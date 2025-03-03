@@ -1,0 +1,142 @@
+[
+  {
+    "input": "bältros",
+    "ground_truth": "4 veckor eller till nästa dag beroende på vilket vaccin",
+    "response": "Bältros, även känt som herpes zoster, kan relateras till följande vaccinationer:\n\n- **Zostavax®**: Väntetid för blodgivning är 4 veckor.\n- **Shingrix®**: Väntetid för blodgivning är till nästa dag."
+  },
+  {
+    "input": "gula febern",
+    "ground_truth": "4 veckor",
+    "response": "Gula febern är en virussjukdom som överförs via myggor. Den kan orsaka feber, muskelvärk, huvudvärk och kan i svåra fall leda till blödningsproblem.\n\nFör vaccination mot gula febern rekommenderas vaccinet \"Stamaril®\", och karenstiden för att ge blod efter vaccination är 4 veckor."
+  },
+  {
+    "input": "hemofilus influensa",
+    "ground_truth": "till nästa dag eller 2 veckor beroende på vilket vaccin",
+    "response": "För hemofilus influensa är det okej att donera blod igen en dag efter vaccination med vaccinet Act-HIB®. Om en kombinationsvaccin har använts kan karenstiden gälla upp till två veckor."
+  },
+  {
+    "input": "hepatit A",
+    "ground_truth": "till nästa dag. Om givet pga. exponering för hepatit: uppehåll 6 mån.",
+    "response": "Hepatit A-vaccination har en karenstid på till nästa dag för blodgivning, om vaccinet ges utan att det är på grund av en exponering för hepatit A. Om vaccinet ges på grund av exponering för hepatit A, är karenstiden sex månader."
+  },
+  {
+    "input": "hepatit B",
+    "ground_truth": "2 veckor. Om givet pga. exponering för hepatit: uppehåll 6 mån.",
+    "response": "Hepatit B ger upp till 6 månaders karens om den drabbade har exponerats för hepatit B. Om den vaccinerade inte har haft någon exponering är karenstiden 2 veckor efter vaccination."
+  },
+  {
+    "input": "hepatit A+B",
+    "ground_truth": "2 veckor. Om givet pga. exponering för hepatit: uppehåll 6 mån.",
+    "response": "För vaccination mot hepatit A+B rekommenderas en karenstid på 2 veckor. Om vaccinet har ges på grund av exponering för hepatit, är det en uppehållstid på 6 månader innan blodgivning kan återupptas."
+  },
+  {
+    "input": "influensa",
+    "ground_truth": "till nästa dag, undantag är Fluenz Tetra® (nässpray) Pandemic Influenza vaccine (H5N1) AstraZenica® (nässpray) som ger 4 veckor karens",
+    "response": "För influensa är karenstiden för att ge blod efter vaccinationen som följer:\n\n- Om du har tagit influensavaccin, kan du ge blod dagen efter vaccinationen. \n\nOm du har några ytterligare frågor eller behöver mer specifik information, är du välkommen att fråga!"
+  },
+  {
+    "input": "japansk encefalit",
+    "ground_truth": "till nästa dag",
+    "response": "Om du har fått vaccin mot japansk encefalit (IXIARO®), kan du donera blod igen nästa dag."
+  },
+  {
+    "input": "kikhosta",
+    "ground_truth": "2 veckor. Om givet pga. exponering för hepatit: uppehåll 6 mån.",
+    "response": "Kikhosta är kopplad till flera kombinationsvacciner, och om du har fått ett av dessa vacciner så finns det en karenstid för att ge blod igen. Om vaccinationen har utförts, kan du återgå till blodgivning dagen efter vaccinationen."
+  },
+  {
+    "input": "kolera",
+    "ground_truth": "till nästa dag",
+    "response": "Kolera kan vaccination ge en karenstid för blodgivning. Om du har tagit vaccinet Dukoral® (peroral), kan du ge blod igen efter nästa dag. Om du har tagit Vaxchora®, är karenstiden fyra veckor."
+  },
+  {
+    "input": "meningokocker",
+    "ground_truth": "till nästa dag",
+    "response": "Meningokocker ger en karens på \"till nästa dag\" efter vaccination med följande vaccin:\n\n1. Menveo®, Nimenrix® (ATC-kod: J07AH08)\n2. Trumenba®, BEXSERO® (ATC-kod: J07AH09)."
+  },
+  {
+    "input": "papillomvirus HPV",
+    "ground_truth": "till nästa dag",
+    "response": "För papillomvirus (HPV) gäller följande vacciner med avseende på blodgivning:\n\n1. **Gardasil®** - karenstid till nästa dag\n2. **Gardasil® 9** - karenstid till nästa dag\n3. **Cervarix®** - karenstid till nästa dag."
+  },
+  {
+    "input": "pneumokocker",
+    "ground_truth": "till nästa dag",
+    "response": "För pneumokocker gäller följande vaccinationer och karenstider för blodgivning:\n\n- **Pneumovax®**: Karens tills nästa dag.\n- **Prevenar 13®**: Karens tills nästa dag.\n- **Synflorix®**: Karens tills nästa dag."
+  },
+  {
+    "input": "polio",
+    "ground_truth": "till nästa dag",
+    "response": "Vaccination mot poliovirus (polio) ger en karenstid på \"till nästa dag\" för blodgivning efter att vaccinet har administrerats."
+  },
+  {
+    "input": "rabies",
+    "ground_truth": "till nästa dag. Om givet pga. misstanke om rabiessmitta: 1 års uppehåll",
+    "response": "Efter vaccination mot rabies (med vacciner som Rabies-Imovax® eller Rabipur®) är karenstiden för blodgivning till nästa dag. Om vaccinet gavs på grund av misstanke om rabiessmitta, är det en karenstid på 1 år."
+  },
+  {
+    "input": "rotavirus",
+    "ground_truth": "4 veckor",
+    "response": "Rotavirus vaccination includes two vaccines:\n\n1. **Rotarix® (peroral)** - Waiting period for blood donation: 4 veckor.\n2. **RotaTeq® (peroral)** - Waiting period for blood donation: 4 veckor. \n\nDu kan donera blod tidigast fyra veckor efter vaccinet."
+  },
+  {
+    "input": "röda hund (rubella)",
+    "ground_truth": "4 veckor",
+    "response": "Röda hund (rubella) ger en karens på 4 veckor efter vaccination. Det innebär att du kan börja ge blod igen tidigast 4 veckor efter att du har fått vaccinet."
+  },
+  {
+    "input": "stelkramp",
+    "ground_truth": "till nästa dag eller 2 veckor. Om givet pga. exponering för hepatit: uppehåll 6 mån. Beror på vilket vaccin.",
+    "response": "Stelkramp (tetanus) kan besvaras med att om du har fått vaccin mot stelkramp, så föreligger det en väntetid på till nästa dag innan du kan ge blod igen."
+  },
+  {
+    "input": "difteri, kikhosta, stelkramp",
+    "ground_truth": "till nästa dag",
+    "response": "Vaccinationerna för följande sjukdomar och deras karens för blodgivning är:\n\n- **Difteri, kikhosta, stelkramp**: Efter vaccination med Boostrix®, Triaxis®, eller diTekiBooster® är karens till nästa dag. \n\nOm du har frågor om hur lång tid det är innan du kan ge blod igen efter en vaccination, är det viktigt att notera specifika vacciner och sjukdomar. Kontakta gärna blodcentralen om du har ytterligare frågor."
+  },
+  {
+    "input": "difteri, kikhosta, polio, stelkramp",
+    "ground_truth": "till nästa dag",
+    "response": "Här är informationen om karenstider för blodgivning kopplad till de nämnda sjukdomarna och vaccinationerna:\n\n1. **Difteri, Kikhosta, Polio, Stelkramp**: Om du har fått något av dessa vaccin kan du ge blod igen *till nästa dag*.\n\nOm du har fler specifika frågor eller behöver ytterligare information, tveka inte att fråga!"
+  },
+  {
+    "input": "difteri, hemofilus influensa B, kikhosta, polio, stelkramp",
+    "ground_truth": "till nästa dag",
+    "response": "Här är informationen om karenstider för blodgivning gällande de nämnda sjukdomarna:\n\n1. **Difteri**: Karens efter vaccination är till nästa dag.\n2. **Hemofilus influensa B**: Ingen specifik karens noteras, vanligtvis administreras som del av kombinationsvacciner.\n3. **Kikhosta**: Ingen specifik karens noteras, vanligtvis administreras som del av kombinationsvacciner.\n4. **Polio**: Karens efter vaccination är till nästa dag.\n5. **Stelkramp**: Karens efter vaccination är till nästa dag. \n\nOm du har fler frågor eller behöver mer information, tveka inte att fråga!"
+  },
+  {
+    "input": "difteri, hemofilus influensa B, kikhosta, polio, stelkramp, hepatit B",
+    "ground_truth": "2 veckor Om givet pga. exponering för hepatit: uppehåll 6 mån.",
+    "response": "1. **Difteri**: Om du har vaccinerats mot difteri, kan du ge blod igen tidigast dagen efter vaccinationen.\n\n2. **Hemofilus influensa B**: Om du har fått vaccin mot hemofilus influensa B, kan du ge blod igen tidigast dagen efter vaccinationen.\n\n3. **Kikhosta**: Om du har fått vaccin mot kikhosta, kan du ge blod igen tidigast dagen efter vaccinationen.\n\n4. **Polio**: Om du har fått vaccin mot polio, kan du ge blod igen tidigast dagen efter vaccinationen.\n\n5. **Stelkramp**: Om du har blivit vaccinerad mot stelkramp, kan du ge blod igen tidigast dagen efter vaccinationen.\n\n6. **Hepatit B**: Om du har blivit vaccinerad mot hepatit B, kan du ge blod igen tidigast om 2 veckor."
+  },
+  {
+    "input": "tyfoidfeber/tyfus, hepatit A (Salmonella typhii)",
+    "ground_truth": "till nästa dag Om givet pga. exponering för hepatit: uppehåll 6 mån.",
+    "response": "För tyfoidfeber/tyfus (Salmonella typhi) och hepatit A gäller följande karenstid för blodgivning om vaccination har utförts:\n\n- **Tyfoidfeber/tyfus:** Om du har fått vaccin mot tyfoidfeber/tyfus, kan du ge blod igen dagen efter vaccination.\n- **Hepatit A:** Om du har fått vaccin mot hepatit A, kan du ge blod igen dagen efter vaccination.\n\nOm vaccinationen gavs på grund av exponering för hepatit, gäller en karens på 6 månader innan du kan ge blod igen."
+  },
+  {
+    "input": "covid-19 (coronavirus, SARS-CoV-2)",
+    "ground_truth": "3 dagar",
+    "response": "Vaccination mot covid-19 (SARS-CoV-2) ger en karens på 3 dagar innan man kan donera blod igen."
+  },
+  {
+    "input": "mpox (apkoppor)",
+    "ground_truth": "4 veckor",
+    "response": "För mpox (apkoppor) är karenstiden för att ge blod efter vaccination 4 veckor."
+  },
+  {
+    "input": "dengue",
+    "ground_truth": "4 veckor",
+    "response": "Vaccineringen mot dengue (Qdenga®) har en karenstid på 4 veckor. Det innebär att det är okej att donera blod tidigast 4 veckor efter vaccinationen."
+  },
+  {
+    "input": "respiratoriskt syncytievirus (RSV, RS-virus)",
+    "ground_truth": "till nästa dag",
+    "response": "Respiratoriskt syncytievirus (RSV) och dess vaccin, Abrysvo®, har en karenstid för blodgivning på till nästa dag efter vaccination."
+  },
+  {
+    "input": "kolera",
+    "ground_truth": "4 veckor",
+    "response": "Kolera är en sjukdom som kan kräva vaccinering. Om du har fått koleravaccin, gäller följande karenstid för blodgivning:\n\n- **Dukoral® (peroral)**: Du kan ge blod igen från nästa dag efter vaccinationen. \n\n- **Vaxchora®**: Du kan ge blod igen fyra veckor efter vaccinationen. \n\nHar du fått något av dessa vaccin?"
+  }
+]
