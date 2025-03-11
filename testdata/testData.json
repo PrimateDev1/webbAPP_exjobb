@@ -47,7 +47,7 @@
     },
     {
     "input":"kolera",
-    "ground_truth":"till nästa dag",
+    "ground_truth":" 4 veckor",
     "response":""
     },
     {
@@ -133,11 +133,6 @@
     {
     "input":"respiratoriskt syncytievirus (RSV, RS-virus)",
     "ground_truth":"till nästa dag",
-    "response":""
-    },
-    {
-    "input":"kolera",
-    "ground_truth":"4 veckor",
     "response":""
     }
 ]
