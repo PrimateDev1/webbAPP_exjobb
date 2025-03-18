@@ -1,0 +1,12 @@
+[
+{
+    "input":"Latent tuberkulos",
+    "ground_truth":" – får godkännas om ej under utredning eller behandling. Får godkännas 2 veckor efter avslutad behandling med antibiotika.",
+    "response":""
+},
+{
+    "input":"Testosteronbrist",
+    "ground_truth":"Får godkännas om orsaken är godkänd för blodgivning. Fråga om läkemedelsbehandling, vid behov se läkemedelslista.",
+    "response":""
+}
+]
