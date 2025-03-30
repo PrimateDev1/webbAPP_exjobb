@@ -2,6 +2,10 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import QuestionPage from "./components/questionspage.js";
 import Chatbot from "./components/chatbot.js";
+import FormDone from "./components/formDone.js";
+
+
+
 
 function Home() {
   return (
@@ -23,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/question/:id" element={<QuestionPage />} />
+          <Route path="/done" element={<FormDone />} />
         </Routes>
         <Chatbot /> {/* ✅ Chatbot should always be visible */}
       </div>

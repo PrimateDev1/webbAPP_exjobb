@@ -84,17 +84,18 @@ wss.on("connection", (ws) => {
 async function createAssistant() {
     const assistant = await openai.beta.assistants.create({
         name: "Real-Time AI Assistant",
-        instructions: "Du ska alltid förhålla dig till instructions_ai.txt, när du svarar på en fråga. Om relevant information finns i sjukdomar-och-åtgärder.txt, använd den för att ge ett korrekt svar.",
+        instructions: "  Du är en hjälpsam AI-assistent. Följ alltid riktlinjerna i 'instructions.txt'. Använd endast verifierad information från dokumenten som finns tillgängliga via file_search. Om relevant information inte finns tillgänglig, säg att informationen inte finns. Svara alltid på svenska.",
         model: "gpt-4o-mini",
         tools: [{ type: "file_search" }],
+       
     });
 
     console.log("✅ Assistant Created:", assistant.id);
     return assistant.id;
 }
 
-// ✅ Upload Files to Vector Store
-async function uploadFiles() {
+// ✅ Upload Files to Vector Store. not really needed right know cuz its managed online
+  async function uploadFiles() {
     const existingStores = await openai.beta.vectorStores.list();
     let vectorStoreId;
 
@@ -106,12 +107,13 @@ async function uploadFiles() {
         console.log("📂 Created new Vector Store:", vectorStoreId);
     }
 
+    /*
     const filePath = path.resolve("sjukdomar-och-åtgärder.txt");
     if (!fs.existsSync(filePath)) {
         console.error("❌ File does not exist at path:", filePath);
         return vectorStoreId;
     }
-
+    
     let uploadedFile;
     try {
         uploadedFile = await openai.files.create({
@@ -128,7 +130,7 @@ async function uploadFiles() {
         file_id: uploadedFile.id,
     });
     console.log("✅ File successfully linked to Vector Store.");
-
+    */
     return vectorStoreId;
 }
 
@@ -156,17 +158,55 @@ async function runAssistant(threadId, assistantId) {
     const run = await openai.beta.threads.runs.createAndPoll(threadId, {
         assistant_id: assistantId,
         tools: [{ type: "file_search" }],
+        temperature: 0.3, 
     });
+    
+    console.log("🛠 AI Run Details:", JSON.stringify(run, null, 2));
+    
+    if (run.status !== "completed") {
+        console.error("❌ Assistant run failed:", run);
+        return `⚠️ AI run failed with status: ${run.status} - ${run.last_error?.message || "Unknown error"}`;
+    }
+    
 
     const messages = await openai.beta.threads.messages.list(threadId, {
         run_id: run.id,
+        limit: 5 // ✅ Only fetch last 5 messages
     });
+    
 
-    let aiResponse = messages.data.pop().content[0].text.value;
+    if (!messages.data.length) {
+        console.error("❌ No response messages found in AI output.");
+        return "⚠️ No response from AI.";
+    }
+
+    let aiResponse = messages.data.pop().content[0].text?.value || "⚠️ No valid response.";
     aiResponse = aiResponse.replace(/【\d+:\d+†[a-zA-Z]+】/g, '');
+
     return aiResponse;
 }
+//memory structure for answers
+let currentAnswers = {};
 
+// ✅ Store answer from frontend
+app.post("/api/answer", (req, res) => {
+    const { questionId, answer } = req.body;
+    currentAnswers[questionId] = answer;
+    console.log("Answer saved:", currentAnswers);
+    res.sendStatus(200);
+  });
+  
+  // ✅ Reset answers at start of form
+  app.post("/api/reset", (req, res) => {
+    currentAnswers = {};
+    console.log("Answers reset.");
+    res.sendStatus(200);
+  });
+  
+  app.get("/api/answers", (req, res) => {
+    res.json(currentAnswers);
+  });
+  
 // ✅ Run Setup (Assistant + Vector Store)
 async function setup() {
     assistantId = await createAssistant();

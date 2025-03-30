@@ -11,8 +11,8 @@ const questions = [
     id: 2,
     text: "Har du tidigare givit blod, plasma, trombocyter eller tidigare anmält dig till blodgivning?",
     followUp: {
-      yes: "När gav du blod, plasma eller trombocyter tidigare? Vilken region?",
-      no: null
+      Ja: "När gav du blod, plasma eller trombocyter tidigare? Vilken region?",
+      Nej: null
     },
     next: 3
   },
@@ -28,7 +28,7 @@ const questions = [
     id: 4,
     text: "Går du på läkarkontroller eller är du sjukskriven?",
     followUp: {
-      yes: "För vad går du på kontroller eller är du sjukskriven?"
+      Ja: "För vad går du på kontroller eller är du sjukskriven?"
     },
     next: 5
   },
@@ -68,7 +68,7 @@ const questions = [
     id: 9,
     text: "Har du eller någon i din familj haft Creutzfeldt-Jakobs sjukdom? (en mycket ovanlig demenssjukdom)",
     followUp: {
-      yes: "Är det dina barn, syskon, föräldrar eller far/morföräldrar som haft Creutzfeldt-Jakobs sjukdom?"
+      Ja: "Är det dina barn, syskon, föräldrar eller far/morföräldrar som haft Creutzfeldt-Jakobs sjukdom?"
     },
     next: 10
   },
@@ -92,7 +92,7 @@ const questions = [
     id: 12,
     text: "Har du, eller har du haft, malaria eller annan tropisk sjukdom?",
     followUp: {
-      yes: "Vilken infektion har du haft, malaria eller annan tropisk sjukdom? När blev du frisk?"
+      Ja: "Vilken infektion har du haft, malaria eller annan tropisk sjukdom? När blev du frisk?"
     },
     next: 13
   },
@@ -100,7 +100,7 @@ const questions = [
     id: 13,
     text: "för män: Har du utretts eller behandlats för förstorad prostata eller prostatasjukdom?",
     followUp: {
-      yes: "Vilken prostata-sjukdom? Vilken behandling fick du?"
+      Ja: "Vilken prostata-sjukdom? Vilken behandling fick du?"
     },
     next: 14
   },
@@ -108,7 +108,7 @@ const questions = [
     id: 14,
     text: "Har du under de senaste 6 månaderna vårdats på sjukhus, undersökts, opererats eller på annat sätt varit i kontakt med sjukvården?",
     followUp: {
-      yes: "För vad har du de senaste 6 månaderna varit i kontakt med sjukvård?"
+      Ja: "För vad har du de senaste 6 månaderna varit i kontakt med sjukvård?"
     },
     next: 15
   },
@@ -116,7 +116,7 @@ const questions = [
     id: 15,
     text: "Har du fått blodtransfusion eller genomgått transplantation?",
     followUp: {
-      yes: "Var det blodtransfusion eller transplantation? När hände det? I vilket land?"
+      Ja: "Var det blodtransfusion eller transplantation? När hände det? I vilket land?"
     },
     next: 16
   },
@@ -124,7 +124,7 @@ const questions = [
     id: 16,
     text: "Har du fått akupunktur de senaste 6 månaderna?",
     followUp: {
-      yes: "Varför fick du akupunktur? När utfördes den senaste akupunkturen?"
+      Ja: "Varför fick du akupunktur? När utfördes den senaste akupunkturen?"
     },
     next: 17
   },
@@ -132,7 +132,7 @@ const questions = [
     id: 17,
     text: "Har du vaccinerats de senaste 4 veckorna?",
     followUp: {
-      yes: "Mot vad vaccinerades du? När fick du vaccinationen?"
+      Ja: "Mot vad vaccinerades du? När fick du vaccinationen?"
     },
     next: 18
   },
@@ -140,7 +140,7 @@ const questions = [
     id: 18,
     text: "Använder du receptbelagda läkemedel, receptfria läkemedel eller värktabletter?",
     followUp: {
-      yes: "Varför har du använt läkemedel? Vilka läkemedel?"
+      Ja: "Varför har du använt läkemedel? Vilka läkemedel?"
     },
     next: 19
   },
@@ -148,7 +148,7 @@ const questions = [
     id: 19,
     text: "Har du de senaste 3 åren använt receptbelagt läkemedel för behandling av: akne, håravfall, hudtumör, psoriasis?",
     followUp: {
-      yes: "För vad fick du behandling: akne, håravfall, hudtumör eller psoriasis?, Vilket läkemedel fick du? Tabletter eller kräm/salva?, När avslutades behandlingen?"
+      Ja: "För vad fick du behandling: akne, håravfall, hudtumör eller psoriasis?, Vilket läkemedel fick du? Tabletter eller kräm/salva?, När avslutades behandlingen?"
     },
     next: 20
   },
@@ -156,7 +156,7 @@ const questions = [
     id: 20,
     text: "Har du behandlats med tillväxthormon?",
     followUp: {
-      yes: "När fick du behandling med tillväxthormon?"
+      Ja: "När fick du behandling med tillväxthormon?"
     },
     next: 21
   },
@@ -172,7 +172,7 @@ const questions = [
     id: 22,
     text: "Har du de senaste 2 veckorna använt droger?(hasch, kokain, GHB, marijuana, rökheroin, khat, metamfetamin, ecstasy eller annan drog)",
     followUp: {
-      yes: "När använde du droger senast?"
+      Ja: "När använde du droger senast?"
     },
     next: 23
   },
@@ -180,7 +180,7 @@ const questions = [
     id: 23,
     text: "Har du de senaste 6 månaderna blivit: tatuerad, piercad, t.ex. tagit hål i örat, kosmetiskt behandlad med nålar genom huden, fått injektion av kosmetiskt preparat?",
     followUp: {
-      yes: "När var senaste gången du tatuerades, piercades eller fick kosmetisk behandling med nålar genom huden?"
+      Ja: "När var senaste gången du tatuerades, piercades eller fick kosmetisk behandling med nålar genom huden?"
     },
     next: 24
   },
@@ -188,7 +188,7 @@ const questions = [
     id: 24,
     text: "Har du bott mer än 5 år utanför Europa?(Exempelvis om du är född i ett land utanför Europa.)",
     followUp: {
-      yes: "Vilket land utanför Europa har du bott i?"
+      Ja: "Vilket land utanför Europa har du bott i?"
     },
     next: 25
   },
@@ -204,7 +204,7 @@ const questions = [
     id: 26,
     text: "Har du de senaste 6 månaderna rest utanför Norden?(Till Norden räknas Danmark, Finland, Island, Norge, Sverige, Färöarna, Grönland och Åland.)",
     followUp: {
-      yes: "Vilket resmål utanför Norden har du besökt? När kom du hem från resan?"
+      Ja: "Vilket resmål utanför Norden har du besökt? När kom du hem från resan?"
     },
     next: 27
   },
@@ -218,9 +218,9 @@ const questions = [
   },
   {
     id: 28,
-    text: "Har du de FäHar du de senaste 3 månaderna haft sexuellt umgänge med ny partner? Eftersom tester inte kan upptäcka virussmitta när en person är nysmittad, behöver vi fråga dig om sexuella smittvägar..)",
+    text: "Har du de senaste 3 månaderna haft sexuellt umgänge med ny partner? Eftersom tester inte kan upptäcka virussmitta när en person är nysmittad, behöver vi fråga dig om sexuella smittvägar..)",
     followUp: {
-      yes: "När var första gången? (Ny sexualpartner ger minst 3 månaders uppehåll för blodgivning.)"
+      Ja: "När var första gången? (Ny sexualpartner ger minst 3 månaders uppehåll för blodgivning.)"
     },
     next: 29
   },
