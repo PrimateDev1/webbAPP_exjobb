@@ -8,7 +8,7 @@ import { json } from "stream/consumers";
 
 dotenv.config(); // Load API key from .env
 //const TEST_FILE = "./small_test.json"; // Correct relative path
-const ITTERATIONS = 3; //n 
+const ITTERATIONS = 5; //n 
 const LARGE_TEST_PATH = "./large_tests/";
 const BATCH_PATH = "batch/";
 const OUTPUT_FILE = "./test_results.json";
@@ -74,11 +74,13 @@ async function removeLastOccurance(aChar, currentpath) {
 
 async function runTestJsonl(isBatch,newRun,testfile){
     let testData = JSON.parse(fs.readFileSync(testfile,"utf-8" ));
+    let large_test_dir = fs.readdirSync(LARGE_TEST_PATH);
+    let batchNr = large_test_dir.length;
     let currentpath;
     let filecounter = 0;
     for (let test of testData){
         console.log(`testing: ${test.input} \n`);
-        let currentfile = (isBatch) ? "batchtest.jsonl":`testdata_${test.input}s.jsonl`;
+        let currentfile = (isBatch) ? `batchtest_${batchNr}.jsonl`:`testdata_${test.input}s.jsonl`;
         currentpath = path.join(LARGE_TEST_PATH, currentfile);
         process.stdout.write("\nloading: " + currentpath.toString() + "\n");
         for(let i = 0; i< ITTERATIONS; i++){
