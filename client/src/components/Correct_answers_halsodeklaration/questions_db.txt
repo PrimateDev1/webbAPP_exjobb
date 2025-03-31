@@ -1,0 +1,149 @@
+För varje fråga med avvikande svar ska du söka efter korrekt regel i dokumenten i vector store och hänvisa till aktuell regel.
+
+Frågor:
+
+fråga 1 : "Har du idag läst Blodcentralens information om när man inte ska ge blod?".
+korrekt svar: "Du måste ha läst informationen annars får du inte ge blod". Vid svar "Nej", flaggas detta som avvikande
+
+fråga 2: "Har du tidigare givit blod, plasma, trombocyter eller tidigare anmält dig till blodgivning?"
+     Om  "ja": "När gav du blod, plasma eller trombocyter tidigare? Vilken region?",
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt "Du måste ange när och var."
+
+fråga 3: "Väger du över 50 kg?",
+korrekt svar: Vid svar "Nej" flaggas detta som avvikande. "Du måste väga över 50 kg, annars får du inte ge blod".
+
+fråga 4: "Går du på läkarkontroller eller är du sjukskriven?".
+    
+    OM  "Ja": "För vad går du på kontroller eller är du sjukskriven?"
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt "Du måste svara på om du är sjukskriven och om du går på kontroller".
+
+    fråga 5: "Har du, eller har du haft oregelbunden hjärtrytm, hjärtsjukdom, kärlkramp, hjärtinfarkt, hjärtsvikt, stroke, högt blodtryck som krävt behandling?".
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt, "Du måste beskriva varför och vad.
+
+
+fråga 6: "Har du, eller har du haft cancer, ämnesomsättnings-sjukdomdiabetes, diabetes, reumatoid artrit, epilepsi, sjukdom i nervsystemet eller hjärnan?",
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt "Du måste beskriva vad exakt du haft problem med".
+
+fråga 7: "Har du, eller har du haft någon blodsjukdom eller blödningsrubbning?".
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt "Du måste beskriva vilken blodsjukdom eller blödningsrubbning".
+
+fråga 8: "Har du, eller har du haft någon allvarlig sjukdom i: mage-tarm, njurar, urinvägar, underliv?",
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt "Du måste skriva vilken av dessa sjukdomar du har eller har haft"
+
+fråga 9: "Har du eller någon i din familj haft Creutzfeldt-Jakobs sjukdom? (en mycket ovanlig demenssjukdom)",
+    "followUp": {
+      "Ja": "Är det dina barn, syskon, föräldrar eller far/morföräldrar som haft Creutzfeldt-Jakobs sjukdom?",
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt "Du måste skriva vilken av dina släktingar eller om det är du som har sjukdomen".
+
+fråga 10: "Har du, eller har du haft allvarlig infektionssjukdom, t.ex. hepatit (gulsot), syfilis, tuberkulos, reumatisk feber, HTLV-infektion, benröta (ostetit)?",
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt "Du måste skriva vilken eller vilka av dessa sjukdomar".
+
+fråga 11: "Har du infektion med HIV eller misstänker du att du kan vara smittad med HIV (aids-virus)?",
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt "Du måste ge ett svar på denna fråga".
+
+fråga 12: "Har du, eller har du haft, malaria eller annan tropisk sjukdom?".
+    "followUp": {
+      "Ja": "Vilken infektion har du haft, malaria eller annan tropisk sjukdom? När blev du frisk?"
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt"Du måste svara på alla frågorna".
+
+fråga 13: "för män: Har du utretts eller behandlats för förstorad prostata eller prostatasjukdom?",
+    "followUp": {
+      "Ja": "Vilken prostata-sjukdom? Vilken behandling fick du?"
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt "Du måste svara på alla frågorna".
+
+
+fråga 14: "Har du under de senaste 6 månaderna vårdats på sjukhus, undersökts, opererats eller på annat sätt varit i kontakt med sjukvården?".
+    "followUp": {
+      "Ja": "För vad har du de senaste 6 månaderna varit i kontakt med sjukvård?"
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt "Du måste svara på alla frågorna".
+
+
+fråga 15: "Har du fått blodtransfusion eller genomgått transplantation?".
+    "followUp": {
+      "Ja": "Var det blodtransfusion eller transplantation? När hände det? I vilket land?"
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt "Du måste svara på alla frågorna".
+
+
+fråga 16: "Har du fått akupunktur de senaste 6 månaderna?",
+    "followUp": {
+      "Ja": "Varför fick du akupunktur? När utfördes den senaste akupunkturen?",
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt "Du måste svara på alla frågorna".
+
+
+fråga 17: "Har du vaccinerats de senaste 4 veckorna?",
+    "followUp": {
+      "Ja": "Mot vad vaccinerades du? När fick du vaccinationen?",
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt "Du måste svara på alla frågorna".
+
+
+fråga 18: "Använder du receptbelagda läkemedel, receptfria läkemedel eller värktabletter?",
+    "followUp": {
+      "Ja": "Varför har du använt läkemedel? Vilka läkemedel?",
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt "Du måste svara på alla frågorna".
+
+
+fråga 19: "Har du de senaste 3 åren använt receptbelagt läkemedel för behandling av: akne, håravfall, hudtumör, psoriasis?",
+    "followUp": {
+      "Ja": "För vad fick du behandling: akne, håravfall, hudtumör eller psoriasis?, Vilket läkemedel fick du? Tabletter eller kräm/salva?, När avslutades behandlingen?",
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt "Du måste svara på alla frågorna".
+
+
+fråga 20: "Har du behandlats med tillväxthormon?",
+    "followUp": {
+      "Ja": "När fick du behandling med tillväxthormon?"
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt att "Du måste skriva när".
+
+fråga 21: "Har du någonsin utanför hälso- och sjukvården injicerat (sprutat in): narkotika, anabola steroider, hormoner, annat preparat?",
+korrekt svar: Vid svar Ja flaggas detta som avvikande .
+
+
+fråga 22: "Har du de senaste 2 veckorna använt droger?(hasch, kokain, GHB, marijuana, rökheroin, khat, metamfetamin, ecstasy eller annan drog)".
+    "followUp": {
+      "Ja": "När använde du droger senast?"
+korrekt svar:  Vid svar Ja flaggas detta som avvikande samt "Du måste skriva när detta var".
+
+
+fråga 23: "Har du de senaste 6 månaderna blivit: tatuerad, piercad, t.ex. tagit hål i örat, kosmetiskt behandlad med nålar genom huden, fått injektion av kosmetiskt preparat?",
+    "followUp": {
+      "Ja": "När var senaste gången du tatuerades, piercades eller fick kosmetisk behandling med nålar genom huden?",
+korrekt svar:  Vid svar Ja flaggas detta som avvikande samt "Du måste ange när detta var".
+
+
+fråga 24: "Har du bott mer än 5 år utanför Europa?(Exempelvis om du är född i ett land utanför Europa.)",
+    "followUp": {
+      "Ja": "Vilket land utanför Europa har du bott i?"
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt "Du måste skriva vilket land som detta var".
+
+fråga 25: "Har du vistats sammanlagt mer än 6 månader i Storbritannien åren 1980–1996?",
+korrekt svar: Vid svar Ja flaggas detta som avvikande.
+
+fråga 26: "Har du de senaste 6 månaderna rest utanför Norden?(Till Norden räknas Danmark, Finland, Island, Norge, Sverige, Färöarna, Grönland och Åland.)",
+    "followUp": {
+      "Ja": "Vilket resmål utanför Norden har du besökt? När kom du hem från resan?",
+korrekt svar:  Vid svar Ja flaggas detta som avvikande samt "Du måste ange både vilket land och när du kom hem".
+
+fråga 27: "Har du haft feber utan förklaring vid besök i tropiskt område eller inom 6 månader efteråt?",
+korrekt svar: Vid svar Ja flaggas detta som avvikande.
+
+fråga 28: "Har du de senaste 3 månaderna haft sexuellt umgänge med ny partner? Eftersom tester inte kan upptäcka virussmitta när en person är nysmittad, behöver vi fråga dig om sexuella smittvägar..)",
+    "followUp": {
+      "Ja": "När var första gången? (Ny sexualpartner ger minst 3 månaders uppehåll för blodgivning.)".
+korrekt svar: Vid svar Ja flaggas detta som avvikande samt "Du måste ange när detta var".
+
+fråga 29: "Har du  eller vet du att din partner de senaste 6 månaderna haft sexuellt umgänge med: person med känd infektion med hepatit, syfilis, HTLV eller HIV? eller  person som du vet har injicerat narkotika eller dopingmedel? Eftersom tester inte kan upptäcka virussmitta när en person är nysmittad, behöver vi fråga dig om sexuella smittvägar.".
+korrekt svar: Vid svar Ja flaggas detta som avvikande.
+
+fråga 30: "Har du betalat eller fått betalt för sexuellt umgänge de senaste 6 månaderna? Eftersom tester inte kan upptäcka virussmitta när en person är nysmittad, behöver vi fråga dig om sexuella smittvägar.".
+korrekt svar: Vid svar Ja flaggas detta som avvikande.
+
+fråga 31: "för män: Har du haft sexuellt umgänge med en annan man de senaste 6 månaderna? Eftersom tester inte kan upptäcka virussmitta när en person är nysmittad, behöver vi fråga dig om sexuella smittvägar",
+korrekt svar: Vid svar Ja flaggas detta som avvikande.
+
+fråga 32: "för kvinnor: Har du de senaste 6 månaderna haft sexuellt umgänge med en man som du vet har haft sexuellt umgänge med annan man? Eftersom tester inte kan upptäcka virussmitta när en person är nysmittad, behöver vi fråga dig om sexuella smittvägar.".
+korrekt svar: Vid svar Ja flaggas detta som avvikande.
+
+fråga 33: "för kvinnor: Försöker du bli gravid?".
+korrekt svar: Vid svar Ja flaggas detta som avvikande.
+
+fråga 34: "Känner du dig frisk?".
+korrekt svar: Vid svar Nej flaggas detta som avvikande.

@@ -11,13 +11,13 @@
     "response":""    
     },
     {
-    "input":"hemofilus influensa",
-    "ground_truth":"till nästa dag eller 2 veckor beroende på vilket vaccin",
+    "input":"hemofilus influensa B",
+    "ground_truth":"till nästa dag eller 2 veckor beroende på vaccin, eller 6 månader om givet i kombinationsvaccin för exponering av hepatit B",
     "response":""
     },
     {
     "input":"hepatit A",
-    "ground_truth":"till nästa dag. Om givet pga. exponering för hepatit: uppehåll 6 mån.",
+    "ground_truth":"till nästa dag eller två veckor om givet som kombinationsvaccin. Om givet pga. exponering för hepatit: uppehåll 6 mån.",
     "response":""
     },
     {
@@ -42,12 +42,12 @@
     },
     {
     "input":"kikhosta",
-    "ground_truth":"2 veckor. Om givet pga. exponering för hepatit: uppehåll 6 mån.",
+    "ground_truth":"till nästa dag eller 2 veckor. Om givet pga. exponering för hepatit: uppehåll 6 mån.",
     "response":""
     },
     {
     "input":"kolera",
-    "ground_truth":"till nästa dag",
+    "ground_truth":"till nästa dag eller fyra veckor beroende på vaccin",
     "response":""
     },
     {
@@ -67,7 +67,7 @@
     },
     {
     "input":"polio",
-    "ground_truth":"till nästa dag",
+    "ground_truth":"till nästa dag eller 2 veckor beroende på vaccin. 6 månaders karens om givet i kombinationsvaccin för exponering av hepatit B",
     "response":""
     },
     {
@@ -91,28 +91,13 @@
     "response":""
     },
     {
-    "input":"difteri, kikhosta, stelkramp",
-    "ground_truth":"till nästa dag",
+    "input":"difteri",
+    "ground_truth":"till nästa dag eller 2 veckor beroende på vaccin. 6 månaders karens om givet i kombinationsvaccin för exponering av hepatit B ",
     "response":""
     },
     {
-    "input":"difteri, kikhosta, polio, stelkramp",
-    "ground_truth":"till nästa dag",
-    "response":""
-    },
-    {
-    "input":"difteri, hemofilus influensa B, kikhosta, polio, stelkramp",
-    "ground_truth":"till nästa dag",
-    "response":""
-    },
-    {
-    "input":"difteri, hemofilus influensa B, kikhosta, polio, stelkramp, hepatit B",
-    "ground_truth":"2 veckor Om givet pga. exponering för hepatit: uppehåll 6 mån.",
-    "response":""
-    },
-    {
-    "input":"tyfoidfeber/tyfus, hepatit A (Salmonella typhii)",
-    "ground_truth":"till nästa dag Om givet pga. exponering för hepatit: uppehåll 6 mån.",
+    "input":"tyfoidfeber/tyfus (Salmonella typhii)",
+    "ground_truth":"till nästa dag.  Om givet i kombinationsvaccin pga. exponering för hepatit: uppehåll 6 mån.",
     "response":""
     },
     {
@@ -134,21 +119,6 @@
     "input":"respiratoriskt syncytievirus (RSV, RS-virus)",
     "ground_truth":"till nästa dag",
     "response":""
-    },
-    {
-    "input":"kolera",
-    "ground_truth":"4 veckor",
-    "response":""
     }
 ]
-
-
-
-
-
-
-
-
-
-
 
