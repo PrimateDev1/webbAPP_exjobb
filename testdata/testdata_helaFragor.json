@@ -1,0 +1,123 @@
+
+[
+    {
+    "input": "Jag har vaccinerat mig mot bältros, när kan jag ge blod tidigast?",
+    "ground_truth": "4 veckor eller till nästa dag beroende på vilket vaccin",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot gula febern, när kan jag ge blod tidigast?",
+    "ground_truth":"4 veckor",
+    "response":""    
+    },
+    {
+    "input":"Jag har vaccinerat mig mot hemofilus influensa B, när kan jag ge blod tidigast?",
+    "ground_truth":"till nästa dag eller 2 veckor beroende på vaccin, eller 6 månader om givet i kombinationsvaccin för exponering av hepatit B",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot hepatit A, när kan jag ge blod tidigast?",
+    "ground_truth":"till nästa dag eller två veckor om givet som kombinationsvaccin. Om givet pga. exponering för hepatit: uppehåll 6 mån.",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot hepatit B, när kan jag ge blod tidigast?",
+    "ground_truth":"2 veckor. Om givet pga. exponering för hepatit: uppehåll 6 mån.",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot hepatit A+B, när kan jag ge blod tidigast?",
+    "ground_truth":"2 veckor. Om givet pga. exponering för hepatit: uppehåll 6 mån.",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot influensa, när kan jag ge blod tidigast?",
+    "ground_truth":"till nästa dag, undantag är Fluenz Tetra® (nässpray) Pandemic Influenza vaccine (H5N1) AstraZenica® (nässpray) som ger 4 veckor karens",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot japansk encefalit, när kan jag ge blod tidigast?",
+    "ground_truth":"till nästa dag",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot kikhosta, när kan jag ge blod tidigast?",
+    "ground_truth":"till nästa dag eller 2 veckor. Om givet pga. exponering för hepatit: uppehåll 6 mån.",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot kolera, när kan jag ge blod tidigast?",
+    "ground_truth":"till nästa dag eller fyra veckor beroende på vaccin",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot meningokocker, när kan jag ge blod tidigast?",
+    "ground_truth":"till nästa dag",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot papillomvirus HPV, när kan jag ge blod tidigast?",
+    "ground_truth":"till nästa dag",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot pneumokocker, när kan jag ge blod tidigast?",
+    "ground_truth":"till nästa dag",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot polio, när kan jag ge blod tidigast?",
+    "ground_truth":"till nästa dag eller 2 veckor beroende på vaccin. 6 månaders karens om givet i kombinationsvaccin för exponering av hepatit B",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot rabies, när kan jag ge blod tidigast?",
+    "ground_truth":"till nästa dag. Om givet pga. misstanke om rabiessmitta: 1 års uppehåll",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot rotavirus, när kan jag ge blod tidigast?",
+    "ground_truth":"4 veckor",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot röda hund (rubella), när kan jag ge blod tidigast?",
+    "ground_truth":"4 veckor",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot stelkramp, när kan jag ge blod tidigast?",
+    "ground_truth":"till nästa dag eller 2 veckor. Om givet pga. exponering för hepatit: uppehåll 6 mån. Beror på vilket vaccin.",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot difteri, när kan jag ge blod tidigast?",
+    "ground_truth":"till nästa dag eller 2 veckor beroende på vaccin. 6 månaders karens om givet i kombinationsvaccin för exponering av hepatit B ",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot tyfoidfeber/tyfus(Salmonella typhii), när kan jag ge blod tidigast?",
+    "ground_truth":"till nästa dag.  Om givet i kombinationsvaccin pga. exponering för hepatit: uppehåll 6 mån.",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot covid-19 (coronavirus, SARS-CoV-2), när kan jag ge blod tidigast?",
+    "ground_truth":"3 dagar",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot mpox (apkoppor), när kan jag ge blod tidigast?",
+    "ground_truth":"4 veckor",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot dengue, när kan jag ge blod tidigast?",
+    "ground_truth":"4 veckor",
+    "response":""
+    },
+    {
+    "input":"Jag har vaccinerat mig mot respiratoriskt syncytievirus (RSV, RS-virus), när kan jag ge blod tidigast?",
+    "ground_truth":"till nästa dag",
+    "response":""
+    }
+]
