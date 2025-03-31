@@ -4,10 +4,11 @@ import dotenv from "dotenv";
 import path from "path";
 import fs from "fs";
 import { error } from "console";
+import { json } from "stream/consumers";
 
 dotenv.config(); // Load API key from .env
 //const TEST_FILE = "./small_test.json"; // Correct relative path
-const ITTERATIONS = 2; //n 
+const ITTERATIONS = 3; //n 
 const LARGE_TEST_PATH = "./large_tests/";
 const BATCH_PATH = "batch/";
 const OUTPUT_FILE = "./test_results.json";
@@ -69,6 +70,62 @@ async function removeLastOccurance(aChar, currentpath) {
             }
 
 
+}
+
+async function runTestJsonl(isBatch,newRun,testfile){
+    let testData = JSON.parse(fs.readFileSync(testfile,"utf-8" ));
+    let currentpath;
+    let filecounter = 0;
+    for (let test of testData){
+        console.log(`testing: ${test.input} \n`);
+        let currentfile = (isBatch) ? "batchtest.jsonl":`testdata_${test.input}s.jsonl`;
+        currentpath = path.join(LARGE_TEST_PATH, currentfile);
+        process.stdout.write("\nloading: " + currentpath.toString() + "\n");
+        for(let i = 0; i< ITTERATIONS; i++){
+            process.stdout.write(".");
+            let response = await queryChatbot(test.input);
+            let result = {
+                iteration:filecounter,
+                input:test.input,
+                ground_truth: test.ground_truth,
+                response: response
+            };
+            let jsonlObj = await obj2jsonl(result);
+            fs.appendFileSync(currentpath, jsonlObj);
+
+
+        }
+
+        
+    }
+}
+
+async function obj2jsonl(obj){
+    let builder = new StringBuilder();
+    builder.append("{");
+    Object.entries(obj).forEach(([key,value]) =>{
+        builder.append('"' + key + '"' );
+        builder.append(":")
+        builder.append('"' + value + '"');
+        builder.append(",");
+    });
+    let jsonl = await removeLastChar(",", builder.toString());
+    jsonl = await removeAllChar('\n', jsonl);
+    return jsonl +"}\n";
+    
+}
+
+async function removeSpecialWhitespace(aString) {
+    return aString.replace(/[\t\n\r\f\v]/g, ' ');
+}
+
+async function removeAllChar(aChar, aString) {
+    return aString.split(aChar).join('');
+}
+
+async function removeLastChar(aChar, aString){
+    const lastindex = aString.lastIndexOf(aChar);
+    return lastindex !== -1 ? aString.slice(0,lastindex) + aString.slice(lastindex+1): aString;
 }
 
 async function runTests(isBatch, newRun, testfile) {
@@ -148,4 +205,20 @@ if(arr.length > 0){
     });
 }
 
-runTests(isBatch,newRun, testfile).catch(console.error);
+class StringBuilder {
+    constructor() {
+      this.parts = [];
+    }
+  
+    append(str) {
+      this.parts.push(str);
+      return this; // For method chaining
+    }
+  
+    toString() {
+      return this.parts.join("");
+    }
+  }
+
+
+runTestJsonl(isBatch,newRun, testfile).catch(console.error);
