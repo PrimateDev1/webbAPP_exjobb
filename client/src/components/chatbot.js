@@ -46,6 +46,7 @@ const Chatbot = () => {
 
     return (
         <div style={styles.chatbotContainer}>
+            <h3 style={styles.chatTitle}>AI-chatbot</h3>
             <div style={styles.chatbox}>
                 {messages.map((msg, index) => (
                     <p key={index} style={msg.sender === "user" ? styles.userMessage : styles.botMessage}>
@@ -72,12 +73,13 @@ const Chatbot = () => {
 // ✅ Keep styles as an object inside JavaScript
 const styles = {
     chatbotContainer: {
-        position: "fixed", bottom: "20px", right: "20px",
-        width: "300px", background: "#fff", padding: "10px",
+        position: "fixed", center: "20px", left: "20px", marginTop: "40px", marginLeft: "30px",
+        width: "300px", background: "#fff", padding: "20px",
         border: "1px solid #ccc", borderRadius: "5px",
         boxShadow: "0px 0px 10px rgba(0,0,0,0.1)",
         zIndex: 1000
     },
+    chatTitle: {marginBottom: "10px", textAlign: "center", fontStyle: "bold", fontSize: "18px"},
     chatbox: { maxHeight: "300px", overflowY: "auto", marginBottom: "10px" },
     userMessage: { textAlign: "right", color: "blue" },
     botMessage: { textAlign: "left", color: "green" },

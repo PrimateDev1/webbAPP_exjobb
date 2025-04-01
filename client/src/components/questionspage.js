@@ -65,6 +65,7 @@ const QuestionPage = () => {
 
   return (
     <div className="container">
+      <div className="question-box" style={{ marginLeft: "40px" }}>
       <h1>Fråga {question.id}</h1>
       <p>{question.text}</p>
 
@@ -119,6 +120,7 @@ const QuestionPage = () => {
       {/* Back Button */}
       <div style={{ marginTop: "1em" }}>
         <button onClick={handleBack}>← Föregående fråga</button>
+        </div>
       </div>
     </div>
   );
