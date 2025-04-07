@@ -39,10 +39,14 @@ app.post("/chat", async (req, res) => {
   }
 
   try {
-      const threadId = await createThread(message);
-      const response = await runAssistant(threadId, assistantId);
-
-      res.json({ reply: response });
+    const threadId = await createThread(message);
+    const { reply, run_id } = await runAssistant(threadId, assistantId);
+    
+    res.json({
+        reply,
+        thread_id: threadId,
+        run_id: run_id
+    });
   } catch (error) {
       console.error("OpenAI API Error:", error);
       res.status(500).json({ error: "Failed to fetch chatbot response" });
@@ -164,7 +168,10 @@ async function runAssistant(threadId, assistantId) {
 
     let aiResponse = messages.data.pop().content[0].text.value;
     aiResponse = aiResponse.replace(/【\d+:\d+†[a-zA-Z]+】/g, '');
-    return aiResponse;
+    return {
+        reply: aiResponse,
+        run_id: run.id
+    };
 }
 
 // ✅ Run Setup (Assistant + Vector Store)
