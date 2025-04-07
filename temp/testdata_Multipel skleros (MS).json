@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 15,
+  "input": "Multipel skleros (MS)",
+  "ground_truth": "Godkänns inte. Permanent avstängning.",
+  "response": "Multipel skleros (MS) är en autoimmun sjukdom som påverkar centrala nervsystemet. Enligt de riktlinjer som finns är personer med multipel skleros inte välkomna som blodgivare. Det anges att individer med MS får en permanent avstängning från att ge blod. \n\nDenna sjukdom kan leda till en rad neurologiska symptom och påverkar kroppens förmåga att skicka och ta emot signaler, vilket i sin tur kan resultera i en mängd olika fysiska och kognitiva problem. OM du har fler frågor om multipel skleros eller relaterade ämnen, tveka inte att fråga!"
+},
+{
+  "iteration": 15,
+  "input": "Multipel skleros (MS)",
+  "ground_truth": "Godkänns inte. Permanent avstängning.",
+  "response": "Multipel skleros (MS) är en neurologisk sjukdom som påverkar nervsystemet. Tyvärr är individer med MS inte godkända som blodgivare, och de får en permanent avstängning från blodgivning. \n\nSjukdomen orsakas av en autoimmun reaktion där immunsystemet angriper skyddet av nervfibrer (myelinet) i centrala nervsystemet, vilket leder till olika neurologiska symtom som kan variera beroende på vilken del av nervsystemet som påverkas. Behandlingen för MS kan inkludera immunsuppressiva läkemedel för att minska inflammation och skador på nervsystemet. \n\nOm du har specifika frågor om symptom eller behandlingar relaterade till multipel skleros kan jag hjälpa till med det!"
+},
+{
+  "iteration": 15,
+  "input": "Multipel skleros (MS)",
+  "ground_truth": "Godkänns inte. Permanent avstängning.",
+  "response": "Multipel skleros (MS) är en kronisk sjukdom som påverkar det centrala nervsystemet. Den kännetecknas av inflammation och skador på myelinet, den skyddande hinna som omger nervfibrerna. Detta kan leda till en rad olika symptom såsom:\n\n- Trötthet\n- Muskelsvaghet\n- Koordinationsproblem\n- Synproblem\n- Känselrubbningar\n\nBehandlingen av multipel skleros varierar beroende på sjukdomens form och svårighetsgrad. Det finns olika läkemedel som syftar till att bromsa sjukdomens utveckling och lindra symtomen. Det är värt att notera att individer med MS inte godkänns som blodgivare på grund av sjukdomens allvar och dess inverkan på immunförsvaret."
+}
+
+]

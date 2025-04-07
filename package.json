@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "name": "webbapp_exjobb",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrimateDev1/webbAPP_exjobb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrimateDev1/webbAPP_exjobb/issues"
+  },
+  "homepage": "https://github.com/PrimateDev1/webbAPP_exjobb#readme",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
+}

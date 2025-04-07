@@ -1,0 +1,134 @@
+[    {
+    "input":"Jag har haft cancer tidigare, kan jag ge blod?",
+    "ground_truth":" godkänns inte. Friskförklarad från cancer – godkänns inte. CancerCancer – godkänns inte. Friskförklarad från cancer – godkänns inte. Cancer in situ – får godkännas om fullt tillfrisknande och minst en kontroll utan anmärkning eller om läkare bedömt att ingen uppföljning krävs.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har tidigare haft cellförändringar i livmoderhalsen (cervix cancer in situ), kan jag donera blod?",
+    "ground_truth":"Cancer in situ – får godkännas om fullt tillfrisknande och minst en kontroll utan anmärkning eller om läkare bedömt att ingen uppföljning krävs.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har tidigare haft en malign sjukdom men är nu frisk, kan jag ge blod?",
+    "ground_truth":"Cancer – godkänns inte. Friskförklarad från cancer – godkänns inte. Cancer in situ – får godkännas om fullt tillfrisknande och minst en kontroll utan anmärkning eller om läkare bedömt att ingen uppföljning krävs.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har haft malignt melanom, kan jag någonsin donera blod?",
+    "ground_truth":"Godkänns inte. Permanent avstängning.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har behandlats för prostatacancer men mår bra nu, får jag ge blod?",
+    "ground_truth":"– godkänns inte. Permanent avstängning.",
+    "response":""
+    },
+    {
+        "input":"Jag har blivit friskförklarad från cancer och mår bra nu, får jag donera blod? ",
+        "ground_truth":"&#8211; godkänns inte. Permanent avstängning. ",
+        "response":""
+    },
+    
+    {
+    "input":"Jag har haft diabetes men är inte insulinbehandlad, kan jag bli blodgivare?",
+    "ground_truth":"Diabetes mellitus – godkänns inte om insulinbehandlad eller symtom som tyder på svårare sjukdom, t ex bensår, neuropati, ögonpåverkan mm. Fråga om läkemedelsbehandling, vid behov se läkemedelslista.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har haft tuberkulos tidigare men är frisk nu, kan jag donera blod?",
+    "ground_truth":"Får godkännas 2 år efter styrkt tillfrisknande.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har haft hjärtinfarkt men mår bra nu, får jag ge blod?",
+    "ground_truth":"– godkänns inte. För givarens skull. Permanent avstängning.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har fått en botoxinjektion på en skönhetssalong, hur länge behöver jag vänta innan jag kan ge blod?",
+    "ground_truth":"Injektion utanför IVO-registrerad klinik enligt ovan på skönhetssalong eller liknande inrättning – får godkännas 6 månader efter injektionen.",
+    "response":""
+    },
+    {
+    "input":"Jag har tidigare haft reumatoid artrit, kan jag bli blodgivare?",
+    "ground_truth":"– godkänns inte. Permanent avstängning.",
+    "response":""
+    },
+    {
+        "input":"jag har haft en sköldkörtelsjukdom, kan jag ändå donera blod?",
+        "ground_truth":"En överfunktion av sköldkörteln som behandlats kan övergå till en underfunktion av sköldkörteln varför alla enskilda sjukdomar inte tas upp. Kontakta blodgivningen.",
+        "response":""
+    },
+    {
+        "input":"Jag har opererat sköldkörteln, får jag ändå donera blod?",
+        "ground_truth":" – får godkännas 6 månader efter operation.",
+        "response":""
+    },
+    
+    {
+    "input":"Jag har artros men är i övrigt frisk, kan jag ge blod?",
+    "ground_truth":"Får godkännas.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har multipel skleros (MS), kan jag donera blod?",
+    "ground_truth":"Godkänns inte. Permanent avstängning.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har Parkinsons sjukdom, kan jag ändå vara blodgivare?",
+    "ground_truth":"Godkänns inte. Permanent avstängning.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har haft epilepsi men har varit anfallsfri och utan medicin i över tre år, kan jag ge blod?",
+    "ground_truth":"Får godkännas om varit krampfri och utan behandling för epilepsi i minst tre år.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har tidigare haft hepatit A men är nu frisk, kan jag donera blod?",
+    "ground_truth":"Hepatit A – får godkännas 6 månader efter tillfrisknande.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har en autoimmun hepatit, kan jag bli blodgivare?",
+    "ground_truth":"Hepatit, autoimmun – godkänns inte. Permanent avstängning.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har haft syfilis och är nu frisk, kan jag ge blod?",
+    "ground_truth":"Får godkännas 1 år efter styrkt tillfrisknande.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har använt narkotika men slutade för två veckor sedan, kan jag ge blod?",
+    "ground_truth":"Användning av narkotikaklassade droger som röks, sväljs eller intas via slemhinnor – får godkännas 2 veckor efter användandet.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har haft förmaksflimmer men tar förebyggande medicin, kan jag donera blod?",
+    "ground_truth":"– Pågående förmaksflimmer – godkänns inte. Förebyggande tablettbehandling mot förmaksflimmer – godkänns inte.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har tidigare haft angina pectoris men är symtomfri nu, får jag ge blod?",
+    "ground_truth":"Godkänns inte om aktuella symtom eller tidigare haft angina pectoris. För givarens skull. Permanent avstängning.",
+    "response":""
+    }
+]

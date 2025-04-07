@@ -1,0 +1,63 @@
+[
+
+{
+    "input":"Hepatit ",
+    "ground_truth":"Hepatit A – får godkännas 6 månader efter tillfrisknande. Hepatit B– får godkännas om utläkt och HBsAg-test är negativ och anti-HBc kan påvisas och anti-HBs kan påvisas med titer ≥100 IE/L. Nära kontakt (samma hushåll) med en person som har en smittsam infektion med hepatit B-virus &#8211; får godkännas tidigast 6 månader efter att den nära kontakten upphört (inte längre samma hushåll) eller tidigast 6 månader efter att den smittsamma personen har bedömts som ej längre smittsam av behandlande läkare.Hepatit C &#8211; godkänns inte. Permanent avstängning. Sexuellt umgänge med person som är smittad med hepatit C &#8211; Får godkännas 6 månader efter sista sexuella kontakten.Hepatit D &#8211; godkänns inte. Permanent avstängning.Hepatit E &#8211; får godkännas 6 månader efter tillfrisknande.Hepatit orsakad av läkemedel &#8211; får godkännas 6 månader efter tillfrisknande.Hepatit, autoimmun &#8211; godkänns inte. Permanent avstängning.Herpes simplex",
+    "response":""
+},
+{
+    "input":"Syfilis (Lues)",
+    "ground_truth":"Får godkännas 1 år efter styrkt tillfrisknande.Om antikroppstest används kan det uppstå praktiska bekymmer eftersom antikroppar ofta kvarstår efter genomgången infektion. De flesta tester som idag används för screening av syfilis ger reaktivitet även om syfilis är utläkt, varför blodgivning ändå inte kommer att godkännas.",
+    "response":""
+},
+{
+    "input":"Tuberkulos (TBC)",
+    "ground_truth":"Får godkännas 2 år efter styrkt tillfrisknande.",
+    "response":""
+},
+{
+    "input":"Reumatisk feber",
+    "ground_truth":"Får godkännas 2 år efter tillfrisknande om inte belägg för kronisk hjärtsjukdom finns.",
+    "response":""
+},
+{
+    "input":"HTLV (Humant T-lymfotropt virus)",
+    "ground_truth":"Godkänns inte. Permanent avstängning.",
+    "response":""
+},
+{
+    "input":"Osteomyelit (Benröta)",
+    "ground_truth":"Får godkännas 2 år efter tillfrisknande.",
+    "response":""
+},
+{
+    "input":"Drogmissbruk",
+    "ground_truth":"Injektion med narkotika – godkänns inte. Permanent avstängning.Injektion med anabola steroider, hormoner eller något annat preparat utanför hälso- och sjukvården – godkänns inte. Permanent avstängning.Användning av narkotikaklassade droger som röks, sväljs eller intas via slemhinnor &#8211; får godkännas 2 veckor efter användandet.",
+    "response":""
+},
+{
+    "input":"Injektion utförd ",
+    "ground_truth":"på IVO-registrerad klinik enligt ovan – får godkännas dagen efter injektion om besvärsfri och om underliggande orsak är godtagbar. Se läkemedelslista. ",
+    "response":""
+},
+{
+    "input":"Botox",
+    "ground_truth":" utförd på IVO-registrerad klinik enligt ovan&#8211; får godkännas, ska dock de 3 närmaste dagarna efter senaste dos märkas &#8221;Plasma ej till patient&#8221; (OBS-kod K01).Injektion utanför IVO-registrerad klinik enligt ovan på skönhetssalong eller liknande inrättning – får godkännas 6 månader efter injektionen. Se läkemedelslista.Injektion i hemmet med kosmetiska preparat med engångssprutor – får godkännas 6 månader efter injektionen. Se läkemedelslista.Injektion i hemmet med kosmetiska preparat utan engångssprutor eller med delade nålar – godkänns inte. Permanent avstängning.",
+    "response":""
+},
+{
+    "input":"Hjärtinfarkt",
+    "ground_truth":" &#8211; godkänns inte. För givarens skull. Permanent avstängning.",
+    "response":""
+},
+{
+    "input":"Förmaksflimmer",
+    "ground_truth":" &#8211; Pågående förmaksflimmer &#8211; godkänns inte. Förebyggande tablettbehandling mot förmaksflimmer &#8211; godkänns inte. Återkommande elkonverteringar pga förmaksflimmer &#8211; godkänns inte.",
+    "response":""
+},
+{
+    "input":"Angina pectoris (Kärlkramp)",
+    "ground_truth":"Godkänns inte om aktuella symtom eller tidigare haft angina pectoris. För givarens skull. Permanent avstängning.Permanent avstängning även om symtomfri efter ev. operation.",
+    "response":""
+}
+]

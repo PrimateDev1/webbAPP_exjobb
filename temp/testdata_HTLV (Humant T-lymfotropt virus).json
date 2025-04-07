@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 24,
+  "input": "HTLV (Humant T-lymfotropt virus)",
+  "ground_truth": "Godkänns inte. Permanent avstängning.",
+  "response": "Humant T-lymfotropt virus (HTLV) är en typ av virus som är associerat med olika medicinska aspekter. Det är noterat att individer som är smittade med HTLV inte godkänns som blodgivare och leds till en permanent avstängning från blodgivning. Detta görs för att skydda både givaren och mottagaren. \n\nOm du har specifika frågor om HTLV, dess effekter, behandling eller relaterade ämnen, är du välkommen att fråga!"
+},
+{
+  "iteration": 24,
+  "input": "HTLV (Humant T-lymfotropt virus)",
+  "ground_truth": "Godkänns inte. Permanent avstängning.",
+  "response": "HTLV står för Humant T-lymfotropt virus, vilket är en retrovirus som kan orsaka olika sjukdomar, inklusive HTLV-relaterad leukemi/lymfom och myelopati. Enligt de uppgifter som finns i dokumentet accepterar blodcentraler inte individer som är smittade av HTLV som blodgivare, vilket innebär att sådana individer får permanent avstängning från blodgivning. \n\nOm du vill ha mer specifik information om HTLV, dess transmission eller relaterade sjukdomar, tveka inte att fråga!"
+},
+{
+  "iteration": 24,
+  "input": "HTLV (Humant T-lymfotropt virus)",
+  "ground_truth": "Godkänns inte. Permanent avstängning.",
+  "response": "HTLV (Humant T-lymfotropt virus) är ett virus som är kopplat till olika sjukdomar, inklusive vissa typer av leukemi och lymfom. Enligt informationen från det uppladdade dokumentet \"sjukdomar-och-åtgärder.txt,\" är blodgivning inte tillåten för personer med HTLV, vilket innebär en permanent avstängning från att ge blod. \n\nOm du har fler frågor eller behöver mer information om HTLV eller relaterade ämnen, tveka inte att fråga!"
+}
+
+]

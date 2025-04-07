@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 22,
+  "input": "Tuberkulos (TBC)",
+  "ground_truth": "Får godkännas 2 år efter styrkt tillfrisknande.",
+  "response": "Tuberkulos (TBC) är en bakteriesjukdom som främst drabbar lungorna, men kan även påverka andra delar av kroppen. Sjukdomen orsakas av Mycobacterium tuberculosis. \n\nNär det gäller blodgivning och tuberkulos, får en person godkännas som blodgivare två år efter styrkt tillfrisknande från aktiv tuberkulos. Om en person har latent tuberkulos kan de godkännas om de inte är under utredning eller behandling, och får godkännas två veckor efter avslutad antibiotikabehandling . \n\nVaccination mot tuberkulos sker med BCG-vaccin, och det är rekommenderat att ha en väntetid på fyra veckor efter vaccinationen innan man donar blod. \n\nOm du har fler frågor om tuberkulos eller relaterade ämnen, är du välkommen att fråga!"
+},
+{
+  "iteration": 22,
+  "input": "Tuberkulos (TBC)",
+  "ground_truth": "Får godkännas 2 år efter styrkt tillfrisknande.",
+  "response": "Tuberkulos (TBC) är en allvarlig smittsam sjukdom som främst påverkar lungorna men kan också sprida sig till andra delar av kroppen. Här är några viktiga punkter om sjukdomen och dess hantering:\n\n1. **Godkännande för blodgivning**: Personer som har haft tuberkulos får godkännas för blodgivning två år efter att de har tillfrisknat. För latent tuberkulos (där personen inte uppvisar symtom som tyder på aktiv sjukdom) får blodgivning godkännas om de inte är under utredning eller behandling. Det krävs också att det har gått två veckor efter att antibiotikabehandlingen har avslutats .\n\n2. **Tuberkulintest**: Ett tuberkulintest (PPD eller Mantoux) kan godkännas för blodgivning om det har avlästs och bedömts utan behov av ytterligare utredning eller behandling. Det kan ibland utföras före vaccination med BCG-vaccin, som i sig kan kräva ett uppehåll för blodgivning .\n\n3. **Vaccin**: BCG-vaccinet, som används för att förebygga tuberkulos, rekommenderas och kräver en väntetid på fyra veckor före blodgivning.\n\nDet är viktigt att följa riktlinjerna för hantering av tuberkulos för att säkerställa både vaccineringens och blodgivningens säkerhet."
+},
+{
+  "iteration": 22,
+  "input": "Tuberkulos (TBC)",
+  "ground_truth": "Får godkännas 2 år efter styrkt tillfrisknande.",
+  "response": "Tuberkulos (TBC) är en infektionssjukdom orsakad av bakterien Mycobacterium tuberculosis. Här är några viktiga punkter kring tuberkulos, inklusive behandlings- och blodgivningsaspekter:\n\n1. **Godkännande vid blodgivning**:\n   - Personer som har haft aktiv tuberkulos får godkännas för blodgivning **2 år** efter styrkt tillfrisknande.\n   - För personer med latent tuberkulos gäller att de får godkännas om de inte är under utredning eller behandling. De får också godkännas **2 veckor** efter avslutad behandling med antibiotika .\n\n2. **Vaccination**:\n   - För att förebygga tuberkulos används BCG-vaccin (Bacillus Calmette-Guérin) som effektivt skapar immunitet mot sjukdomen. Efter vaccination gäller en väntetid på **4 veckor** innan man kan delta i blodgivning.\n\nOm du har fler specifika frågor eller behöver mer information om tuberkulos, tveka inte att fråga!"
+}
+
+]

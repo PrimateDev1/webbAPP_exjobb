@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 18,
+  "input": "Epilepsi – diagnostiserad (Gäller inte enstaka krampanfall)",
+  "ground_truth": "Får godkännas om varit krampfri och utan behandling för epilepsi i minst tre år.",
+  "response": "För diagnosen epilepsi gäller följande: En person får godkännas som blodgivare om hen har varit krampfri och uten behandling för epilepsi i minst tre år. Det är viktigt att notera att detta inte gäller enstaka krampanfall."
+},
+{
+  "iteration": 18,
+  "input": "Epilepsi – diagnostiserad (Gäller inte enstaka krampanfall)",
+  "ground_truth": "Får godkännas om varit krampfri och utan behandling för epilepsi i minst tre år.",
+  "response": "Epilepsi anses som diagnostiserad om gälden inte rör sig om enstaka krampanfall. En person med diagnosen epilepsi får godkännas för blodgivning om de har varit krampfria och utan behandling för epilepsi i minst tre år."
+},
+{
+  "iteration": 18,
+  "input": "Epilepsi – diagnostiserad (Gäller inte enstaka krampanfall)",
+  "ground_truth": "Får godkännas om varit krampfri och utan behandling för epilepsi i minst tre år.",
+  "response": "Epilepsi som är diagnostiserad, med beaktande av att den inte gäller enstaka krampanfall, får godkännas om personen har varit krampfri och utan behandling för epilepsi i minst tre år."
+}
+
+]

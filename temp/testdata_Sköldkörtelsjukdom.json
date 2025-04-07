@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 9,
+  "input": "Sköldkörtelsjukdom",
+  "ground_truth": "En överfunktion av sköldkörteln som behandlats kan övergå till en underfunktion av sköldkörteln varför alla enskilda sjukdomar inte tas upp. Kontakta blodgivningen.",
+  "response": "Sköldkörtelsjukdomar inkluderar en mängd olika tillstånd som påverkar sköldkörteln, vilka kan orsaka antingen överfunktion eller underfunktion. Några av de vanligaste sjukdomarna som faller under denna kategori är:\n\n- **Tyreotoxikos**: En överfunktion av sköldkörteln.\n- **Hashimotos tyreoidit**: En autoimmun sjukdom som orsakar underfunktion.\n- **Graves sjukdom** (även kallad Basedows sjukdom): En autoimmun sjukdom som leder till hypertyreos.\n- **Toxisk diffus struma**: Överfunktion orsakad av en förstorad sköldkörtel.\n- **Knölstruma**: En förstorad sköldkörtel med knölar.\n- **Tyreoidit**: Inflammation i sköldkörteln.\n\nDet är viktigt att notera att en överfunktion av sköldkörteln som behandlas kan övergå till en underfunktion. Behandlingen kan inkludera läkemedel som tyreostatika eller radiojod, beroende på sjukdomens natur. \n\nFör personer med hypotyreos, det vill säga underfunktion av sköldkörteln, kan de godkännas för behandling om tillståndet är välinställt med medicinering. \n\nOperation av sköldkörteln får godkännas sex månader efter ingreppet, beroende på de specifika omständigheterna."
+},
+{
+  "iteration": 9,
+  "input": "Sköldkörtelsjukdom",
+  "ground_truth": "En överfunktion av sköldkörteln som behandlats kan övergå till en underfunktion av sköldkörteln varför alla enskilda sjukdomar inte tas upp. Kontakta blodgivningen.",
+  "response": "Sköldkörtelsjukdomar omfattar olika tillstånd som påverkar sköldkörtelns funktion, inklusive:\n\n- **Hypertyreos**: Överfunktion av sköldkörteln. Behandling kan inkludera tyreostatika (godkänns 12 månader efter sista dos) eller radiojod (godkänns 6 månader efter avslutad behandling).\n- **Hypotyreos**: Underfunktion av sköldkörteln. Behandling är möjlig och godkänns om patienten är välinställd på medicinering.\n- Andra sjukdomar relaterade till sköldkörteln inkluderar tyreotoxikos, Hashimotos tyreoidit, Graves sjukdom, Basedows sjukdom, toxisk diffus struma, knölstruma och autoimmun tyreoidit.\n\nObservera att om sköldkörteln har opererats, godkänns blodgivning tidigast 6 månader efter operationen. Sjukdomar relaterade till maligna tumörer godkänns inte för blodgivning."
+},
+{
+  "iteration": 9,
+  "input": "Sköldkörtelsjukdom",
+  "ground_truth": "En överfunktion av sköldkörteln som behandlats kan övergå till en underfunktion av sköldkörteln varför alla enskilda sjukdomar inte tas upp. Kontakta blodgivningen.",
+  "response": "Sköldkörtelsjukdomar omfattar en rad olika tillstånd relaterade till sköldkörteln, inklusive:\n\n- **Hypertyreos (överfunktion av sköldkörteln)**: Behandling med tyreostatika får godkännas 12 månader efter sista dos och behandling med radiojod får godkännas 6 månader efter avslutad behandling.\n- **Hypotyreos (underfunktion av sköldkörteln)**: Detta får godkännas om det är välinställt och kan behandlas med läkemedel.\n- Vanliga sköldkörtelsjukdomar inkluderar även tyreotoxikos, Hashimotos tyreoidit, Graves sjukdom (även känd som Basedows sjukdom), toxisk diffus struma, knölstruma och autoimmun tyreoidit.\n\nVid operation av sköldkörteln är det viktigt att notera att detta får godkännas 6 månader efter ingreppet. Diagnoser som är under utredning, exempelvis elakartad tumör (cancer) eller del av multiorgansjukdom, godkänns inte."
+}
+
+]

@@ -73,9 +73,14 @@ const Chatbot = () => {
 // ✅ Keep styles as an object inside JavaScript
 const styles = {
     chatbotContainer: {
-        position: "fixed", center: "20px", left: "20px", marginTop: "40px", marginLeft: "30px",
-        width: "300px", background: "#fff", padding: "20px",
-        border: "1px solid #ccc", borderRadius: "5px",
+        position: "",
+        left: "20px",
+        top: "40px",
+        width: "300px",
+        background: "#fff",
+        padding: "20px",
+        border: "1px solid #ccc",
+        borderRadius: "5px",
         boxShadow: "0px 0px 10px rgba(0,0,0,0.1)",
         zIndex: 1000
     },

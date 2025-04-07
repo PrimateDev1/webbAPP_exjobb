@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 23,
+  "input": "Reumatisk feber",
+  "ground_truth": "Får godkännas 2 år efter tillfrisknande om inte belägg för kronisk hjärtsjukdom finns.",
+  "response": "Reumatisk feber är en sjukdom som kan uppstå som en komplikation till halsfluss orsakad av streptokocker. Det är en inflammatorisk sjukdom som påverkar hjärtat, leder, hud och centrala nervsystemet. När det gäller blodgivning finns det specifika riktlinjer:\n\n- En person som har haft reumatisk feber får godkännas för blodgivning två år efter tillfrisknande, förutsatt att det inte finns belägg för kronisk hjärtsjukdom. \n\nDet är viktigt att notera att reumatisk feber kan orsaka bestående skador på hjärtats klaffar, vilket kan påverka bedömningen av blodgivarens hälsa."
+},
+{
+  "iteration": 23,
+  "input": "Reumatisk feber",
+  "ground_truth": "Får godkännas 2 år efter tillfrisknande om inte belägg för kronisk hjärtsjukdom finns.",
+  "response": "Reumatisk feber är en sjukdom som kan uppkomma som en komplikation till en streptokockinfektion, såsom halsfluss. Den kännetecknas av inflammation i leder, hjärta, hud och nervsystem. \n\nNär det gäller blodgivning, får personer som har haft reumatisk feber godkännas för blodgivning 2 år efter tillfrisknande, så länge det inte finns några indicier på kronisk hjärtsjukdom."
+},
+{
+  "iteration": 23,
+  "input": "Reumatisk feber",
+  "ground_truth": "Får godkännas 2 år efter tillfrisknande om inte belägg för kronisk hjärtsjukdom finns.",
+  "response": "Reumatisk feber (rheumatisk feber) är en sjukdom som kan uppstå efter en streptokockinfektion, oftast en halsfluss. Den kan leda till inflammation i hjärtat, leder, hud och centrala nervsystemet. Det är viktigt att behandla den underliggande streptokockinfektionen för att förhindra reumatisk feber.\n\nEnligt riktlinjer för blodgivning får personer som har haft reumatisk feber godkännas för blodgivning två år efter tillfrisknande, förutsatt att det inte finns tecken på kronisk hjärtsjukdom."
+}
+
+]

@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 4,
+  "input": "Malignt melanom",
+  "ground_truth": "Godkänns inte. Permanent avstängning.",
+  "response": "Malignt melanom är en form av hudcancer som uppstår från melanocyter, de celler som producerar pigmentet melanin. Det är den mest aggressiva formen av hudcancer och kan sprida sig till andra delar av kroppen om det inte upptäcktes i tid.\n\nI vissa dokument beskrivs malignt melanom således:\n\n- **Godkänns inte**: Enligt riktlinjer för blodgivning är personer som har drabbats av malignt melanom underkastade permanent avstängning som blodgivare. \n\nDet är viktigt att tidig upptäckte av symtom och behandling är avgörande för överlevnaden och resultatet av sjukdomen. Flera faktorer, såsom storlek på tumören och huruvida den har spridit sig, påverkar prognosen.\n\nOm du har fler specifika frågor eller behöver mer information, tveka inte att fråga!"
+},
+{
+  "iteration": 4,
+  "input": "Malignt melanom",
+  "ground_truth": "Godkänns inte. Permanent avstängning.",
+  "response": "Malignt melanom, som är en typ av hudcancer, godkänns inte för blodgivning. Detta medför permanent avstängning av individen från att ge blod. \n\nDet är viktigt att notera att om en person har eller har haft malignt melanom, kan det påverka deras kapacitet att bidra som blodgivare, oavsett behandlingsresultat eller nuvarande hälsotillstånd."
+},
+{
+  "iteration": 4,
+  "input": "Malignt melanom",
+  "ground_truth": "Godkänns inte. Permanent avstängning.",
+  "response": "Malignt melanom är en allvarlig form av hudcancer som utvecklas från melanocyter, de celler som producerar pigmentet melanin i huden. Enligt de riktlinjer som finns i dokumentet, om en individ har diagnostiserats med malignt melanom, får de inte bli blodgivare, och detta resulterar i permanent avstängning. \n\nDet är viktigt att följa upp med läkarbesök och eventuell behandling, och personer som blivit friskförklarade från cancer inklusive malignt melanom är inte godkända som blodgivare."
+}
+
+]

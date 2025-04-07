@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 27,
+  "input": "Injektion utförd ",
+  "ground_truth": "på IVO-registrerad klinik enligt ovan – får godkännas dagen efter injektion om besvärsfri och om underliggande orsak är godtagbar. Se läkemedelslista. ",
+  "response": "En injektion som utförs på en IVO-registrerad klinik får godkännas dagen efter om patienten är besvärsfri och om den underliggande orsaken är godtagbar. Det är viktigt att observera att injektioner som utförs utanför en IVO-registrerad klinik, till exempel på skönhetssalonger, får godkännas först sex månader efter injektionen. \n\nVid botoxinjektioner från en IVO-registrerad klinik ska det noteras \"Plasma ej till patient\" under tre dagar efter den senaste dosen. Injektioner i hemmet med kosmetiska preparat får också godkännas, men kriterierna varierar efter ifall engångssprutor används eller om delade nålar används, där den senare leder till permanent avstängning. \n\nOm du har fler specifika frågor angående injektioner eller relaterade processer, låt mig veta!"
+},
+{
+  "iteration": 27,
+  "input": "Injektion utförd ",
+  "ground_truth": "på IVO-registrerad klinik enligt ovan – får godkännas dagen efter injektion om besvärsfri och om underliggande orsak är godtagbar. Se läkemedelslista. ",
+  "response": "En injektion som är utförd på en IVO-registrerad klinik kan godkännas dagen efter injektionen om patienten är besvärsfri och om den underliggande orsaken bedöms vara godtagbar. Det är viktigt att påpeka att injektioner gjort utanför en IVO-registrerad klinik, såsom på en skönhetssalong, får godkännas tidigast sex månader efter injektionen. \n\nOm du har specifika frågor om injektionen eller dess klassificering, tveka inte att ställa dem!"
+},
+{
+  "iteration": 27,
+  "input": "Injektion utförd ",
+  "ground_truth": "på IVO-registrerad klinik enligt ovan – får godkännas dagen efter injektion om besvärsfri och om underliggande orsak är godtagbar. Se läkemedelslista. ",
+  "response": "Om en injektion har utförts på en IVO-registrerad klinik, får den godkännas dagen efter injektionen, förutsatt att patienten är besvärsfri och att den underliggande orsaken är godtagbar. Det finns specifika regler kring olika typer av injektioner, särskilt kosmetiska injektioner, där det anges att Botox injektioner också får godkännas med särskilda märkningar vissa dagar efter utförandet. \n\nInjektioner utförda utanför IVO-registrerade kliniker, som på skönhetssalonger, får däremot godkännas först efter 6 månader, och injektioner som görs i hemmet med delade nålar eller utan engångssprutor godkänns inte överhuvudtaget, vilket innebär permanent avstängning. \n\nDetta betyder att hanteringen av injektioner är strängt reglerad för att säkerställa patientens säkerhet och effektiviteten i behandlingen."
+}
+
+]

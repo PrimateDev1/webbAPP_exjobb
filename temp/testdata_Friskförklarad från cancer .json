@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 6,
+  "input": "Friskförklarad från cancer ",
+  "ground_truth": "&#8211; godkänns inte. Permanent avstängning. ",
+  "response": "Att vara friskförklarad från cancer innebär vanligtvis att man har fullgjort en behandlingsplan och uppnått ett tillstånd som anses vara utan tecken på sjukdomen. Men det är viktigt att notera att enligt de riktlinjer som finns i dokumenten du har laddat upp, godkänns inte personer som är friskförklarade från cancer som blodgivare. Det står uttryckligen att friskförklarad från cancer \"godkänns inte. Permanent avstängning\". \n\nDet är viktigt att ha i åtanke att dessa riktlinjer är till för att skydda både givaren och mottagaren, och olika typer av cancer kan ha olika regler och undantag beroende på omständigheterna kring sjukdomen och dess behandling."
+},
+{
+  "iteration": 6,
+  "input": "Friskförklarad från cancer ",
+  "ground_truth": "&#8211; godkänns inte. Permanent avstängning. ",
+  "response": "Enligt dokumentet godkänns inte blodgivning för individer som har blivit friskförklarade från cancer. Det anges tydligt att personer som är friskförklarade från cancer får en permanent avstängning från blodgivning."
+},
+{
+  "iteration": 6,
+  "input": "Friskförklarad från cancer ",
+  "ground_truth": "&#8211; godkänns inte. Permanent avstängning. ",
+  "response": "Att bli friskförklarad från cancer innebär inte per automatik att man kan godkännas som blodgivare. Enligt den information som finns i dokumentet så godkänns inte personer som har blivit friskförklarade från cancer. Det anges också att maligna sjukdomar generellt inte tillåts för blodgivning, vilket innebär att personer med en historia av cancervård är föremål för permanent avstängning från blodgivning. \n\nDäremot finns det särskilda fall för cancer in situ, där godkännande kan övervägas efter fullt tillfrisknande och minst en kontroll utan anmärkning, eller om läkare bedömt att ingen uppföljning krävs."
+}
+
+]

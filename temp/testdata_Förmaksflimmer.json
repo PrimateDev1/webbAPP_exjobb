@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 30,
+  "input": "Förmaksflimmer",
+  "ground_truth": " &#8211; Pågående förmaksflimmer &#8211; godkänns inte. Förebyggande tablettbehandling mot förmaksflimmer &#8211; godkänns inte. Återkommande elkonverteringar pga förmaksflimmer &#8211; godkänns inte.",
+  "response": "Förmaksflimmer är en typ av oregelbunden hjärtrytmen som inte godkänns under vissa förhållanden när det gäller blodgivning. Enligt det dokument som granskats, blir individer med pågående förmaksflimmer, de som får förebyggande behandling mot förmaksflimmer, samt de som genomgår återkommande elkonverteringar på grund av förmaksflimmer, inte godkända för blodgivning.\n\nOm du har fler frågor om förmaksflimmer eller relaterade ämnen, tveka inte att fråga!"
+},
+{
+  "iteration": 30,
+  "input": "Förmaksflimmer",
+  "ground_truth": " &#8211; Pågående förmaksflimmer &#8211; godkänns inte. Förebyggande tablettbehandling mot förmaksflimmer &#8211; godkänns inte. Återkommande elkonverteringar pga förmaksflimmer &#8211; godkänns inte.",
+  "response": "Förmaksflimmer, ett tillstånd där hjärtats förmak slår oregelbundet och ofta snabbt, har flera restriktioner kopplade till blodgivning. Enligt de uppgifter som finns i dokumentet godkänns inte:\n\n- Pågående förmaksflimmer.\n- Förebyggande tablettbehandling mot förmaksflimmer.\n- Återkommande elkonverteringar på grund av förmaksflimmer.\n\nDet är en allvarlig hjärtrytmrubbning som kan leda till stroke och andra komplikationer, och därför är det viktigt att de som lider av detta tillstånd inte bidrar till blodgivning."
+},
+{
+  "iteration": 30,
+  "input": "Förmaksflimmer",
+  "ground_truth": " &#8211; Pågående förmaksflimmer &#8211; godkänns inte. Förebyggande tablettbehandling mot förmaksflimmer &#8211; godkänns inte. Återkommande elkonverteringar pga förmaksflimmer &#8211; godkänns inte.",
+  "response": "Förmaksflimmer är en typ av arytmi (oregelbunden hjärtrytm) som kännetecknas av att hjärtat slår oregelbundet och ofta snabbare än normalt. Här är viktiga punkter att notera angående förmaksflimmer ur hälsoperspektiv:\n\n1. **Godkännande för blodgivning**: Pågående förmaksflimmer godkänns inte för blodgivning. Detta gäller även förebyggande behandling med tabletter mot förmaksflimmer samt återkommande elkonverteringar på grund av förmaksflimmer. Detta innebär att personer som har dessa tillstånd inte får ge blod.\n\n2. **Behandlingsmetoder**: Almänna behandlingsmetoder för förmaksflimmer kan inkludera läkemedel, elkonvertering och i vissa fall ablation. Det är viktigt att patienter med förmaksflimmer får en noggrann medicinsk bedömning och följdbehandling.\n\nOm du har specifika frågor om symptomen, diagnos eller behandling av förmaksflimmer, tveka inte att fråga!"
+}
+
+]

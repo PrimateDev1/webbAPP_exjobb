@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 26,
+  "input": "Drogmissbruk",
+  "ground_truth": "Injektion med narkotika – godkänns inte. Permanent avstängning.Injektion med anabola steroider, hormoner eller något annat preparat utanför hälso- och sjukvården – godkänns inte. Permanent avstängning.Användning av narkotikaklassade droger som röks, sväljs eller intas via slemhinnor &#8211; får godkännas 2 veckor efter användandet.",
+  "response": "Drogmissbruk innebär ett möjligt missbruk av både narkotiska ämnen och andra preparat. Enligt information från dokumentet, får injektion med narkotika inte godkännas, vilket leder till en permanent avstängning från blodgivning. Användning av anabola steroider, hormoner eller preparat utanför hälso- och sjukvården godkänns inte heller och resulterar i permanent avstängning.\n\nÅ andra sidan, om narkotikaklassade droger används genom att röka, svälja eller inta via slemhinnor, kan detta godkännas om det har gått minst två veckor sedan användningen. \n\nDetta visar vikten av att ha noggranna och ansvariga rutiner för att säkerställa både givarnas och mottagarnas säkerhet."
+},
+{
+  "iteration": 26,
+  "input": "Drogmissbruk",
+  "ground_truth": "Injektion med narkotika – godkänns inte. Permanent avstängning.Injektion med anabola steroider, hormoner eller något annat preparat utanför hälso- och sjukvården – godkänns inte. Permanent avstängning.Användning av narkotikaklassade droger som röks, sväljs eller intas via slemhinnor &#8211; får godkännas 2 veckor efter användandet.",
+  "response": "Drogmissbruk kan ha olika konsekvenser och behandlas på olika sätt beroende på typ och omfattning av missbruket. Enligt informationen i det dokument jag har tillgång till, gäller följande riktlinjer för blodgivare som har en historia av drogmissbruk:\n\n1. **Injektion med narkotika**: Detta är inte godkänt och leder till permanent avstängning som blodgivare.\n2. **Injektion med anabola steroider, hormoner eller andra preparat utanför hälso- och sjukvården**: Även detta godkänns inte och resulterar i permanent avstängning.\n3. **Användning av narkotikaklassade droger som röks, sväljs eller intas via slemhinnor**: Detta kan godkännas, men tidigast två veckor efter att drogen använts.\n\nDet är viktigt att personer med drogmissbruk får stöd och hjälp för att hantera sitt missbruk, och det finns många resurser och behandlingar tillgängliga för detta."
+},
+{
+  "iteration": 26,
+  "input": "Drogmissbruk",
+  "ground_truth": "Injektion med narkotika – godkänns inte. Permanent avstängning.Injektion med anabola steroider, hormoner eller något annat preparat utanför hälso- och sjukvården – godkänns inte. Permanent avstängning.Användning av narkotikaklassade droger som röks, sväljs eller intas via slemhinnor &#8211; får godkännas 2 veckor efter användandet.",
+  "response": "Drogmissbruk har specifika riktlinjer när det gäller medicinska åtgärder. Här är några viktiga punkter:\n\n1. **Injektion med narkotika**: Godkänns inte och leder till permanent avstängning från blodgivning.\n   \n2. **Injektion med anabola steroider, hormoner eller andra preparat utanför hälso- och sjukvården**: Godkänns inte, vilket också resulterar i permanent avstängning.\n\n3. **Användning av narkotikaklassade droger** som röks, sväljs eller intas via slemhinnor: Detta får godkännas 2 veckor efter användandet.\n\nDessa riktlinjer syftar till att skydda både givaren och mottagaren inom hälso- och sjukvården."
+}
+
+]

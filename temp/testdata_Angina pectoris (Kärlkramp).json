@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 31,
+  "input": "Angina pectoris (Kärlkramp)",
+  "ground_truth": "Godkänns inte om aktuella symtom eller tidigare haft angina pectoris. För givarens skull. Permanent avstängning.Permanent avstängning även om symtomfri efter ev. operation.",
+  "response": "Angina pectoris, även känd som kärlkramp, är ett tillstånd som kännetecknas av bröstsmärta eller obehag som uppstår när hjärtat inte får tillräckligt med syre. Denna brist på syre kan vara ett resultat av kranskärlssjukdom, där blodkärlen som förser hjärtat med blod börjar bli förträngda eller blockerade av plack.\n\nEnligt informationen i dokumentet så godkänns inte blodgivning om man har aktuella symtom på angina pectoris eller om man tidigare har haft tillståndet. För givarens säkerhet rekommenderas permanent avstängning från blodgivning även om man skulle vara symtomfri efter eventuell operation. \n\nOm du har specifika frågor om behandling eller symptom hantering av angina pectoris, ställ gärna ytterligare frågor!"
+},
+{
+  "iteration": 31,
+  "input": "Angina pectoris (Kärlkramp)",
+  "ground_truth": "Godkänns inte om aktuella symtom eller tidigare haft angina pectoris. För givarens skull. Permanent avstängning.Permanent avstängning även om symtomfri efter ev. operation.",
+  "response": "Angina pectoris, även känd som kärlkramp, är en sjukdom som kännetecknas av smärta eller obehag i bröstet när hjärtat inte får tillräckligt med blod och syre, ofta på grund av förträngningar i kransartärerna. I kontexten av blodgivning är angina pectoris stationär i sina riktlinjer, vilket innebär följande:\n\n- Om en person har aktuella symtom eller tidigare har haft angina pectoris, godkänns de inte som blodgivare. Detta gäller även om personen varit symtomfri efter eventuell operation relaterad till angina pectoris. Det resulterar i permanent avstängning från att ge blod. \n\nDetta beslut är baserat på hänsyn till säkerheten för givaren, eftersom angina pectoris kan indikera underliggande hjärtsjukdomar som kan påverka en persons hälsa negativt i samband med blodgivning."
+},
+{
+  "iteration": 31,
+  "input": "Angina pectoris (Kärlkramp)",
+  "ground_truth": "Godkänns inte om aktuella symtom eller tidigare haft angina pectoris. För givarens skull. Permanent avstängning.Permanent avstängning även om symtomfri efter ev. operation.",
+  "response": "Angina pectoris, eller kärlkramp, är en typ av hjärtproblem som kännetecknas av bröstsmärtor som uppstår när hjärtmuskeln inte får tillräckligt med syre. Detta händer ofta vid fysisk ansträngning eller stress. \n\nEnligt de uppgifter som finns i dokumentet, bedöms situationen angående angina pectoris på följande sätt:\n\n- Angina pectoris godkänns **inte** för blodgivare som har aktuella symtom eller som har haft angina pectoris tidigare. \n- Det föreligger permanent avstängning för blodgivare, även om de är symtomfria efter eventuell operation relaterad till angina pectoris.\n\nDetta innebär att personer med en historia av angina pectoris inte kan bli blodgivare för att skydda både givaren och mottagaren."
+}
+
+]

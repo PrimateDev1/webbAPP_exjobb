@@ -63,9 +63,21 @@ const QuestionPage = () => {
     }
   };
 
+  const styles = {
+    container: {
+      display: "flex",             // Make it a flex container
+      flexDirection: "column",     // Stack children vertically
+      justifyContent: "flex-end", // Align items to the top (main axis)
+      alignItems: "center",     // Align items to the left (cross axis)
+      marginLeft: "40px",
+      padding: "1em",              // Optional: spacing inside the container
+      gap: "1em",                  // Optional: spacing between child elements
+    },
+  };
+
   return (
     <div className="container">
-      <div className="question-box" style={{ marginLeft: "40px" }}>
+      <div className="question-box" style={styles.container}>
       <h1>Fråga {question.id}</h1>
       <p>{question.text}</p>
 

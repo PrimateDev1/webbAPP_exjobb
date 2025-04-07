@@ -1,0 +1,36 @@
+[  {
+    "input":"Jag har tidigare haft hepatit A men är nu frisk, kan jag donera blod?",
+    "ground_truth":"Hepatit A – får godkännas 6 månader efter tillfrisknande.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har en autoimmun hepatit, kan jag bli blodgivare?",
+    "ground_truth":"Hepatit, autoimmun – godkänns inte. Permanent avstängning.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har haft syfilis och är nu frisk, kan jag ge blod?",
+    "ground_truth":"Får godkännas 1 år efter styrkt tillfrisknande.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har använt narkotika men slutade för två veckor sedan, kan jag ge blod?",
+    "ground_truth":"Användning av narkotikaklassade droger som röks, sväljs eller intas via slemhinnor – får godkännas 2 veckor efter användandet.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har haft förmaksflimmer men tar förebyggande medicin, kan jag donera blod?",
+    "ground_truth":"– Pågående förmaksflimmer – godkänns inte. Förebyggande tablettbehandling mot förmaksflimmer – godkänns inte.",
+    "response":""
+    },
+    
+    {
+    "input":"Jag har tidigare haft angina pectoris men är symtomfri nu, får jag ge blod?",
+    "ground_truth":"Godkänns inte om aktuella symtom eller tidigare haft angina pectoris. För givarens skull. Permanent avstängning.",
+    "response":""
+    }
+]

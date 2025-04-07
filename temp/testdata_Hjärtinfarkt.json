@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 29,
+  "input": "Hjärtinfarkt",
+  "ground_truth": " &#8211; godkänns inte. För givarens skull. Permanent avstängning.",
+  "response": "En hjärtinfarkt, också känd som myocardial infarction, innebär att en del av hjärtmuskeln skadas på grund av otillräcklig blodförsörjning, oftast orsakad av en blodpropp i en kransartär. Detta tillstånd är potentiellt livshotande och kräver omedelbar medicinsk hjälp.\n\nEnligt faktabladet, så godkänns inte blodgivning för personer som har drabbats av hjärtinfarkt. Det medför en permanent avstängning från blodgivning för givarens säkerhet. \n\nOm du har fler frågor eller behöver mer information om hjärtinfarkt eller andra relaterade ämnen, tveka inte att fråga!"
+},
+{
+  "iteration": 29,
+  "input": "Hjärtinfarkt",
+  "ground_truth": " &#8211; godkänns inte. För givarens skull. Permanent avstängning.",
+  "response": "Hjärtinfarkt, eller hjärtattack, är en allvarlig medicinsk tillstånd som uppstår när blodflödet till en del av hjärtat blockeras, vilket kan leda till skador på hjärtmuskeln. Personer som haft en hjärtinfarkt får inte godkännas för blodgivning igen, eftersom det betraktas som en permanent avstängning, av hänsyn till givaren själv. \n\nDet är viktigt att förstå att hjärtinfarkt innebär en risk för framtida hälsoproblem och att sådana individer därför inte ska delta i blodgivning."
+},
+{
+  "iteration": 29,
+  "input": "Hjärtinfarkt",
+  "ground_truth": " &#8211; godkänns inte. För givarens skull. Permanent avstängning.",
+  "response": "Hjärtinfarkt är en allvarlig medicinsk tillstånd som innebär att blodtillförseln till en del av hjärtmuskeln blockeras, vilket kan leda till skador eller död av hjärtmuskelceller. Detta tillstånd klassificeras under sjukdomar som inte godkänns för blodgivning. En person som har haft hjärtinfarkt kommer att bli permanent avstängd från att ge blod, dels för sin egen säkerhet och hälsa. \n\nOm du har ytterligare frågor om hjärtinfarkter eller relaterade ämnen, är du välkommen att fråga!"
+}
+
+]

@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 17,
+  "input": "Demens (ex: Alzheimers sjukdom)",
+  "ground_truth": "Godkänns inte. Permanent avstängning.",
+  "response": "Demens, särskilt Alzheimers sjukdom, innebär en permanent avstängning från blodgivning. Det betyder att en person med denna diagnos inte kan godkännas som blodgivare. \n\nOm du har fler frågor eller behöver mer information om demens eller relaterade ämnen, tveka inte att fråga!"
+},
+{
+  "iteration": 17,
+  "input": "Demens (ex: Alzheimers sjukdom)",
+  "ground_truth": "Godkänns inte. Permanent avstängning.",
+  "response": "Demens, inklusive Alzheimers sjukdom, innebär en permanent avstängning från blodgivning. Det innebär att individer med dessa diagnoser inte får vara blodgivare. \n\nOm du har fler frågor eller behöver mer information, tveka inte att fråga!"
+},
+{
+  "iteration": 17,
+  "input": "Demens (ex: Alzheimers sjukdom)",
+  "ground_truth": "Godkänns inte. Permanent avstängning.",
+  "response": "Demens, inklusive Alzheimers sjukdom, är en sjukdom som medför en permanent avstängning från blodgivning. Enligt de riktlinjer som finns behöver personer med bekräftad diagnos av demens inte längre godkännas som blodgivare, vilket gäller oavsett sjukdomens svårighetsgrad eller behandling. \n\nOm du har fler frågor om demens eller relaterade ämnen, tveka inte att fråga!"
+}
+
+]

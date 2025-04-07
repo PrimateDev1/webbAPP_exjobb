@@ -1,0 +1,41 @@
+[
+{
+  "iteration": 2,
+  "input": "Testosteronbrist",
+  "ground_truth": "Får godkännas om orsaken är godkänd för blodgivning. Fråga om läkemedelsbehandling, vid behov se läkemedelslista.",
+  "response": "Testosteronbrist, även känd som hypogonadism, kan uppstå av flera orsaker och leda till en rad symptom. Behandling av testosteronbrist är ibland aktuell, och i detta sammanhang godkänns den om orsaken är godkänd för blodgivning. Det är viktigt att rådgöra om eventuell läkemedelsbehandling, och en läkemedelslista kan behövas för mer information.\n\nOm du har specifika frågor om orsaker, symptom eller behandlingsalternativ kan jag ge mer detaljerad information."
+},
+{
+  "iteration": 2,
+  "input": "Testosteronbrist",
+  "ground_truth": "Får godkännas om orsaken är godkänd för blodgivning. Fråga om läkemedelsbehandling, vid behov se läkemedelslista.",
+  "response": "Testosteronbrist kan godkännas för blodgivning om orsaken är godkänd för detta. Det är viktigt att kontrollera om det finns behov av läkemedelsbehandling relaterat till tillståndet. Vid behov bör givarens medicinlista inspekteras för att säkerställa att de läkemedel som tas inte påverkar blodgivningen negativt."
+}
+
+,{
+  "iteration": 2,
+  "input": "Testosteronbrist",
+  "ground_truth": "Får godkännas om orsaken är godkänd för blodgivning. Fråga om läkemedelsbehandling, vid behov se läkemedelslista.",
+  "response": "Testosteronbrist, eller brist på testosteron, får godkännas för blodgivning om orsaken till bristen är godkänd för blodgivning. Det är också viktigt att fråga om eventuell läkemedelsbehandling och, vid behov, att kontrollera läkemedelslistan."
+},
+{
+  "iteration": 2,
+  "input": "Testosteronbrist",
+  "ground_truth": "Får godkännas om orsaken är godkänd för blodgivning. Fråga om läkemedelsbehandling, vid behov se läkemedelslista.",
+  "response": "Testosteronbrist, eller hypogonadism, är ett medicinskt tillstånd där kroppen producerar otillräckliga mängder av testosteron, vilket kan påverka många aspekter av hälsa och välbefinnande. Här är några viktiga punkter att veta om testosteronbrist:\n\n1. **Symptom**: Vanliga symptom inkluderar trötthet, nedsatt libido, minskat muskelmassa, humörförändringar och ibland viktökning.\n\n2. **Behandling**: För personer med testosteronbrist kan behandling övervägas, och detta bör noggrant bedömas av en läkare. Behandlingen kan innebära testosteronersättning.\n\n3. **Återställning av testosteronnivåer**: Det är viktigt att identifiera orsaken till testosteronbristen för att kunna erbjuda rätt behandling. \n\n4. **Godkännande för blodgivning**: I enlighet med riktlinjer får testosteronbrist godkännas om orsaken är godkänd för blodgivning.\n\nOm du har fler frågor om symptomen, orsakerna eller behandlingen av testosteronbrist, tveka inte att fråga!"
+}
+
+,{
+  "iteration": 2,
+  "input": "Testosteronbrist",
+  "ground_truth": "Får godkännas om orsaken är godkänd för blodgivning. Fråga om läkemedelsbehandling, vid behov se läkemedelslista.",
+  "response": "Testosteronbrist, även känt som lågt testosteron, kan leda till flera symtom och hälsoproblem. Här är en sammanfattning av relevant information:\n\n### Definition och Orsaker\nTestosteronbrist kan godkännas för blodgivning om orsaken till bristen är godkänd för blodgivning. För mer detaljerad information om behandlingar kan det vara bra att fråga om läkemedelsbehandling.\n\n### Symtom\nSymtomen vid testosteronbrist kan inkludera:\n- Minskad libido\n- Erektil dysfunktion\n- Trötthet och minskad energi\n- Depressiva symtom\n- Minskad muskelmassa och styrka\n- Ökad kroppsfett\n\n### Behandlingsalternativ\nBehandlingar för testosteronbrist kan innefatta hormonbehandling, livsstilsförändringar och läkemedel. Det är viktigt att rådfråga en läkare för att få en korrekt diagnos och behandling.\n\nOm du vill ha mer specifik information eller har frågor kring testosteronbrist, tveka inte att ställa dem!"
+},
+{
+  "iteration": 2,
+  "input": "Testosteronbrist",
+  "ground_truth": "Får godkännas om orsaken är godkänd för blodgivning. Fråga om läkemedelsbehandling, vid behov se läkemedelslista.",
+  "response": "Testosteronbrist är en medicinsk tillstånd där kroppen inte producerar tillräckligt med testosteron, ett viktigt hormon som påverkar många funktioner i kroppen, inklusive sexuell hälsa, muskelmassan och energinivåerna.\n\nEnligt information från dokumentet \"sjukdomar-och-åtgärder.txt\", får blodgivning godkännas om orsaken till testosteronbristen är godkänd för blodgivning. Det rekommenderas att man också frågar om eventuell läkemedelsbehandling och hänvisar till läkemedelslistan vid behov. \n\nOm du har fler specifika frågor eller behöver detaljerad information om behandling eller symptom relaterade till testosteronbrist, tveka inte att fråga!"
+}
+
+]

@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 12,
+  "input": "Kronisk artrit",
+  "ground_truth": " – bedömning baseras på grundsjukdomen. Fråga om läkemedelsbehandling, vid behov se läkemedelslista. ",
+  "response": "Kronisk artrit, eller långvarig ledinflammation, bedöms utifrån den underliggande sjukdomen. I sammanhang där en grundsjukdom finns, är det viktigt att ställa frågor om eventuell läkemedelsbehandling och att konsultera en läkemedelslista vid behov. Det noteras också att reumatoid artrit inte godkänns för blodgivning, vilket innebär att sådana individer permanent avstängs från att ge blod. \n\nDet är avgörande att förstå den specifika diagnosen och behandlingen av kronisk artrit för att göra en korrekt bedömning av patientens tillstånd och möjligheten till blodgivning."
+},
+{
+  "iteration": 12,
+  "input": "Kronisk artrit",
+  "ground_truth": " – bedömning baseras på grundsjukdomen. Fråga om läkemedelsbehandling, vid behov se läkemedelslista. ",
+  "response": "Kronisk artrit är en form av ledinflammation som har flerfaldiga orsaker och där bedömningen baseras på grundsjukdomen. Det är viktigt att alltid fråga om eventuell läkemedelsbehandling, vilket kan vara relevant för dessa patienter. \n\nOm du har specifika frågor kring symptom, behandling eller livsstilsjusteringar relaterade till kronisk artrit, tveka inte att ställa dem!"
+},
+{
+  "iteration": 12,
+  "input": "Kronisk artrit",
+  "ground_truth": " – bedömning baseras på grundsjukdomen. Fråga om läkemedelsbehandling, vid behov se läkemedelslista. ",
+  "response": "Kronisk artrit, eller långvarig ledinflammation, bedöms utifrån grundsjukdomen som orsakar tillståndet. Det är viktigt att kontrollera om det finns en underliggande sjukdom kopplad till artriten. Vid bedömningen bör även läkemedelsbehandling övervägas, om det är aktuellt. \n\nOm du har ytterligare frågor om kronisk artrit eller relaterade ämnen är du välkommen att ställa dem!"
+}
+
+]

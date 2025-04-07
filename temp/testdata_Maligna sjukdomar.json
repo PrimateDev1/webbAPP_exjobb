@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 3,
+  "input": "Maligna sjukdomar",
+  "ground_truth": "Cancer &#8211; godkänns inte. Friskförklarad från cancer &#8211; godkänns inte. Cancer in situ &#8211; får godkännas om fullt tillfrisknande och minst en kontroll utan anmärkning eller om läkare bedömt att ingen uppföljning krävs.",
+  "response": "Maligna sjukdomar, vilket innefattar olika typer av cancer, får generellt inte godkännas för blodgivning. Här är några specifika punkter:\n\n1. **Cancer**: Godkänns inte. Friskförklarad från cancer godkänns inte heller.\n2. **Cancer in situ**: Får godkännas endast om det skett ett fullständigt tillfrisknande och minst en kontroll utan anmärkning, eller om läkare bedömt att ingen uppföljning krävs.\n3. **Malignt melanom**: Godkänns inte och leder till permanent avstängning från blodgivning.\n4. **Myelodysplastiskt syndrom (MDS)** och **myelom**: Dessa sjukdomar leder också till permanent avstängning.\n\nOm du har fler frågor eller behöver mer specifik information om en särskild sjukdom, tveka inte att fråga!"
+},
+{
+  "iteration": 3,
+  "input": "Maligna sjukdomar",
+  "ground_truth": "Cancer &#8211; godkänns inte. Friskförklarad från cancer &#8211; godkänns inte. Cancer in situ &#8211; får godkännas om fullt tillfrisknande och minst en kontroll utan anmärkning eller om läkare bedömt att ingen uppföljning krävs.",
+  "response": "Maligna sjukdomar, såsom cancer, har särskilda riktlinjer för acceptans av blodgivare. Generellt gäller följande:\n\n1. **Cancer**:\n   - Om en person har haft cancer, godkänns de inte som blodgivare.\n   - Personer som har friskförklarats från cancer får också en avslag på sin ansökan.\n   - Cancer in situ (cancer som är begränsad till ett område) kan godkännas om det har skett ett fullt tillfrisknande och det har gjorts minst en kontroll utan anmärkning, eller om läkare bedömt att ingen uppföljning krävs.\n\n2. **Malignt melanom**:\n   - Dessa individer godkänns inte och får permanent avstängning från blodgivning.\n\n3. **Myelodysplastiskt syndrom (MDS)**:\n   - Ingen godkännande ges, och det innebär också en permanent avstängning.\n\n4. **Meningeom (hjärntumör)**:\n   - Om meningeomet är godartat kan individen godkännas om de är symtomfria. Men om det är malignt så får de permanent avstängning.\n\nSammanfattningsvis är blivande blodgivare med historia av maligna sjukdomar generellt sett uteslutna från att ge blod."
+},
+{
+  "iteration": 3,
+  "input": "Maligna sjukdomar",
+  "ground_truth": "Cancer &#8211; godkänns inte. Friskförklarad från cancer &#8211; godkänns inte. Cancer in situ &#8211; får godkännas om fullt tillfrisknande och minst en kontroll utan anmärkning eller om läkare bedömt att ingen uppföljning krävs.",
+  "response": "Maligna sjukdomar omfattar en rad olika cancerformer och villkor som ofta leder till permanent avstängning från blodgivning. Här är en sammanfattning av relaterade punkter:\n\n1. **Cancer**: Generellt godkänns inte blodgivning för personer som har haft cancer. \n2. **Friskförklarad från cancer**: Om en person har blivit friskförklarad från cancer, så godkänns de inte för blodgivning.\n3. **Cancer in situ**: Godkänns endast om det har skett ett fullständigt tillfrisknande och minst en kontroll utan anmärkningar, eller om läkaren bedömer att ingen uppföljning krävs.\n4. **Malignt melanom**: Om detta konstateras, gäller permanent avstängning från blodgivning.\n5. **Myelodysplastiskt syndrom (MDS)**: Det medför också en permanent avstängning.\n6. **Meningeom (hjärntumör)**: Om denna är malign, godkänns inte blodgivning. Om den är godartad och symptomfri, kan blodgivning övervägas efter operation.\n7. **Gliom (hjärntumör)**: Samma regler gäller, med skillnaden att om det är malign så godkänns inte blodgivning.\n\nSammanfattningen visar att maligna sjukdomar i stor utsträckning resulterar i permanent avstängning från blodgivning, med få undantag beroende på tillfrisknande och medicinsk bedömning."
+}
+
+]

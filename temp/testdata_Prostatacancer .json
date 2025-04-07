@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 5,
+  "input": "Prostatacancer ",
+  "ground_truth": "&#8211; godkänns inte. Permanent avstängning.  ",
+  "response": "Prostatacancer är en form av cancer som drabbar prostatan, oftast hos män. Enligt de uppgifter jag har tillgång till, så godkänns inte prostatacancer för blodgivning; personer med prostatacancer eller som har varit friskförklarade från cancer får permanent avstängning från blodgivning. \n\nOm du har fler specifika frågor om prostatacancer eller dess behandlingar, tveka inte att fråga!"
+},
+{
+  "iteration": 5,
+  "input": "Prostatacancer ",
+  "ground_truth": "&#8211; godkänns inte. Permanent avstängning.  ",
+  "response": "Prostatacancer är en sjukdom som inte godkänns för blodgivning. Det finns en permanent avstängning för individer med prostatacancer, och även de som har friskförklarats från cancer får inte godkännas som blodgivare. \n\nBehovet av att undvika blodgivning i dessa fall grundar sig i att cancer kan påverka patientens hälsa och öka riskerna för komplikationer. Om du har fler frågor om prostatacancer eller relaterade ämnen, tveka inte att fråga!"
+},
+{
+  "iteration": 5,
+  "input": "Prostatacancer ",
+  "ground_truth": "&#8211; godkänns inte. Permanent avstängning.  ",
+  "response": "Prostatacancer, eller prostatacancer, har en allvarlig konsekvens när det gäller blodgivning. Enligt informationen kan personer med prostatacancer inte ge blod, och det är en permanent avstängning från blodgivning trots eventuell friskförklaring från cancer. \n\nDet är viktigt att diskutera de specifika villkoren och diagnostiska åtgärderna med en läkare för mer information om prostatacancer och dess behandlingar, samt knutna krav och restriktioner vid blodgivning."
+}
+
+]

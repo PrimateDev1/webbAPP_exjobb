@@ -69,11 +69,11 @@ const FormDone = () => {
   `;
   
 
-        const chatRes = await fetch("http://localhost:5000/chat", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ message: prompt }),
-        });
+  const chatRes = await fetch("http://localhost:5000/chat", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message: prompt }),
+  });
 
         const chatData = await chatRes.json();
         setAiFeedback(chatData.reply || "Ingen feedback tillgänglig.");
@@ -88,8 +88,20 @@ const FormDone = () => {
     getAnswersAndFeedback();
   }, []);
 
+  const styles = {
+    container: {
+      display: "flex",             // Make it a flex container
+      flexDirection: "column",     // Stack children vertically
+      justifyContent: "flex-end", // Align items to the top (main axis)
+      alignItems: "center",     // Align items to the left (cross axis)
+      marginTop: "2em",
+      padding: "1em",              // Optional: spacing inside the container
+      gap: "1em",                  // Optional: spacing between child elements
+    },
+  };
+
   return (
-    <div className="container">
+    <div className="container" style = {styles.container}>
       <h1>Formulär färdigt!</h1>
       <h2>AI-feedback</h2>
       {isLoading ? (
@@ -97,7 +109,7 @@ const FormDone = () => {
       ) : (
         <pre>{aiFeedback}</pre>
       )}
-      <button onClick={() => navigate("/")} style={{ marginTop: "2em" }}>
+      <button onClick={() => navigate("/")} style={styles}>
         Avsluta granskning
       </button>
     </div>

@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 13,
+  "input": "Reumatoid artrit",
+  "ground_truth": " – godkänns inte. Permanent avstängning.",
+  "response": "Reumatoid artrit (RA), även känd som ledgångsreumatism, är en autoimmun sjukdom som påverkar lederna och kan leda till kronisk inflammation. Enligt dokumentet är blodgivning inte godkänd för personer med reumatoid artrit, och detta leder till permanent avstängning. Detta beror på svårigheter att återhämta hemoglobinet (Hb) på grund av den kroniska inflammation som sjukdomen medför. \n\nOm du har fler frågor om reumatoid artrit eller relaterade ämnen, tveka inte att fråga!"
+},
+{
+  "iteration": 13,
+  "input": "Reumatoid artrit",
+  "ground_truth": " – godkänns inte. Permanent avstängning.",
+  "response": "Reumatoid artrit (RA) är en autoimmun sjukdom som framför allt drabbar lederna, vilket leder till inflammation, smärta och kan i längden orsaka ledskador. Det är viktigt att notera att individer som lider av reumatoid artrit inte godkänns som blodgivare. Detta beror på att tillståndet kan leda till svårigheter att återhämta hemoglobinnivåerna på grund av den kroniska inflammationen i kroppen. Därför får personer med reumatoid artrit permanent avstängning från att ge blod."
+},
+{
+  "iteration": 13,
+  "input": "Reumatoid artrit",
+  "ground_truth": " – godkänns inte. Permanent avstängning.",
+  "response": "Reumatoid artrit (RA), eller ledgångsreumatism, är en autoimmun sjukdom som leder till inflammation i lederna. Det orsakar smärta, svullnad och kan leda till ledskörhet och deformation över tid. Tyvärr godkänns individer med reumatoid artrit inte som blodgivare, och det finns en permanent avstängning från blodgivning för dem som lider av detta tillstånd. Detta beror på att den kroniska inflammationen i kroppen kan orsaka svårigheter att återhämta hemoglobinnivåerna. \n\nOm du har fler frågor eller behöver ytterligare information kring reumatoid artrit kan jag gärna hjälpa till!"
+}
+
+]

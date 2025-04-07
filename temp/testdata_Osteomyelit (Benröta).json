@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 25,
+  "input": "Osteomyelit (Benröta)",
+  "ground_truth": "Får godkännas 2 år efter tillfrisknande.",
+  "response": "Osteomyelit, även känd som benröta, kan godkännas för blodgivning två år efter tillfrisknande. Det är en infektion i benvävnaden som kan orsakas av olika faktorer, inklusive bakterier som sprids via blodet eller genom direkt infektion av sår eller trauma.\n\nOm du har ytterligare frågor angående behandling eller hantering av osteomyelit är du välkommen att fråga!."
+},
+{
+  "iteration": 25,
+  "input": "Osteomyelit (Benröta)",
+  "ground_truth": "Får godkännas 2 år efter tillfrisknande.",
+  "response": "Osteomyelit, även känd som benröta, är en infektionssjukdom som påverkar benvävnad. En viktig notering är att individer som har haft osteomyelit får godkännas för blodgivning två år efter tillfrisknande."
+},
+{
+  "iteration": 25,
+  "input": "Osteomyelit (Benröta)",
+  "ground_truth": "Får godkännas 2 år efter tillfrisknande.",
+  "response": "Osteomyelit, även känd som benröta, är en inflammatorisk sjukdom i benet som oftast orsakas av en infektion. Enligt dokumentationen får blodgivning godkännas 2 år efter tillfrisknande från osteomyelit. \n\nOm du har fler frågor eller behöver mer information om osteomyelit eller relaterade ämnen, tveka inte att fråga!"
+}
+
+]

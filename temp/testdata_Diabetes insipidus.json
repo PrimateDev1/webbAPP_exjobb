@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 8,
+  "input": "Diabetes insipidus",
+  "ground_truth": " – brist på ADH – antidiuretiskt hormon &#8211; godkänns inte. Permanent avstängning.",
+  "response": "Diabetes insipidus är en sjukdom som orsakas av en brist på antidiuretiskt hormon (ADH), vilket leder till att njurarna inte kan återabsorbera vatten ordentligt, vilket i sin tur resulterar i överdriven urinering och törst. Enligt informationen i den uppladdade filen är diabetes insipidus en sjukdom som inte godkänns för blodgivning och resulterar i permanent avstängning för den som drabbas."
+},
+{
+  "iteration": 8,
+  "input": "Diabetes insipidus",
+  "ground_truth": " – brist på ADH – antidiuretiskt hormon &#8211; godkänns inte. Permanent avstängning.",
+  "response": "Diabetes insipidus är en sjukdom som orsakas av brist på antidiuretiskt hormon (ADH). Enligt information från dokumenten som laddats upp är diabetes insipidus inte godkänd för blodgivning och leder till permanent avstängning."
+},
+{
+  "iteration": 8,
+  "input": "Diabetes insipidus",
+  "ground_truth": " – brist på ADH – antidiuretiskt hormon &#8211; godkänns inte. Permanent avstängning.",
+  "response": "Diabetes insipidus är en sjukdom som orsakas av en brist på antidiuretiskt hormon (ADH). Enligt information från sjukdomar-och-åtgärder.txt godkänns inte personer med diabetes insipidus som blodgivare, vilket leder till permanent avstängning."
+}
+
+]

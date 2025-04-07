@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 21,
+  "input": "Syfilis (Lues)",
+  "ground_truth": "Får godkännas 1 år efter styrkt tillfrisknande.Om antikroppstest används kan det uppstå praktiska bekymmer eftersom antikroppar ofta kvarstår efter genomgången infektion. De flesta tester som idag används för screening av syfilis ger reaktivitet även om syfilis är utläkt, varför blodgivning ändå inte kommer att godkännas.",
+  "response": "Syfilis, även känd som lues, är en sexuellt överförbar sjukdom orsakad av bakterien Treponema pallidum. Enligt riktlinjerna för blodgivning får en person som haft syfilis godkännas för blodgivning ett år efter styrkt tillfrisknande. Det finns dock praktiska problem när antikroppstest används, eftersom antikroppar ofta kvarstår även efter att infektionen är utläkt. Detta medför att de flesta tester som används för screening av syfilis kan visa reaktivitet, vilket leder till att blodgivning inte godkänns trots att infektionen är utläkt."
+},
+{
+  "iteration": 21,
+  "input": "Syfilis (Lues)",
+  "ground_truth": "Får godkännas 1 år efter styrkt tillfrisknande.Om antikroppstest används kan det uppstå praktiska bekymmer eftersom antikroppar ofta kvarstår efter genomgången infektion. De flesta tester som idag används för screening av syfilis ger reaktivitet även om syfilis är utläkt, varför blodgivning ändå inte kommer att godkännas.",
+  "response": "Syfilis, även känd som lues, är en sexuellt överförbar infektion orsakad av bakterien *Treponema pallidum*. Behandling och blodgivning relaterad till syfilis hanteras specifikt:\n\n1. Om en person har haft syfilis och blivit friskförklarad, får de godkännas för blodgivning 1 år efter styrkt tillfrisknande. Det är viktigt att notera att antikroppar mot syfilis kan kvarstå länge efter att infektionen har läkt. Därför kan screeningtester visa reaktivitet även om personen är frisk, vilket innebär att blodgivning kan nekas på grund av detta.\n\n2. Personer med syfilis bör alltid iaktta noggranna rutiner för att undvika återinfektion och spridning till andra. \n\nOm du har specifika frågor om symptom eller behandlingar för syfilis, tveka inte att fråga!"
+},
+{
+  "iteration": 21,
+  "input": "Syfilis (Lues)",
+  "ground_truth": "Får godkännas 1 år efter styrkt tillfrisknande.Om antikroppstest används kan det uppstå praktiska bekymmer eftersom antikroppar ofta kvarstår efter genomgången infektion. De flesta tester som idag används för screening av syfilis ger reaktivitet även om syfilis är utläkt, varför blodgivning ändå inte kommer att godkännas.",
+  "response": "Syfilis, även känd som Lues, är en sexuell överförbar infektion orsakad av bakterien *Treponema pallidum*. Här är viktig information relaterad till syfilis:\n\n### Godkännande för blodgivning\n1. **Tillfrisknande:** Personer som har haft syfilis får godkännas för blodgivning ett år efter styrkt tillfrisknande.\n2. **Antikroppstest:** Det är viktigt att notera att om antikroppstest används kan det finnas praktiska bekymmer, eftersom antikroppar ofta kvarstår även efter att infektionen har läkt. De flesta tester som används idag för screening kan ge reaktivitet även om syfilis är utläkt, vilket innebär att blodgivning kanske inte godkänns.\n\n### Behandling och symptom\nBehandlingen för syfilis involverar vanligtvis antibiotika, oftast penicillin. Symtomen kan variera beroende på steget av infektionen. Tidiga symtom kan inkludera sår på genitalierna eller andra områden, feber, svullna lymfkörtlar och utslag.\n\nFör mer specifik information om behandlingar och verksamheten kring syfilis, eller om du har några andra frågor relaterade till detta, kan jag hjälpa till vidare!"
+}
+
+]

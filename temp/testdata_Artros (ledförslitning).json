@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 14,
+  "input": "Artros (ledförslitning)",
+  "ground_truth": "Får godkännas.",
+  "response": "Artros, även känt som ledförslitning, är en sjukdom som kännetecknas av gradvis förlust av ledbrosk vilket kan leda till smärta och nedsatt rörlighet. Trots dessa utmaningar får personer med artros godkännas för olika aktiviteter och behandlingar, vilket innebär att de inte nödvändigtvis behöver stå i vägen för sina livsförhållanden.\n\nOm du har specifika frågor eller behöver mer information kring behandling eller hanterande av artros, var god att specificera, så kan jag hjälpa dig mer.</br>Enligt den senaste informationen får artros godkännas."
+},
+{
+  "iteration": 14,
+  "input": "Artros (ledförslitning)",
+  "ground_truth": "Får godkännas.",
+  "response": "Artros, även känd som ledförslitning, är en sjukdom som kännetecknas av nedbrytning av brosket i lederna. Detta kan leda till smärta, stelhet och minskad rörlighet. Enligt den information jag har tillgång till är artros en sjukdom som \"får godkännas\" i samband med vissa bedömningar, vilket tyder på att det kan vara möjligt att delta i olika behandlingsprogram beroende på individuella omständigheter. \n\nBehandlingen av artros kan inkludera smärtlindring, fysioterapi och ibland kirurgi om symptomen är svåra. Det är viktigt för patienter att diskutera sina symptom och behandlingsalternativ med en sjukvårdspersonal för att få den mest lämpliga vården."
+},
+{
+  "iteration": 14,
+  "input": "Artros (ledförslitning)",
+  "ground_truth": "Får godkännas.",
+  "response": "Artros, även känt som ledförslitning, är en sjukdom som kännetecknas av nedbrytning av brosket i lederna. Det är en vanlig form av artrit och kan leda till smärta, svullnad och stelhet i de drabbade lederna. Artros kan påverka alla leder i kroppen, men är mest frekvent i knän, höfter och händer.\n\nEnligt informationen jag har, får artros godkännas för blodgivning, vilket innebär att individer med artros kan bidra med blod så länge deras tillstånd inte påverkar deras allmänna hälsa i en sådan utsträckning att det utgör en risk."
+}
+
+]

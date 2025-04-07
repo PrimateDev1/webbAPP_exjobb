@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 10,
+  "input": "Operation av sköldkörteln",
+  "ground_truth": " – får godkännas 6 månader efter operation.",
+  "response": "Operation av sköldkörteln (thyroideakirurgi) får godkännas efter sex månader från operationstillfället. Detta gäller för blodgivning och relaterade medicinska åtgärder. \n\nDet är viktigt att patienten är stabil och att det inte finns några kvarstående komplikationer eller tecken på infektion vid tidpunkten för eventuell blodgivning eller annan medicinsk intervention efter operationen."
+},
+{
+  "iteration": 10,
+  "input": "Operation av sköldkörteln",
+  "ground_truth": " – får godkännas 6 månader efter operation.",
+  "response": "Operation av sköldkörteln, även kallad tyreoidectomi, är en kirurgisk åtgärd som kan behövas vid olika sköldkörtelsjukdomar. Det är viktigt att beakta att en operation av sköldkörteln får godkännas för viss aktivitet, exempelvis blodgivning, först sex månader efter själva operationen.\n\nDet är också angeläget att operationsområdet är välläkt och utan tecken på infektion före godkännande för aktiviteter som blodgivning. Om en vävnadsanalys har utförts, måste resultaten vara klara innan godkännande kan ges. \n\nOm du har specifika frågor kring operationen eller återhämtning, kan du ställa dem, så ska jag hjälpa dig!"
+},
+{
+  "iteration": 10,
+  "input": "Operation av sköldkörteln",
+  "ground_truth": " – får godkännas 6 månader efter operation.",
+  "response": "Operation av sköldkörteln, eller tyreoidektomi, är en kirurgisk åtgärd som utförs för att behandla olika sköldkörtelsjukdomar, såsom struma, tumörer (både godartade och elakartade), och över- eller underfunktion av sköldkörteln.\n\nEnligt riktlinjerna inom svensk sjukvård får blodgivning godkännas sex månader efter en sköldkörteloperation, förutsatt att patienten är återställd och inga komplikationer har uppstått. Det är viktigt att operationsområdet är väl läkt och utan tecken på infektion innan blodgivning övervägs.\n\nOm du har specifika frågor om kirurgin, diagnoser som leder till operation, eller postoperativa åtgärder, är du välkommen att fråga!"
+}
+
+]

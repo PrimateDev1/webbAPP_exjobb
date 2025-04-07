@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 2,
+  "input": "Cervix cancer in situ (cellförändringar i livmoderhals)",
+  "ground_truth": "Cancer in situ &#8211; får godkännas om fullt tillfrisknande och minst en kontroll utan anmärkning eller om läkare bedömt att ingen uppföljning krävs.",
+  "response": "Cervix cancer in situ, som även kallas cellförändringar i livmoderhalsen, är en form av cancer som befinner sig i ett tidigt stadium. Denna typ av cancer klassificeras som \"in situ\" vilket innebär att cancern finns kvar inom det område där den uppstod och inte har spridit sig till omgivande vävnader.\n\nEnligt informationen kan cancer in situ godkännas för blodgivning under följande villkor:\n- Fullständigt tillfrisknande har uppnåtts.\n- Minst en kontroll har utförts utan anmärkning.\n- Läkaren har bedömt att ingen uppföljning krävs.\n\nDet är viktigt att notera att cellförändringar på cervix, ofta orsakade av Humant papillomvirus (HPV), kräver noggrann uppföljning. \n\nDärför är det avgörande för den som har haft cervix cancer in situ att följa upp med sin läkare och att säkerställa att de uppfyller de angivna kriterierna innan de överväger att ge blod."
+},
+{
+  "iteration": 2,
+  "input": "Cervix cancer in situ (cellförändringar i livmoderhals)",
+  "ground_truth": "Cancer in situ &#8211; får godkännas om fullt tillfrisknande och minst en kontroll utan anmärkning eller om läkare bedömt att ingen uppföljning krävs.",
+  "response": "Cervix cancer in situ, eller cellförändringar i livmoderhalsen, innebär att det finns tidiga, ytliga förändringar i cellerna på livmoderhalsens slemhinna. Dessa förändringar kan vara ett tecken på ett potentiellt canceröst tillstånd, men de är inte än fullfjädrad cancer.\n\nFör att blodgivning ska vara godkänd efter att ha diagnostiserats med cervix cancer in situ, krävs att följande kriterier är uppfyllda:\n1. Fullt tillfrisknande från tillståndet.\n2. Minst en kontroll utan anmärkning.\n3. Alternativt, om läkare bedömer att ingen uppföljning krävs, kan det godkännas. \n\nVidare är cellförändringar i livmoderhalsen vanligen orsakade av HPV (humant papillomvirus), och dessa cellförändringar kan följa upp var sjätte månad eller oftare om de bedöms vara riskfyllda."
+},
+{
+  "iteration": 2,
+  "input": "Cervix cancer in situ (cellförändringar i livmoderhals)",
+  "ground_truth": "Cancer in situ &#8211; får godkännas om fullt tillfrisknande och minst en kontroll utan anmärkning eller om läkare bedömt att ingen uppföljning krävs.",
+  "response": "Cancers in situ, inklusive cervix cancer in situ (cellförändringar i livmoderhalsen), hänvisar till ytliga tumörformer som inte har invaderat det omgivande vävnaden. Denna typ av cancer kan ofta övervakas eller behandlas framgångsrikt, särskilt om den upptäckts tidigt.\n\n**Cervix cancer in situ** definieras som cellförändringar som är begränsade till livmoderhalsens slemhinna. Det är vanligtvis relaterat till infektioner med humant papillomvirus (HPV). Behandlingen kan inkludera konisering eller noggrann övervakning genom regelbundna cellprov.\n\nEnligt vårdstandarder får cervix cancer in situ godkännas för vissa åtgärder, som att ge blod, om följande kriterier uppfylls: \n- Fullt tillfrisknande efter behandling.\n- Minst en uppföljande kontroll utan anmärkning efter behandlingen, eller om en läkare bedömt att ingen uppföljning krävs. \n\nCellförändringar på cervix som följs upp var sjätte månad eller oftare godkänns inte för vissa åtgärder."
+}
+
+]

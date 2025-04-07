@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 11,
+  "input": "Artrit (ledinflammation)",
+  "ground_truth": "Finns flera olika orsaker till artrit. Kontrollera om det finns en grundsjukdom. ",
+  "response": "Artrit, eller ledinflammation, kan ha flera olika orsaker. Det är viktigt att kontrollera om det finns en grundsjukdom som orsakar artriten. För kronisk artrit baseras bedömningen på den underliggande sjukdomen, och det rekommenderas att man kollar med läkemedelslistan angående behandling.\n\nSpecifikt för reumatoid artrit (RA) gäller att den inte godkänns för blodgivning och leder till permanent avstängning av blodgivaren, huvudsakligen på grund av svårigheter att återhämta hemoglobin (Hb) på grund av den kroniska inflammationen i kroppen. \n\nDet finns även andra typer av artrit, som reaktiv artrit, vilken kan godkännas för blodgivning 1 månad efter tillfrisknande."
+},
+{
+  "iteration": 11,
+  "input": "Artrit (ledinflammation)",
+  "ground_truth": "Finns flera olika orsaker till artrit. Kontrollera om det finns en grundsjukdom. ",
+  "response": "Artrit, eller ledinflammation, kan ha flera olika orsaker. Det är viktigt att kontrollera om det finns en underliggande sjukdom som kan bidra till tillståndet. Vid kronisk artrit baseras bedömningen på den grundsjukdomen som ligger till grund för inflammationen. \n\nReumatoid artrit (RA) är en form av artrit som inte godkänns för blodgivning och medför permanent avstängning, sannolikt på grund av svårigheter att återhämta hemoglobinnivåer efter blodgivning på grund av kronisk inflammation. \n\nReaktiv artrit, som är en inflammation i leden efter en infektion, kan godkännas för blodgivning en månad efter tillfrisknande. Det är viktigt att alltid fråga om aktuell läkemedelsbehandling och se läkemedelslistan vid bedömning av blodgivning för personer med artrit."
+},
+{
+  "iteration": 11,
+  "input": "Artrit (ledinflammation)",
+  "ground_truth": "Finns flera olika orsaker till artrit. Kontrollera om det finns en grundsjukdom. ",
+  "response": "Artrit, eller ledinflammation, är en åkomma som kan ha flera olika orsaker. Det är viktigt att kontrollera om det finns någon underliggande sjukdom som ligger till grund för artriten. Behandlingen för kronisk artrit baseras ofta på den identifierade grundsjukdomen. \n\nFör vissa typer av artrit, som reumatoid artrit, kan det finnas begränsningar för behandling och blodgivning, då detta kan leda till avstängning från blodgivning. Reaktiv artrit, som uppstår efter en infektion, kan också hanteras under specifika villkor, och det är möjligt att ge blod en månad efter att man tillfrisknat från infektionen.\n\nOm du har mer specifika frågor angående symptom eller behandlingar, vänligen specificera så kan jag ge mer detaljerad information."
+}
+
+]

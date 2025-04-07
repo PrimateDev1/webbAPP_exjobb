@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 16,
+  "input": "Parkinsons sjukdom",
+  "ground_truth": "Godkänns inte. Permanent avstängning.",
+  "response": "Parkinsons sjukdom är en neurologisk sjukdom som kännetecknas av progressiv nedbrytning av dopaminproducerande neuroner i hjärnan. I samband med blodgivning är det viktigt att notera att personer som diagnostiserats med Parkinsons sjukdom inte får godkännas som blodgivare; det rör sig om en permanent avstängning från blodgivning."
+},
+{
+  "iteration": 16,
+  "input": "Parkinsons sjukdom",
+  "ground_truth": "Godkänns inte. Permanent avstängning.",
+  "response": "Parkinsons sjukdom är en neurologisk sjukdom som kännetecknas av nedsatt rörelseförmåga, skakningar, muskelstelhet och balansproblem. Enligt informationen från dokumentet om sjukdomar och åtgärder, godkänns inte blodgivning för personer med Parkinsons sjukdom. Det anges att detta är en permanent avstängning från blodgivning. \n\nOm du har fler frågor om Parkinsons sjukdom eller relaterade ämnen, tveka inte att fråga!"
+},
+{
+  "iteration": 16,
+  "input": "Parkinsons sjukdom",
+  "ground_truth": "Godkänns inte. Permanent avstängning.",
+  "response": "Parkinsons sjukdom är en neurologisk sjukdom som påverkar rörelseförmågan. Enligt de riktlinjer som finns i den dokumentation som jag har tillgång till, godkänns inte personer med Parkinsons sjukdom som blodgivare. Detta innebär en permanent avstängning från blodgivning på grund av sjukdomens natur. \n\nOm du har fler frågor eller vill veta mer om specifika aspekter av Parkinsons sjukdom, är du välkommen att ställa dem!"
+}
+
+]

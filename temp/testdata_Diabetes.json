@@ -1,0 +1,21 @@
+[
+{
+  "iteration": 7,
+  "input": "Diabetes",
+  "ground_truth": "Diabetes mellitus – godkänns inte om insulinbehandlad eller symtom som tyder på svårare sjukdom, t ex bensår, neuropati, ögonpåverkan mm. Fråga om läkemedelsbehandling, vid behov se läkemedelslista. ",
+  "response": "Diabetes, specifically referring to diabetes mellitus, is mentioned in the context of blood donation guidelines. Individuals with diabetes mellitus who are insulin-treated, or who exhibit symptoms indicating severe disease (such as leg ulcers, neuropathy, or eye complications), are not approved for blood donation. It is advised to inquire about any medication being taken for diabetes for further assessment. \n\nAdditionally, another form of diabetes, diabetes insipidus, is also mentioned but results in a permanent deferral from blood donation. \n\nIf you have further specific questions about diabetes or its management, feel free to ask!"
+},
+{
+  "iteration": 7,
+  "input": "Diabetes",
+  "ground_truth": "Diabetes mellitus – godkänns inte om insulinbehandlad eller symtom som tyder på svårare sjukdom, t ex bensår, neuropati, ögonpåverkan mm. Fråga om läkemedelsbehandling, vid behov se läkemedelslista. ",
+  "response": "Diabetes är en sjukdom som kan yttra sig i flera former, varav de två vanligaste är diabetes mellitus och diabetes insipidus.\n\n1. **Diabetes Mellitus**:\n   - Godkänns inte som blodgivare om personen är insulinbehandlad eller har symtom som tyder på svårare sjukdom, såsom bensår, neuropati, eller ögonpåverkan. Det är viktigt att diskutera eventuell läkemedelsbehandling med en läkare.\n\n2. **Diabetes Insipidus**:\n   - Detta tillstånd orsakas av brist på antidiuretiskt hormon (ADH) och leder till att njurarna inte kan koncentrera urinen, vilket resulterar i ökad urinproduktion. Personer med diabetes insipidus godkänns inte som blodgivare och får permanent avstängning.\n\nOm du har fler frågor om diabetes eller relaterade ämnen, tveka inte att ställa dem!"
+},
+{
+  "iteration": 7,
+  "input": "Diabetes",
+  "ground_truth": "Diabetes mellitus – godkänns inte om insulinbehandlad eller symtom som tyder på svårare sjukdom, t ex bensår, neuropati, ögonpåverkan mm. Fråga om läkemedelsbehandling, vid behov se läkemedelslista. ",
+  "response": "Diabetes är en metabolisk sjukdom som kännetecknas av hög blodsockernivå (hyperglykemi), vilket beror på otillräcklig insulinproduktion, insulinresistens eller båda. Det finns två huvudsakliga typer av diabetes: \n\n1. **Diabetes mellitus** (typ 1 och typ 2).\n   - **Typ 1**: Kroppen producerar inte insulin. Det är autoimmun och kan uppstå i alla åldrar, men oftast i barndomen eller ung vuxenålder.\n   - **Typ 2**: Kroppen blir resistent mot insulin. Det är vanligare hos vuxna, särskilt de som är överviktiga.\n\nRegler kring bloddonation i samband med diabetes:\n- **Diabetes mellitus** godkänns inte för bloddonation om individen är insulinbehandlad eller om det finns symtom på allvarligare komplikationer, såsom bensår, neuropati eller ögonpåverkan. Det är viktigt att fråga om eventuell läkemedelsbehandling.\n- **Diabetes insipidus**, som beror på brist på antidiuretiskt hormon (ADH), leder till permanent avstängning från bloddonation.\n\nFör mer information om lämplig medicinsk behandling och eventuella läkemedel kopplade till diabetes, se läkemedelslistan."
+}
+
+]
