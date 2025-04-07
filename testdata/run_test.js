@@ -6,9 +6,9 @@ import fs from "fs";
 import { error } from "console";
 import { json } from "stream/consumers";
 
-dotenv.config();
-
-const ITTERATIONS = 1;
+dotenv.config(); // Load API key from .env
+//const TEST_FILE = "./small_test.json"; // Correct relative path
+const ITTERATIONS = 3; //n 
 const LARGE_TEST_PATH = "./large_tests/";
 const OUTPUT_FILE = "./test_results.json";
 const CHATBOT_URL = "http://localhost:5000/chat";
@@ -77,75 +77,114 @@ async function getFileSearchChunks(thread_id, run_id) {
     }
 }
 
-async function runTestJsonl(isBatch, newRun, testfile) {
-    let testData = JSON.parse(fs.readFileSync(testfile, "utf-8"));
-    let large_test_dir = fs.readdirSync(LARGE_TEST_PATH);
-    let batchNr = large_test_dir.length;
+async function runTestJsonl(isBatch,newRun,testfile){
+    let testData = JSON.parse(fs.readFileSync(testfile,"utf-8" ));
+    let currentpath;
     let filecounter = 0;
-
-    for (let test of testData) {
-        console.log(`testing: ${test.input}\n`);
-        let currentfile = isBatch ? `batchtest_${batchNr}.jsonl` : `testdata_${test.input}s.jsonl`;
-        let currentpath = path.join(LARGE_TEST_PATH, currentfile);
-        process.stdout.write("\nloading: " + currentpath + "\n");
-
-        for (let i = 0; i < ITTERATIONS; i++) {
+    for (let test of testData){
+        console.log(`testing: ${test.input} \n`);
+        let currentfile = (isBatch) ? "batchtest.jsonl":`testdata_${test.input}s.jsonl`;
+        currentpath = path.join(LARGE_TEST_PATH, currentfile);
+        process.stdout.write("\nloading: " + currentpath.toString() + "\n");
+        for(let i = 0; i< ITTERATIONS; i++){
             process.stdout.write(".");
-            let chatbotResponse = await queryChatbot(test.input);
-            let file_chunks = [];
-
-            if (chatbotResponse.thread_id && chatbotResponse.run_id) {
-                file_chunks = await getFileSearchChunks(chatbotResponse.thread_id, chatbotResponse.run_id);
-            }
-
+            let response = await queryChatbot(test.input);
             let result = {
-                iteration: filecounter,
-                input: test.input,
+                iteration:filecounter,
+                input:test.input,
                 ground_truth: test.ground_truth,
-                response: chatbotResponse.reply,
-                file_chunks: file_chunks
+                response: response
             };
-
             let jsonlObj = await obj2jsonl(result);
             fs.appendFileSync(currentpath, jsonlObj);
+
+
         }
+
+        
     }
 }
 
-async function obj2jsonl(obj) {
+async function obj2jsonl(obj){
     let builder = new StringBuilder();
     builder.append("{");
-    Object.entries(obj).forEach(([key, value]) => {
-        builder.append('"' + key + '"');
-        builder.append(":");
-        builder.append(JSON.stringify(value));
+    Object.entries(obj).forEach(([key,value]) =>{
+        builder.append('"' + key + '"' );
+        builder.append(":")
+        builder.append('"' + value + '"');
         builder.append(",");
     });
     let jsonl = await removeLastChar(",", builder.toString());
     jsonl = await removeAllChar('\n', jsonl);
-    return jsonl + "}\n";
+    return jsonl +"}\n";
+    
 }
 
-async function removeLastChar(aChar, aString) {
-    const lastindex = aString.lastIndexOf(aChar);
-    return lastindex !== -1 ? aString.slice(0, lastindex) + aString.slice(lastindex + 1) : aString;
+async function removeSpecialWhitespace(aString) {
+    return aString.replace(/[\t\n\r\f\v]/g, ' ');
 }
 
 async function removeAllChar(aChar, aString) {
     return aString.split(aChar).join('');
 }
 
-class StringBuilder {
-    constructor() {
-        this.parts = [];
+async function removeLastChar(aChar, aString){
+    const lastindex = aString.lastIndexOf(aChar);
+    return lastindex !== -1 ? aString.slice(0,lastindex) + aString.slice(lastindex+1): aString;
+}
+
+async function runTests(isBatch, newRun, testfile) {
+    let testData = JSON.parse(fs.readFileSync(testfile, "utf-8"));
+    let filecounter = 1;
+    let currentpath;
+    let flag = true;
+    for (let test of testData) {
+        console.log(`Testing: ${test.input} \n`);
+        let currentfile = `testdata_${test.input}.json`;
+        if(isBatch){
+            currentfile = "batchtest.json";
+        }
+        currentpath = path.join(LARGE_TEST_PATH, currentfile);
+        console.log(newRun);
+        console.log(flag);
+        if(newRun && flag){
+            fs.writeFileSync(currentpath, "[\n");
+            flag = false;
+        }
+        else if(!newRun){
+            removeLastOccurance("]", currentpath);
+        }
+            
+        for (let i = 0; i<ITTERATIONS; i++){
+            if(i % 2 == 0){
+                console.log("loading....");
+            }
+            let response = await queryChatbot(test.input);
+            let result = {
+                iteration:filecounter,
+                input:test.input,
+                ground_truth: test.ground_truth,
+                response: response
+            };
+            console.log(currentpath);
+            fs.appendFileSync(currentpath, JSON.stringify(result, null, 2));
+            fs.appendFileSync(currentpath, ",\n");
+            console.log( `Wrote to: ${currentpath} `);
+        }
+        ++filecounter;
+        console.log(`Testing: ${test.input} is done...`);
+        if(!isBatch){
+            removeLastOccurance(",", currentpath);
+            fs.appendFileSync(currentpath, "\n]");
+        }
+    flag = true;
     }
-    append(str) {
-        this.parts.push(str);
-        return this;
+    
+    if(isBatch){
+        removeLastOccurance(",", currentpath);
+        fs.appendFileSync(currentpath, "\n]");
     }
-    toString() {
-        return this.parts.join("");
-    }
+    console.log("all tests done in this run");
 }
 
 let isBatch = false;
@@ -161,4 +200,20 @@ if (arr.length > 0) {
     });
 }
 
-runTestJsonl(isBatch, newRun, testfile).catch(console.error);
+class StringBuilder {
+    constructor() {
+      this.parts = [];
+    }
+  
+    append(str) {
+      this.parts.push(str);
+      return this; // For method chaining
+    }
+  
+    toString() {
+      return this.parts.join("");
+    }
+  }
+
+
+runTestJsonl(isBatch,newRun, testfile).catch(console.error);

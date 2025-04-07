@@ -1,0 +1,157 @@
+[
+{
+    "input":"Cancer &#8211;",
+    "ground_truth":" godkänns inte. Friskförklarad från cancer &#8211; godkänns inte. CancerCancer &#8211; godkänns inte. Friskförklarad från cancer &#8211; godkänns inte. Cancer in situ – får godkännas om fullt tillfrisknande och minst en kontroll utan anmärkning eller om läkare bedömt att ingen uppföljning krävs.",
+    "response":""
+},
+{
+    "input":"Cervix cancer in situ (cellförändringar i livmoderhals)",
+    "ground_truth":"Cancer in situ &#8211; får godkännas om fullt tillfrisknande och minst en kontroll utan anmärkning eller om läkare bedömt att ingen uppföljning krävs.",
+    "response":""
+},
+{
+    "input":"Maligna sjukdomar",
+    "ground_truth":"Cancer &#8211; godkänns inte. Friskförklarad från cancer &#8211; godkänns inte. Cancer in situ &#8211; får godkännas om fullt tillfrisknande och minst en kontroll utan anmärkning eller om läkare bedömt att ingen uppföljning krävs.",
+    "response":""
+},
+{
+    "input":"Malignt melanom",
+    "ground_truth":"Godkänns inte. Permanent avstängning.",
+    "response":""
+},
+{
+    "input":"Prostatacancer ",
+    "ground_truth":"&#8211; godkänns inte. Permanent avstängning.  ",
+    "response":""
+},
+{
+    "input":"Friskförklarad från cancer ",
+    "ground_truth":"&#8211; godkänns inte. Permanent avstängning. ",
+    "response":""
+},
+{
+    "input":"Diabetes",
+    "ground_truth":"Diabetes mellitus – godkänns inte om insulinbehandlad eller symtom som tyder på svårare sjukdom, t ex bensår, neuropati, ögonpåverkan mm. Fråga om läkemedelsbehandling, vid behov se läkemedelslista. ",
+    "response":""
+},
+{
+    "input":"Diabetes insipidus",
+    "ground_truth":" – brist på ADH – antidiuretiskt hormon &#8211; godkänns inte. Permanent avstängning.",
+    "response":""
+},
+{
+    "input":"Sköldkörtelsjukdom",
+    "ground_truth":"En överfunktion av sköldkörteln som behandlats kan övergå till en underfunktion av sköldkörteln varför alla enskilda sjukdomar inte tas upp. Kontakta blodgivningen.",
+    "response":""
+},
+{
+    "input":"Operation av sköldkörteln",
+    "ground_truth":" – får godkännas 6 månader efter operation.",
+    "response":""
+},
+{
+    "input":"Artrit (ledinflammation)",
+    "ground_truth":"Finns flera olika orsaker till artrit. Kontrollera om det finns en grundsjukdom. ",
+    "response":""
+},
+{
+    "input":"Kronisk artrit",
+    "ground_truth":" – bedömning baseras på grundsjukdomen. Fråga om läkemedelsbehandling, vid behov se läkemedelslista. ",
+    "response":""
+},
+{
+    "input":"Reumatoid artrit",
+    "ground_truth":" – godkänns inte. Permanent avstängning.",
+    "response":""
+},
+{
+    "input":"Artros (ledförslitning)",
+    "ground_truth":"Får godkännas.",
+    "response":""
+},
+{
+    "input":"Multipel skleros (MS)",
+    "ground_truth":"Godkänns inte. Permanent avstängning.",
+    "response":""
+},
+{
+    "input":"Parkinsons sjukdom",
+    "ground_truth":"Godkänns inte. Permanent avstängning.",
+    "response":""
+},
+{
+    "input":"Demens (ex: Alzheimers sjukdom)",
+    "ground_truth":"Godkänns inte. Permanent avstängning.",
+    "response":""
+},
+{
+    "input":"Epilepsi – diagnostiserad (Gäller inte enstaka krampanfall)",
+    "ground_truth":"Får godkännas om varit krampfri och utan behandling för epilepsi i minst tre år.",
+    "response":""
+},
+{
+    "input":"Creutzfeldt-Jakobs sjukdom Creutzfeldt-Jakob disease (CJD) Transmissibel spongiform encefalopati (TSE) Variant Creutzfeldt-Jakob disease (vCJD)",
+    "ground_truth":"Finns olika typer – ärftlig, sporadisk och överförd sjukdom.Diagnosticerad med Creutzfeldt-Jakobs sjukdom oavsett typ eller variant – godkänns inte. Permanent avstängning.En biologisk släkting till en person med Creutzfeldt-Jakobs sjukdom får godkännas om det går att utesluta en ärftlig form av sjukdomen. Det krävs en genetisk undersökning av prionproteingenen hos personer med säkerställd diagnos för att biologiska släktingar ska kunna vara blodgivare (enligt Socialstyrelsen).",
+    "response":""
+},
+{
+    "input":"Hepatit ",
+    "ground_truth":"Hepatit A – får godkännas 6 månader efter tillfrisknande. Hepatit B– får godkännas om utläkt och HBsAg-test är negativ och anti-HBc kan påvisas och anti-HBs kan påvisas med titer ≥100 IE/L. Nära kontakt (samma hushåll) med en person som har en smittsam infektion med hepatit B-virus &#8211; får godkännas tidigast 6 månader efter att den nära kontakten upphört (inte längre samma hushåll) eller tidigast 6 månader efter att den smittsamma personen har bedömts som ej längre smittsam av behandlande läkare.Hepatit C &#8211; godkänns inte. Permanent avstängning. Sexuellt umgänge med person som är smittad med hepatit C &#8211; Får godkännas 6 månader efter sista sexuella kontakten.Hepatit D &#8211; godkänns inte. Permanent avstängning.Hepatit E &#8211; får godkännas 6 månader efter tillfrisknande.Hepatit orsakad av läkemedel &#8211; får godkännas 6 månader efter tillfrisknande.Hepatit, autoimmun &#8211; godkänns inte. Permanent avstängning.Herpes simplex",
+    "response":""
+},
+{
+    "input":"Syfilis (Lues)",
+    "ground_truth":"Får godkännas 1 år efter styrkt tillfrisknande.Om antikroppstest används kan det uppstå praktiska bekymmer eftersom antikroppar ofta kvarstår efter genomgången infektion. De flesta tester som idag används för screening av syfilis ger reaktivitet även om syfilis är utläkt, varför blodgivning ändå inte kommer att godkännas.",
+    "response":""
+},
+{
+    "input":"Tuberkulos (TBC)",
+    "ground_truth":"Får godkännas 2 år efter styrkt tillfrisknande.",
+    "response":""
+},
+{
+    "input":"Reumatisk feber",
+    "ground_truth":"Får godkännas 2 år efter tillfrisknande om inte belägg för kronisk hjärtsjukdom finns.",
+    "response":""
+},
+{
+    "input":"HTLV (Humant T-lymfotropt virus)",
+    "ground_truth":"Godkänns inte. Permanent avstängning.",
+    "response":""
+},
+{
+    "input":"Osteomyelit (Benröta)",
+    "ground_truth":"Får godkännas 2 år efter tillfrisknande.",
+    "response":""
+},
+{
+    "input":"Drogmissbruk",
+    "ground_truth":"Injektion med narkotika – godkänns inte. Permanent avstängning.Injektion med anabola steroider, hormoner eller något annat preparat utanför hälso- och sjukvården – godkänns inte. Permanent avstängning.Användning av narkotikaklassade droger som röks, sväljs eller intas via slemhinnor &#8211; får godkännas 2 veckor efter användandet.",
+    "response":""
+},
+{
+    "input":"Injektion utförd ",
+    "ground_truth":"på IVO-registrerad klinik enligt ovan – får godkännas dagen efter injektion om besvärsfri och om underliggande orsak är godtagbar. Se läkemedelslista. ",
+    "response":""
+},
+{
+    "input":"Botox",
+    "ground_truth":" utförd på IVO-registrerad klinik enligt ovan&#8211; får godkännas, ska dock de 3 närmaste dagarna efter senaste dos märkas &#8221;Plasma ej till patient&#8221; (OBS-kod K01).Injektion utanför IVO-registrerad klinik enligt ovan på skönhetssalong eller liknande inrättning – får godkännas 6 månader efter injektionen. Se läkemedelslista.Injektion i hemmet med kosmetiska preparat med engångssprutor – får godkännas 6 månader efter injektionen. Se läkemedelslista.Injektion i hemmet med kosmetiska preparat utan engångssprutor eller med delade nålar – godkänns inte. Permanent avstängning.",
+    "response":""
+},
+{
+    "input":"Hjärtinfarkt",
+    "ground_truth":" &#8211; godkänns inte. För givarens skull. Permanent avstängning.",
+    "response":""
+},
+{
+    "input":"Förmaksflimmer",
+    "ground_truth":" &#8211; Pågående förmaksflimmer &#8211; godkänns inte. Förebyggande tablettbehandling mot förmaksflimmer &#8211; godkänns inte. Återkommande elkonverteringar pga förmaksflimmer &#8211; godkänns inte.",
+    "response":""
+},
+{
+    "input":"Angina pectoris (Kärlkramp)",
+    "ground_truth":"Godkänns inte om aktuella symtom eller tidigare haft angina pectoris. För givarens skull. Permanent avstängning.Permanent avstängning även om symtomfri efter ev. operation.",
+    "response":""
+}
+]
