@@ -88,7 +88,7 @@ wss.on("connection", (ws) => {
 async function createAssistant() {
     const assistant = await openai.beta.assistants.create({
         name: "Real-Time AI Assistant",
-        instructions: "Du ska alltid först titta i instructions_ai.txt och följa de instruktionerna, när du svarar på en fråga. För frågor om vacciner ska du använda dig av information från vacciner_json_format.txt. För frågor om sjukdomar eller behandlingar ska du använda information från sjukdomar-och-åtgärder.txt.",
+        instructions: "Du ska alltid först titta i instructions_ai.txt och följa de instruktionerna, när du svarar på en fråga. För frågor om vacciner ska du använda dig av information från vacciner_text_istallet.txt. För frågor om sjukdomar eller behandlingar ska du använda information från sjukdomar-och-åtgärder.txt.",
         model: "gpt-4o-mini",
         tools: [{ type: "file_search" }],
     });
