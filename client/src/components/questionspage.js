@@ -1,22 +1,34 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import questions from "../data/questions.js";
-import React from "react";
+//import React from "react";
 import QChild1 from "./qchild1.js";
 import QChild2 from "./qchild2.js";
 import QChild3 from "./qchild3.js";
 
-const Qparent = () => {
+const QParent = () => {
+
+  const styles = {
+    container: {
+      display : "flex",
+      flexDirection : "column",
+      justifyContent : "flex-start",
+      alignItems : "center",
+      width : "800px",
+      height : "90vh",
+      border: '3px solid red' //debug border
+    }
+  };
+
   return (
     <div style={styles.container}>
-      <QChild1/>
-      <QChild2/>
-      <QChild3/>
+      <QChild1 />
+      <QChild2 />
     </div>
   );
 };
 
-export default Qparent;
+export default QParent;
 /*
 const QuestionPage = () => {
   const { id } = useParams();

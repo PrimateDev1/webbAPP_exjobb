@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+//import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import questions from "../data/questions.js";
 import React from "react";
@@ -62,46 +63,29 @@ const QChild2 = () => {
           alignItems : "center"
         },
       };
-
-    if(questions.followup){
-        <div style = {btnStylesYesNo.container}>
-        <button onClick={() => handleAnswer("Ja")}>Ja</button>
-        <button onClick={() => handleAnswer("Nej")}>Nej</button>
-      </div>
-    }
-    else if(questions.next){
-        <button onClick={handleNext}>Nästa fråga</button>
-    }
-    else{
+      
+    return (
         
-    }
+    <div style = {btnStylesYesNo.container}>
+      <button onClick={() => handleAnswer("Ja")}>Ja</button>
+      <button onClick={() => handleAnswer("Nej")}>Nej</button>  
+      
+      {showFollowUp && (
+        <div>
+          <p>{question.followUp["Ja"]}</p>
+          <input
+            type="text"
+            placeholder="Skriv ditt svar här..."
+            value={userAnswer}
+            onChange={(e) => setUserAnswer(e.target.value)}
+          />
+          </div>
+      )};
+      
+    </div>
+    );      
+    
 
-    {showFollowUp && (
-      <div>
-        <p>{question.followUp["Ja"]}</p>
-        <input
-          type="text"
-          placeholder="Skriv ditt svar här..."
-          value={userAnswer}
-          onChange={(e) => setUserAnswer(e.target.value)}
-        />
-        {question.next ? (
-          <button onClick={handleNext}>Nästa fråga</button>
-        ) : (
-          <button
-            onClick={() => {
-              if (userAnswer) {
-                saveAnswer(userAnswer);
-              }
-              navigate("/done");
-            }}
-          >
-            Avsluta formulär
-          </button>
-        )}
-      </div>
-    )}
-
-}
+};
 
 export default QChild2;

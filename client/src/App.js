@@ -4,13 +4,14 @@ import QuestionPage from "./components/questionspage.js";
 import Chatbot from "./components/chatbot.js";
 import FormDone from "./components/formDone.js";
 import Home from "./components/home.js"
+import QParent from "./components/questionspage.js";
 
 
 const appstyle = {
   container: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-around",
+    justifyContent: "center",
     alignItems: "flex-start",
     padding: "20px",
     flexWrap: "wrap",  // Allow wrapping on smaller screens
@@ -24,12 +25,13 @@ const questionsStyle = {
     justifyContent : "flex-end",
     alignItems : "center",
     width : "600px",
-    height : "1800px",
+    height : "1000px",
   }
 }
 
 
 function App() {
+
   return (
     <Router>
       <div style={appstyle.container}>
@@ -37,7 +39,7 @@ function App() {
         <div style={{ flex: 1 }}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/question/:id" element={<QuestionPage />} style = {questionsStyle.container} />
+            <Route path="/question/:id" element={<QParent/>} style = {questionsStyle.container} />
             <Route path="/done" element={<FormDone />} />
           </Routes>
         </div>
