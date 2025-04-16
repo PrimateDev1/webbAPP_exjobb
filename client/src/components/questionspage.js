@@ -1,7 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import questions from "../data/questions.js";
+import React from "react";
+import QChild1 from "./qchild1.js";
+import QChild2 from "./qchild2.js";
+import QChild3 from "./qchild3.js";
 
+const Qparent = () => {
+  return (
+    <div style={styles.container}>
+      <QChild1/>
+      <QChild2/>
+      <QChild3/>
+    </div>
+  );
+};
+
+export default Qparent;
+/*
 const QuestionPage = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -68,22 +84,47 @@ const QuestionPage = () => {
       display: "flex",             // Make it a flex container
       flexDirection: "column",     // Stack children vertically
       justifyContent: "flex-end", // Align items to the top (main axis)
-      alignItems: "center",     // Align items to the left (cross axis)
+      alignItems: "center",     
       marginLeft: "40px",
       padding: "1em",              // Optional: spacing inside the container
-      gap: "1em",                  // Optional: spacing between child elements
+      gap: "1em",      
+      width : "600px",
+      height : "400px",
+      overflow : "auto",
     },
   };
+
+  const btnStylesYesNo = {
+    container : {
+      display : "flex",
+      padding : "1em",
+      gap : "1em",
+      justifyContent : "center",
+      alignItems : "center"
+    },
+  };
+
+  const btnStylesNextPrev = {
+    container : {
+      display : "flex",
+      padding : "1em",
+      gap : "1em",
+      justifyContent : "flex-end",
+      alignItems: "center"
+    }
+  }
+
+  
 
   return (
     <div className="container">
       <div className="question-box" style={styles.container}>
-      <h1>Fråga {question.id}</h1>
+      <h1>Fråga {question.id}</h1 >
       <p>{question.text}</p>
 
-      {/* Yes/No Buttons */}
+      //yes and no buttons
       {question.followUp ? (
-        <div>
+        <div style = {btnStylesYesNo.container}>
           <button onClick={() => handleAnswer("Ja")}>Ja</button>
           <button onClick={() => handleAnswer("Nej")}>Nej</button>
         </div>
@@ -102,7 +143,7 @@ const QuestionPage = () => {
         </button>
       )}
 
-      {/* Show Follow-Up Question & Input Field */}
+      {/* Show Follow-Up Question & Input Field }
       {showFollowUp && (
         <div>
           <p>{question.followUp["Ja"]}</p>
@@ -129,13 +170,14 @@ const QuestionPage = () => {
         </div>
       )}
 
-      {/* Back Button */}
-      <div style={{ marginTop: "1em" }}>
+      {/* Back Button }
+      <div style = {btnStylesNextPrev.container}>
         <button onClick={handleBack}>← Föregående fråga</button>
+        <button onClick={handleNext}>Nästa fråga </button>
         </div>
       </div>
     </div>
   );
 };
-
-export default QuestionPage;
+*/
+//export default QuestionPage;

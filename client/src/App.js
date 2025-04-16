@@ -17,6 +17,17 @@ const appstyle = {
   },
 };
 
+const questionsStyle = {
+  container: {
+    display : "flex",
+    flexDirection : "column",
+    justifyContent : "flex-end",
+    alignItems : "center",
+    width : "600px",
+    height : "1800px",
+  }
+}
+
 
 function App() {
   return (
@@ -26,7 +37,7 @@ function App() {
         <div style={{ flex: 1 }}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/question/:id" element={<QuestionPage />} />
+            <Route path="/question/:id" element={<QuestionPage />} style = {questionsStyle.container} />
             <Route path="/done" element={<FormDone />} />
           </Routes>
         </div>
