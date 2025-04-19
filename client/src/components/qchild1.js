@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import questions from "../data/questions.js";
 
 
-const QChild1 = () => {
+const QChild1 = ({question}) => {
 
 
   
@@ -20,13 +20,11 @@ const QChild1 = () => {
       padding: "1em",              // Optional: spacing inside the container
       gap: "1em",      
       width : "600px",
-      height : "300px",
+      height : "200px",
       overflow : "auto",
       border : "3px solid red"
     },
   };
-  const questionIndex = parseInt(id) - 1;
-  const question = questions[questionIndex];
 
   if (!question) {
     return <h2>Frågan finns inte.</h2>;

@@ -5,25 +5,31 @@ import questions from "../data/questions.js";
 import React from "react";
 
 
-const QChild2 = () => {
+const QChild2 = ({question, questionindex}) => {
 
 
-  const { id } = useParams();
+  
   const navigate = useNavigate();
-
-  const questionIndex = parseInt(id) - 1;
-  const question = questions[questionIndex];
-
   const [showFollowUp, setShowFollowUp] = useState(false);
-  const [userAnswer, setUserAnswer] = useState("");
+  const [userAnswers, setUserAnswers] = useState({});
+  const [btnStates, setBtnStates] = useState({});
 
 
   const handleAnswer = (answer) => {
     saveAnswer(answer);
+    setBtnStates(prev => ({
+      ...prev,
+      [questionindex]: {
+        Ja : answer === "Ja",
+        Nej : answer === "Nej"
+      }
+    }));
+    
 
     if (question.followUp && question.followUp[answer]) {
       setShowFollowUp(true);
     } else if (question.next) {
+      
       navigate(`/question/${question.next}`);
     } else {
       navigate("/done");
@@ -38,12 +44,21 @@ const QChild2 = () => {
   };
 
   const handleBack = () => {
-    if (questionIndex > 0) {
-      const prevId = questions[questionIndex - 1].id;
+    if (questionindex > 0) {
+      const prevId = questions[questionindex - 1].id;
       navigate(`/question/${prevId}`);
     } else {
       navigate("/");
     }
+  };
+
+  const handleInputChange = (e) => {
+    const newValue = e.target.value;
+  
+    setUserAnswers(prev => ({
+      ...prev,
+      [questionindex]: newValue
+    }));
   };
 
   const saveAnswer = (answerToSave) => {
@@ -56,19 +71,46 @@ const QChild2 = () => {
 
     const btnStylesYesNo = {
         container : {
-          display : "flex",
-          padding : "1em",
-          gap : "1em",
-          justifyContent : "center",
-          alignItems : "center"
+          display: "flex",             // Make it a flex container
+          flexDirection: "column",     // Stack children vertically
+          justifyContent: "flex-start", // Align items to the top (main axis)
+          alignItems: "center",     
+          marginLeft: "40px",
+          padding: "1em",              // Optional: spacing inside the container
+          gap: "1em",      
+          width : "600px",
+          height : "300px",
+          overflow : "auto",
+          border : "3px solid red"
         },
       };
       
     return (
         
     <div style = {btnStylesYesNo.container}>
-      <button onClick={() => handleAnswer("Ja")}>Ja</button>
-      <button onClick={() => handleAnswer("Nej")}>Nej</button>  
+      <div style={{ display: 'flex', gap: '10px' }}>
+      <button 
+        onClick={() => handleAnswer("Ja")}
+        style={{
+        backgroundColor: btnStates[questionindex]?.Ja ? 'green' : 'gray',
+        color: 'white',
+        padding: '10px 20px',
+        border: 'none',
+        borderRadius: '5px',
+        cursor: 'pointer'
+      }}>Ja </button>
+
+      <button 
+        onClick={() => handleAnswer("Nej")}
+        style={{
+        backgroundColor: btnStates[questionindex]?.Nej ? 'green' : 'gray',
+        color: 'white',
+        padding: '10px 20px',
+        border: 'none',
+        borderRadius: '5px',
+        cursor: 'pointer'
+      }}>Nej </button>  
+      </div>
       
       {showFollowUp && (
         <div>
@@ -76,11 +118,11 @@ const QChild2 = () => {
           <input
             type="text"
             placeholder="Skriv ditt svar här..."
-            value={userAnswer}
-            onChange={(e) => setUserAnswer(e.target.value)}
+            value={userAnswers[questionindex] || ""}
+            onChange={handleInputChange}
           />
           </div>
-      )};
+      )}
       
     </div>
     );      

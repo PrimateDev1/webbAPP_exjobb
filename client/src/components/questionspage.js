@@ -19,11 +19,16 @@ const QParent = () => {
       border: '3px solid red' //debug border
     }
   };
+  
+  const { id } = useParams();
+  const questionIndex_ = parseInt(id) - 1;
+  const question_ = questions[questionIndex_];
 
   return (
     <div style={styles.container}>
-      <QChild1 />
-      <QChild2 />
+      <QChild1 question = {question_} />
+      <QChild2 question = {question_} questionindex = {questionIndex_} />
+      <QChild3 question = {question_} questionindex = {questionIndex_} />
     </div>
   );
 };
