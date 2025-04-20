@@ -5,16 +5,16 @@ import questions from "../data/questions.js";
 import  { useState, useEffect, useLayoutEffect } from "react";
 
 
-const QChild3 = ({question, questionindex}) => {
+const QChild3 = ({question, questionindex, showFollowUp, setShowFollowUp, userAnswers, btnStates}) => {
 
   const navigate = useNavigate();
-  const [showFollowUp, setShowFollowUp] = useState(false);
-  const [userAnswer, setUserAnswer] = useState("");
 
   const handleNext = () => {
-    if (showFollowUp && userAnswer) {
-      saveAnswer(userAnswer);
+    if (showFollowUp && userAnswers[questionindex] !== null) {
+    let ans = btnStates.Ja === true ? "Ja": "Nej"; 
+      saveAnswer(ans);
     }
+    setShowFollowUp(false);
     navigate(`/question/${question.next}`);
   };
 
@@ -24,9 +24,21 @@ const QChild3 = ({question, questionindex}) => {
     }
     if(question.id > 1){
       let previous = question.id -1;
+      setShowFollowUp(false);
       navigate(`/question/${previous}`);
     }
   }
+
+  const saveAnswer = (answerToSave) => {
+    let answer_ = userAnswers[questionindex] !== null ?
+     answerToSave + `: ${userAnswers[questionindex]}`:
+     answerToSave; 
+     fetch("http://localhost:5000/api/answer", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ questionId: question.id, answer : answer_}),
+    });
+  };
 
     const styles = {
         container : {

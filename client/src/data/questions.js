@@ -3,7 +3,8 @@ const questions = [
     id: 1,
     text: "Har du idag läst Blodcentralens information om när man inte ska ge blod?",
     followUp: {
-     
+     Ja: null,
+     Nej: null
     },
     next: 2
   },
@@ -20,7 +21,8 @@ const questions = [
     id: 3,
     text: "Väger du över 50 kg?",
     followUp: {
-    
+      Ja: null,
+     Nej: null
     },
     next: 4
   },
@@ -36,7 +38,8 @@ const questions = [
     id: 5,
     text: "Har du, eller har du haft oregelbunden hjärtrytm, hjärtsjukdom, kärlkramp, hjärtinfarkt, hjärtsvikt, stroke, högt blodtryck som krävt behandling?",
     followUp: {
-    
+      Ja: null,
+      Nej: null
     },
     next: 6
   },
@@ -44,7 +47,8 @@ const questions = [
     id: 6,
     text: "Har du, eller har du haft cancer, ämnesomsättnings-sjukdomdiabetes, diabetes, reumatoid artrit, epilepsi, sjukdom i nervsystemet eller hjärnan?",
     followUp: {
-     
+      Ja: null,
+      Nej: null
     },
     next: 7
   },
@@ -52,7 +56,8 @@ const questions = [
     id: 7,
     text: "Har du, eller har du haft någon blodsjukdom eller blödningsrubbning?",
     followUp: {
-   
+      Ja: null,
+     Nej: null
     },
     next: 8
   },
@@ -60,7 +65,8 @@ const questions = [
     id: 8,
     text: "Har du, eller har du haft någon allvarlig sjukdom i: mage-tarm, njurar, urinvägar, underliv?",
     followUp: {
-      
+      Ja: null,
+     Nej: null
     },
     next: 9
   },
@@ -76,7 +82,8 @@ const questions = [
     id: 10,
     text: "Har du, eller har du haft allvarlig infektionssjukdom, t.ex. hepatit (gulsot), syfilis, tuberkulos, reumatisk feber, HTLV-infektion, benröta (ostetit)?",
     followUp: {
-     
+      Ja: null,
+      Nej: null
     },
     next: 11
   },
@@ -84,7 +91,8 @@ const questions = [
     id: 11,
     text: "Har du infektion med HIV eller misstänker du att du kan vara smittad med HIV (aids-virus)?",
     followUp: {
-     
+      Ja: null,
+      Nej: null
     },
     next: 12
   },
@@ -164,7 +172,8 @@ const questions = [
     id: 21,
     text: "Har du någonsin utanför hälso- och sjukvården injicerat (sprutat in): narkotika, anabola steroider, hormoner, annat preparat?",
     followUp: {
-    
+      Ja: null,
+      Nej: null
     },
     next: 22
   },
@@ -194,9 +203,10 @@ const questions = [
   },
   {
     id: 25,
-    text: "Har du bott merHar du vistats sammanlagt mer än 6 månader i Storbritannien åren 1980–1996?",
+    text: "Har du vistats sammanlagt mer än 6 månader i Storbritannien åren 1980–1996?",
     followUp: {
-      
+      Ja: null,
+     Nej: null
     },
     next: 26
   },
@@ -212,7 +222,8 @@ const questions = [
     id: 27,
     text: "Har du haft feber utan förklaring vid besök i tropiskt område eller inom 6 månader efteråt?",
     followUp: {
-      
+      Ja: null,
+     Nej: null
     },
     next: 28
   },
@@ -228,7 +239,8 @@ const questions = [
     id: 29,
     text: "Har du  eller vet du att din partner de senaste 6 månaderna haft sexuellt umgänge med: person med känd infektion med hepatit, syfilis, HTLV eller HIV? eller  person som du vet har injicerat narkotika eller dopingmedel? Eftersom tester inte kan upptäcka virussmitta när en person är nysmittad, behöver vi fråga dig om sexuella smittvägar. ",
     followUp: {
-      
+      Ja: null,
+     Nej: null
     },
     next: 30
   },
@@ -236,7 +248,8 @@ const questions = [
     id: 30,
     text: "Har du betalat eller fått betalt för sexuellt umgänge de senaste 6 månaderna? Eftersom tester inte kan upptäcka virussmitta när en person är nysmittad, behöver vi fråga dig om sexuella smittvägar.",
     followUp: {
-      
+      Ja: null,
+     Nej: null
     },
     next: 31
   },
@@ -244,7 +257,8 @@ const questions = [
     id: 31,
     text: "för män: Har du haft sexuellt umgänge med en annan man de senaste 6 månaderna? Eftersom tester inte kan upptäcka virussmitta när en person är nysmittad, behöver vi fråga dig om sexuella smittvägar",
     followUp: {
-     
+      Ja: null,
+      Nej: null
     },
     next: 32
   },
@@ -252,7 +266,8 @@ const questions = [
     id: 32,
     text: "för kvinnor: Har du de senaste 6 månaderna haft sexuellt umgänge med en man som du vet har haft sexuellt umgänge med annan man? Eftersom tester inte kan upptäcka virussmitta när en person är nysmittad, behöver vi fråga dig om sexuella smittvägar.",
     followUp: {
-
+      Ja: null,
+     Nej: null
     },
     next: 33
   },
@@ -260,7 +275,8 @@ const questions = [
     id: 33,
     text: "för kvinnor: Försöker du bli gravid?",
     followUp: {
-  
+      Ja: null,
+     Nej: null
     },
     next: 34
   },
@@ -268,7 +284,8 @@ const questions = [
     id: 34,
     text: "Känner du dig frisk?",
     followUp: {
-    
+      Ja: null,
+     Nej: null
     },
   }
 ];

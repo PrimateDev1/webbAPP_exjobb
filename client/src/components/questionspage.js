@@ -23,12 +23,31 @@ const QParent = () => {
   const { id } = useParams();
   const questionIndex_ = parseInt(id) - 1;
   const question_ = questions[questionIndex_];
+  const [showFollowUp, setShowFollowUp] = useState(false);
+  const [userAnswers, setUserAnswers] = useState({});
+  const [btnStates, setBtnStates] = useState({});
 
   return (
     <div style={styles.container}>
       <QChild1 question = {question_} />
-      <QChild2 question = {question_} questionindex = {questionIndex_} />
-      <QChild3 question = {question_} questionindex = {questionIndex_} />
+      <QChild2 
+        question = {question_}
+        questionindex = {questionIndex_}
+        showFollowUp = {showFollowUp}
+        setShowFollowUp = {setShowFollowUp}
+        userAnswers={userAnswers}
+        setUserAnswers={setUserAnswers}
+        btnStates = {btnStates}
+        setBtnStates = {setBtnStates}
+       />
+      <QChild3 
+        question = {question_}
+        questionindex = {questionIndex_}
+        showFollowUp = {showFollowUp}
+        setShowFollowUp = {setShowFollowUp}
+        userAnswers = {userAnswers}
+        btnStates = {btnStates}
+        />
     </div>
   );
 };

@@ -5,16 +5,14 @@ import questions from "../data/questions.js";
 import React from "react";
 
 
-const QChild2 = ({question, questionindex}) => {
+const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
+  userAnswers, setUserAnswers, btnStates, setBtnStates
+}) => {
 
 
   
   const navigate = useNavigate();
-  const [showFollowUp, setShowFollowUp] = useState(false);
-  const [userAnswers, setUserAnswers] = useState({});
-  const [btnStates, setBtnStates] = useState({});
-
-
+  
   const handleAnswer = (answer) => {
     saveAnswer(answer);
     setBtnStates(prev => ({
@@ -29,17 +27,20 @@ const QChild2 = ({question, questionindex}) => {
     if (question.followUp && question.followUp[answer]) {
       setShowFollowUp(true);
     } else if (question.next) {
-      
+      setShowFollowUp(false);
       navigate(`/question/${question.next}`);
+      
     } else {
       navigate("/done");
     }
   };
 
   const handleNext = () => {
-    if (showFollowUp && userAnswer) {
-      saveAnswer(userAnswer);
+    if (showFollowUp && userAnswers[questionindex] != null) {
+      let ans = btnStates.Ja === true ? "Ja" : "Nej";
+      saveAnswer(ans);
     }
+    setShowFollowUp(false);
     navigate(`/question/${question.next}`);
   };
 
@@ -54,7 +55,6 @@ const QChild2 = ({question, questionindex}) => {
 
   const handleInputChange = (e) => {
     const newValue = e.target.value;
-  
     setUserAnswers(prev => ({
       ...prev,
       [questionindex]: newValue
@@ -62,10 +62,14 @@ const QChild2 = ({question, questionindex}) => {
   };
 
   const saveAnswer = (answerToSave) => {
+    let completedAnswer = answerToSave;
+    if(userAnswers[questionindex]){
+      completedAnswer += `: ${userAnswers[questionindex]}`;
+    }
     fetch("http://localhost:5000/api/answer", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ questionId: question.id, answer: answerToSave }),
+      body: JSON.stringify({ questionId: question.id, answer: completedAnswer }),
     });
   };
 
@@ -112,7 +116,7 @@ const QChild2 = ({question, questionindex}) => {
       }}>Nej </button>  
       </div>
       
-      {showFollowUp && (
+      { question.followUp["Ja"] !== null && btnStates[questionindex]?.Ja && (
         <div>
           <p>{question.followUp["Ja"]}</p>
           <input
