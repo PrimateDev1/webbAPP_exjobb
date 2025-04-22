@@ -14,42 +14,38 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
   const navigate = useNavigate();
   
   const handleAnswer = (answer) => {
-    saveAnswer(answer);
+
     setBtnStates(prev => ({
       ...prev,
       [questionindex]: {
-        Ja : answer === "Ja",
-        Nej : answer === "Nej"
+        Ja : evalStringStart("Ja", answer),
+        Nej : evalStringStart("Nej", answer),
       }
     }));
-    
 
-    if (question.followUp && question.followUp[answer]) {
+    let textAnswer = (answer === "Nej") ? undefined : userAnswers[questionindex];
+
+    if(btnStates[questionindex]?.Nej){
+      setUserAnswers(prev => ({
+        ...prev,
+        [questionindex]: undefined,
+      }));
+    }
+    saveAnswer(answer, textAnswer);
+
+    function evalStringStart  (aStr, searchStr){
+      const regex = new RegExp(`^${aStr}`);
+      return regex.test(searchStr);
+    }
+
+    if (question?.followUp && question?.followUp[answer]) {
       setShowFollowUp(true);
-    } else if (question.next) {
+    } else if (question?.next) {
       setShowFollowUp(false);
-      navigate(`/question/${question.next}`);
+      navigate(`/question/${question?.next}`);
       
     } else {
       navigate("/done");
-    }
-  };
-
-  const handleNext = () => {
-    if (showFollowUp && userAnswers[questionindex] != null) {
-      let ans = btnStates.Ja === true ? "Ja" : "Nej";
-      saveAnswer(ans);
-    }
-    setShowFollowUp(false);
-    navigate(`/question/${question.next}`);
-  };
-
-  const handleBack = () => {
-    if (questionindex > 0) {
-      const prevId = questions[questionindex - 1].id;
-      navigate(`/question/${prevId}`);
-    } else {
-      navigate("/");
     }
   };
 
@@ -61,11 +57,10 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
     }));
   };
 
-  const saveAnswer = (answerToSave) => {
+  const saveAnswer = (answerToSave, textAnswer) => {
     let completedAnswer = answerToSave;
-    if(userAnswers[questionindex]){
+    if(textAnswer !== undefined)
       completedAnswer += `: ${userAnswers[questionindex]}`;
-    }
     fetch("http://localhost:5000/api/answer", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -116,9 +111,9 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
       }}>Nej </button>  
       </div>
       
-      { question.followUp["Ja"] !== null && btnStates[questionindex]?.Ja && (
+      { question?.followUp["Ja"] !== null && btnStates[questionindex]?.Ja && (
         <div>
-          <p>{question.followUp["Ja"]}</p>
+          <p>{question?.followUp["Ja"]}</p>
           <input
             type="text"
             placeholder="Skriv ditt svar här..."

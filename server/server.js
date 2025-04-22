@@ -188,7 +188,7 @@ async function runAssistant(threadId, assistantId) {
 //memory structure for answers
 let currentAnswers = {};
 
-// ✅ Store answer from frontend
+// Store answer from frontend
 app.post("/api/answer", (req, res) => {
     const { questionId, answer } = req.body;
     currentAnswers[questionId] = answer;
@@ -196,7 +196,7 @@ app.post("/api/answer", (req, res) => {
     res.sendStatus(200);
   });
   
-  // ✅ Reset answers at start of form
+  // Reset answers at start of form
   app.post("/api/reset", (req, res) => {
     currentAnswers = {};
     console.log("Answers reset.");
