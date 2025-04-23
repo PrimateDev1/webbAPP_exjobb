@@ -23,12 +23,17 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
       }
     }));
 
-    let textAnswer = (answer === "Nej") ? undefined : userAnswers[questionindex];
+    let textAnswer = (answer === "Nej") ? undefined :
+     " placeholder gang";
 
     if(btnStates[questionindex]?.Nej){
       setUserAnswers(prev => ({
         ...prev,
-        [questionindex]: undefined,
+        [questionindex]: Object.keys(...prev[questionindex] || {})
+        .reduce((undefinedMap, i) =>{
+          undefinedMap[i] = undefined;
+          return undefinedMap;
+        }, {})
       }));
     }
     saveAnswer(answer, textAnswer);
@@ -49,18 +54,21 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
     }
   };
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e, i) => {
     const newValue = e.target.value;
     setUserAnswers(prev => ({
       ...prev,
-      [questionindex]: newValue
+      [questionindex]: {
+        ...(prev[questionindex] || {}),
+        [i] : newValue
+      }
     }));
   };
 
   const saveAnswer = (answerToSave, textAnswer) => {
     let completedAnswer = answerToSave;
     if(textAnswer !== undefined)
-      completedAnswer += `: ${userAnswers[questionindex]}`;
+      completedAnswer += textAnswer;
     fetch("http://localhost:5000/api/answer", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -111,17 +119,17 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
       }}>Nej </button>  
       </div>
       
-      { question?.followUp["Ja"] !== null && btnStates[questionindex]?.Ja && (
-        <div>
-          <p>{question?.followUp["Ja"]}</p>
+      { question?.followUp["Ja"] !== null && btnStates[questionindex]?.Ja &&
+      question?.followUp["Ja"]?.map((fq, i) => (
+        <div key={i}>
+          <p>{fq.text}</p>
           <input
             type="text"
             placeholder="Skriv ditt svar här..."
-            value={userAnswers[questionindex] || ""}
-            onChange={handleInputChange}
+            onChange={(e) => handleInputChange(e, i)}
           />
-          </div>
-      )}
+        </div>
+      ))}
       
     </div>
     );      

@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const Chatbot = () => {
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [loadingDots, setLoadingDots] = useState(""); // ✅ State for animated dots
+    const chatEndRef = useRef(null);
 
     useEffect(() => {
         let interval;
@@ -19,28 +20,34 @@ const Chatbot = () => {
         return () => clearInterval(interval); // Cleanup interval
     }, [isLoading]);
 
+    useEffect(() => {
+        if (chatEndRef.current) {
+            chatEndRef.current.scrollIntoView({ behavior: "smooth" });
+        }
+    }, [messages, isLoading]);
+
     const sendMessage = async () => {
         if (!input.trim()) return;
-
-        const newMessages = [...messages, { sender: "user", text: input }];
-        setMessages(newMessages);
+    
+        const userMessage = { sender: "user", text: input };
+        setMessages(prev => [...prev, userMessage]);
         setInput("");
-        setIsLoading(true); // ✅ Show loading animation
-
+        setIsLoading(true);
+    
         try {
             const response = await fetch("http://localhost:5000/chat", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ message: input })
             });
-
+    
             const data = await response.json();
-            setMessages([...newMessages, { sender: "bot", text: data.reply }]);
+            setMessages(prev => [...prev, { sender: "bot", text: data.reply }]);
         } catch (error) {
             console.error("Chatbot error:", error);
-            setMessages([...newMessages, { sender: "bot", text: "Error getting response." }]);
+            setMessages(prev => [...prev, { sender: "bot", text: "Error getting response." }]);
         } finally {
-            setIsLoading(false); // ✅ Stop animation when response is received
+            setIsLoading(false);
         }
     };
 
@@ -54,6 +61,7 @@ const Chatbot = () => {
                     </p>
                 ))}
                 {isLoading && <p style={styles.loading}>Inhämtar svar{loadingDots}</p>} {/* ✅ Animated Loading */}
+                <div ref={chatEndRef}/>{/* This is the anchor for autoscroll */}
             </div>
             <input
                 style={styles.input}
