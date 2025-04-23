@@ -213,7 +213,7 @@ const questions = [
     text: "Har du de senaste 6 månaderna blivit: tatuerad, piercad, t.ex. tagit hål i örat, kosmetiskt behandlad med nålar genom huden, fått injektion av kosmetiskt preparat?",
     nrFollowUp: 1,
     followUp: {
-      Ja: "När var senaste gången du tatuerades, piercades eller fick kosmetisk behandling med nålar genom huden?"
+      Ja: [{ "text" : "När var senaste gången du tatuerades, piercades eller fick kosmetisk behandling med nålar genom huden?"}]
     },
     next: 24
   },

@@ -12,7 +12,7 @@ const QChild3 = ({question, questionindex, showFollowUp, setShowFollowUp, userAn
   //TODO BUGG: svar defaultar till Nej när man trycker på nästa fråga även om man markerat Ja
 
   const handleNext = () => {
-    if (showFollowUp && userAnswers[questionindex] !== null) {
+    if (showFollowUp && userAnswers[questionindex] ) {
     let ans = btnStates[questionindex]?.Ja === true ? "Ja": "Nej";
       saveAnswer(ans);
     }
@@ -34,14 +34,11 @@ const QChild3 = ({question, questionindex, showFollowUp, setShowFollowUp, userAn
   }
 
   const saveAnswer = (answerToSave) => {
-    let answer_ = typeof userAnswers[questionindex] !== 'undefined'&&
-    userAnswers[questionindex] !== "" ?
-     answerToSave + `: ${userAnswers[questionindex]}`:
-     answerToSave; 
+    let followupText = ": " + Object.values(userAnswers[questionindex]).join(", ");
      fetch("http://localhost:5000/api/answer", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ questionId: question.id, answer : answer_}),
+      body: JSON.stringify({ questionId: question.id, answer : answerToSave + followupText }),
     });
   };
 
