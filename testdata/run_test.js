@@ -8,7 +8,7 @@ import { json } from "stream/consumers";
 
 dotenv.config(); // Load API key from .env
 //const TEST_FILE = "./small_test.json"; // Correct relative path
-const ITTERATIONS = 3; //n 
+const ITTERATIONS = 10; //n 
 const LARGE_TEST_PATH = "./large_tests/";
 const BATCH_PATH = "batch/";
 const OUTPUT_FILE = "./test_results.json";
