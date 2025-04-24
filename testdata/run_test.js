@@ -1,4 +1,4 @@
-
+// Enhanced run_test.js with file search chunk tracking
 import axios from "axios";
 import dotenv from "dotenv";
 import path from "path";
@@ -10,66 +10,71 @@ dotenv.config(); // Load API key from .env
 //const TEST_FILE = "./small_test.json"; // Correct relative path
 const ITTERATIONS = 10; //n 
 const LARGE_TEST_PATH = "./large_tests/";
-const BATCH_PATH = "batch/";
 const OUTPUT_FILE = "./test_results.json";
-const CHATBOT_URL = "http://localhost:5000/chat";  //  chatbot's local API
+const CHATBOT_URL = "http://localhost:5000/chat";
 
-// Function to query the chatbot
 async function queryChatbot(message) {
     try {
         const response = await axios.post(CHATBOT_URL, { message });
-        return response.data.reply;  // Adjust based on API response format
+        return response.data; // expects: { reply, thread_id, run_id }
     } catch (error) {
         console.error("Error querying chatbot:", error);
-        return "Error retrieving response";
+        return { reply: "Error retrieving response" };
     }
 }
-/*
-async function runTests() {
-    let testData = JSON.parse(fs.readFileSync(TEST_FILE, "utf-8"));
-    let results = [];
 
-    for (let i = 0; i < 4; i++) {
-        console.log(`🔄 Iteration ${i + 1} of 4`);
+async function getFileSearchChunks(thread_id, run_id) {
+    const headers = {
+        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`,
+        "Content-Type": "application/json",
+        "OpenAI-Beta": "assistants=v2"
+    };
 
-        for (let test of testData) {
-            console.log(`  ➤ Testing: ${test.input}`);
-            let response = await queryChatbot(test.input);
+    try {
+        const stepsUrl = `https://api.openai.com/v1/threads/${thread_id}/runs/${run_id}/steps`;
+        const stepsResponse = await axios.get(stepsUrl, { headers });
+        const steps = stepsResponse.data.data;
 
-            results.push({
-                iteration: i + 1,
-                input: test.input,
-                ground_truth: test.ground_truth, // Keeping same naming
-                response: response
-            });
-        }
-    }
+        const fileSearchStep = steps.find(
+            step => step.step_details?.tool_calls?.some(call => call.type === "file_search")
+        );
+        if (!fileSearchStep) return [];
 
-    // Save results
-    fs.writeFileSync(OUTPUT_FILE, JSON.stringify(results, null, 2));
-    console.log(`✅ Test results saved to ${OUTPUT_FILE}`);
-}
-*/
+        const step_id = fileSearchStep.id;
+        const detailUrl = `https://api.openai.com/v1/threads/${thread_id}/runs/${run_id}/steps/${step_id}?include[]=step_details.tool_calls[*].file_search.results[*].content`;
+        const detailResponse = await axios.get(detailUrl, { headers });
 
-async function removeLastOccurance(aChar, currentpath) {
-    console.log("removing " + aChar);
-    let data = fs.readFileSync(currentpath, 'utf-8');
-            const lastindex = data.lastIndexOf(aChar);
-            if(lastindex !== -1){
-                let replacement = "";
-                if(aChar == "]"){
-                    replacement = ",";
+        const toolCalls = detailResponse.data.step_details.tool_calls || [];
+
+        const chunks = [];
+
+        for (const call of toolCalls) {
+            if (call.type !== "file_search") continue;
+        
+            for (const result of call.file_search.results || []) {
+                let fileName = "unknown";
+                try {
+                    const fileMeta = await axios.get(`https://api.openai.com/v1/files/${result.file_id}`, { headers });
+                    fileName = fileMeta.data.filename;
+                } catch (err) {
+                    console.warn("⚠️ Could not fetch file name for", result.file_id);
                 }
-                data = data.substring(0,lastindex) + replacement +  data.substring(lastindex+1);
-                fs.writeFileSync(currentpath, data, 'utf-8');
-                console.log("ready to append file with new tests...");
+        
+                chunks.push({
+                    file_id: result.file_id,
+                    document_name: fileName,
+                    score: result.score
+                    // content: result.content  // leave out to reduce output size
+                });
             }
-            else{
-                console.log("This file seem empty or broken... Need a manual check before proceeding");
-                throw error;
-            }
+        }
+        
 
-
+        return chunks;
+    } catch (err) {
+        console.error("Error fetching file search chunks:", err.message);
+        return [];
+    }
 }
 
 async function runTestJsonl(isBatch,newRun,testfile){
@@ -186,22 +191,12 @@ let isBatch = false;
 let newRun = false;
 let testfile = "";
 const arr = process.argv.slice(2);
-if(arr.length > 0){
-    const str1 = "batch";
-    const str2 = "new";
+if (arr.length > 0) {
     arr.forEach(str => {
-        if(str == str1){
-            isBatch = true;
-        }
-        else if(str == str2){
-            newRun = true;
-        }
-        else if(str.search(".js") != -1){
-            testfile = "./" + str;
-        }
-        else{
-            console.log(`Unrecognized arg ${str}`);
-        }
+        if (str === "batch") isBatch = true;
+        else if (str === "new") newRun = true;
+        else if (str.search(".js") !== -1) testfile = "./" + str;
+        else console.log(`Unrecognized arg ${str}`);
     });
 }
 
