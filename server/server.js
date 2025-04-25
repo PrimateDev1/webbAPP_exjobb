@@ -31,6 +31,7 @@ app.use(cors({
 app.use(express.json());
 // ✅ Chatbot API Endpoint (Fix for 404 Error)
 app.post("/chat", async (req, res) => {
+    console.log("Activating chatbot...");
   const { message } = req.body;
   if (!message) return res.status(400).json({ error: "Message is required" });
 
@@ -204,6 +205,7 @@ app.post("/api/answer", (req, res) => {
   });
   
   app.get("/api/answers", (req, res) => {
+    console.log("SENDING ANSWERS::::::::");
     res.json(currentAnswers);
   });
   

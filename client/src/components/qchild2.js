@@ -24,7 +24,7 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
     }));
 
     let textAnswer = (answer === "Nej") ? undefined :
-     " placeholder gang";
+     "";
 
     if(btnStates[questionindex]?.Nej){
       setUserAnswers(prev => ({
@@ -76,6 +76,18 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
     });
   };
 
+    const followUpStyle = {
+      container : {
+        display  :"flex",
+        flexDirection: "column",
+        justifyContent: "flex-start",
+        alignItems: "center",     
+        marginLeft: "40px",
+        padding: "1em",              // Optional: spacing inside the container
+        gap: "1em",    
+      }
+    }
+
     const btnStylesYesNo = {
         container : {
           display: "flex",             // Make it a flex container
@@ -121,7 +133,7 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
       
       { question?.followUp["Ja"] !== null && btnStates[questionindex]?.Ja &&
       question?.followUp["Ja"]?.map((fq, i) => (
-        <div key={i}>
+        <div key={i} style={followUpStyle.container}>
           <p>{fq.text}</p>
           <input
             type="text"

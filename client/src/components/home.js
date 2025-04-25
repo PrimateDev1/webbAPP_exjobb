@@ -27,7 +27,7 @@ const Home = () => {
     navigate("/question/1");
   }
   catch (err){
-    console.err("could not fetch server endpoint api/reset");
+    console.error("could not fetch server endpoint api/reset");
     }
 };
 

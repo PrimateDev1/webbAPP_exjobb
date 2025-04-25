@@ -1,13 +1,88 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import allQuestions from "../data/questions.js"; 
+import questions from "../data/questions.js";
 
 const FormDone = () => {
   const [answers, setAnswers] = useState({});
-  const [aiFeedback, setAiFeedback] = useState("");
+  const [aiFeedback, setAiFeedback] = useState([]);
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
   const [loadingDots, setLoadingDots] = useState("");
+
+  function cleanAndSplit(str) {
+    // Remove everything before and including the first colon
+    let cleaned = str.includes(':') ? str.split(':').slice(1).join(':') : str;
+    if(cleaned === str) return undefined;
+    // Split by comma and trim each part
+    return cleaned.split(',').map(part => part.trim());
+  }
+
+  function splitBeforeColon(str) {
+    // Keep everything before the first colon
+    const beforeColon = str.includes(':') ? str.split(':')[0] : str;
+  
+    // Split by comma and trim each part
+    return beforeColon.split(',').map(part => part.trim());
+  }
+
+  function getAnswerById(id) {
+    return answers[id.toString()];
+  }
+
+  function answerBuilder(question, summary){
+    const main = question.text;
+    const qid = question.id;
+    const fuarr = question?.followUp?.Ja;
+    console.log(qid);
+    const ansText = summary[qid];
+    console.log(ansText);
+
+    const fuText = cleanAndSplit(ansText); //is undefined sometimes?
+    console.log("fuText:" + fuText);
+    const ansBinary = splitBeforeColon(ansText);
+    let builder = "Fråga: " + main + " Svar:" + ansBinary;
+    if (Array.isArray(fuarr) && fuText !== undefined) {
+      fuarr.forEach((element, i) => {
+        for(let i = 0; i<10; i++){
+          console.log(element);
+          console.log(Object.values(element));
+        }
+        let tot = ` Följdfråga ${i}: ${Object.values(element)} svar: ${fuText[i]}`;
+        builder += tot;
+      });
+    }
+    return builder;
+  }
+
+  function setPrompt (ans)  {
+    
+      return `
+        Du är en sjukvårdsrådgivare som granskar svaren från en blodgivare som fyllt i ett hälsodeklarationsformulär.
+        
+        Du har tillgång till riktlinjer i dokumentet "questions_db.txt" som beskriver varje fråga och när det krävs ytterligare information. Använd detta dokument som referens.
+        Detta är frågan som ställs med svar och eventuella följdfrågor:
+        ${ans}
+        
+        Din uppgift:
+        1. Gå igenom frågan och svaret utifrån informationen i dokumentet.
+        2. Om svaret är endast ja/nej utan följdfråga, om det då inte går att precisera att svaret är problematiskt ska du anta att svaret är bra!
+        3. Om svaret har en följdfråga. Var mer kritisk ifall följdfrågan innehåller information som gör att ett beslut kan fattas om svaret är problematiskt eller inte.
+        4. Beskriv vad rätt information borde innehålla, ifall svaret är problematiskt.
+        
+        Formatera svaret så här:
+        
+        Skriv frågan här...
+        Svar: Skriv användarens svar här.
+        Problem (Om det behövs): Svarar "på månen", vilket är otydligt och osammanhängande.
+        Rätt information (Om det behövs): Måste specificera tid och plats om man tidigare gett blod.
+        
+      `;
+    
+  
+  }
+
+  
 
   useEffect(() => {
     let interval;
@@ -23,70 +98,37 @@ const FormDone = () => {
   }, [isLoading]);
 
   useEffect(() => {
-    async function getAnswersAndFeedback() {
-      setIsLoading(true);
-
-      try {
-        const res = await fetch("http://localhost:5000/api/answers");
-        const data = await res.json();
-        setAnswers(data);
-
-        const summary = Object.entries(data)
-  .map(([id, answer]) => {
-    const q = allQuestions.find((q) => q.id.toString() === id);
-    if (!q) return `Fråga ${id}: ${answer}`;
-
-    let result = `Fråga ${id}: ${q.text}\nSvar: ${answer}`;
-    return result;
-  })
-  .join("\n\n");
-
-  const prompt = `
-  Du är en sjukvårdsrådgivare som granskar svaren från en blodgivare som fyllt i ett hälsodeklarationsformulär.
-  
-  Du har tillgång till riktlinjer i dokumentet "questions_db.txt" som beskriver varje fråga och när det krävs ytterligare information. Använd detta dokument som referens.
-  
-  Här är blodgivarens svar:
-  ${summary}
-  
-  Din uppgift:
-  1. Identifiera endast de frågor där svaret verkar:
-     - felaktigt
-     - otydligt
-     - saknar obligatorisk information enligt reglerna i dokumentet
-  2. Förklara kortfattat varför svaret är problematiskt.
-  3. Beskriv vad rätt information borde innehålla.
-  4. Lista endast problematiska svar – ignorera helt korrekta svar.
-  
-  Formatera svaret så här:
-  
-  Fråga 2:
-  Problem: Svarar "på månen", vilket är otydligt och osammanhängande.
-  Rätt information: Måste specificera tid och plats om man tidigare gett blod.
-  
-  Lista inget om alla svar är korrekta. Om allt verkar korrekt, skriv exakt:
-  "Alla svar verkar vara korrekta."
-  `;
-  
-
-  const chatRes = await fetch("http://localhost:5000/chat", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ message: prompt }),
-  });
-
-        const chatData = await chatRes.json();
-        setAiFeedback(chatData.reply || "Ingen feedback tillgänglig.");
-      } catch (err) {
-        console.error("❌ Error:", err);
-        setAiFeedback("Kunde inte hämta AI-feedback.");
-      }
-
-      setIsLoading(false);
+    async function fetchAi() {
+        let qid = 1;
+        for(qid; qid <=34; qid++){
+          try{
+            let res = await fetch("http://localhost:5000/api/answers");
+            let data = await res.json();
+            setAnswers(data);
+            let q = questions.find(q => q.id === qid);
+            console.log(q);
+            console.log(data);
+            let ans = answerBuilder(q, data);
+            console.log(ans);
+            let prompt = setPrompt(ans);
+            console.log(prompt);
+            let chatRes = await fetch("http://localhost:5000/chat", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ message: prompt }),
+            });
+            setIsLoading(false);
+          
+            let chatData = await chatRes.json();
+            setAiFeedback(prev => [...prev, chatData.reply || "Ingen feedback tillgänglig."]);
+          }catch (e){
+            console.error("Error in fetchAi:", e);
+          }
+        }  
     }
-
-    getAnswersAndFeedback();
+    fetchAi();
   }, []);
+
 
   const styles = {
     container: {
@@ -105,10 +147,27 @@ const FormDone = () => {
       <h1>Formulär färdigt!</h1>
       <h2>AI-feedback</h2>
       {isLoading ? (
-        <p>AI-feedback genereras{loadingDots}</p>
-      ) : (
-        <pre>{aiFeedback}</pre>
-      )}
+  <p>AI-feedback genereras{loadingDots}</p>
+) : (
+  <div>
+    {aiFeedback.map((res, index) => (
+      <div
+        key={index}
+        style={{
+          border: "1px solid #ccc",
+          padding: "1rem",
+          borderRadius: "8px",
+          marginBottom: "1rem",
+          backgroundColor: "#f9f9f9",
+          whiteSpace: "pre-wrap"
+        }}
+      >
+        <strong>Fråga {index + 1}:</strong>
+        <p>{res}</p>
+      </div>
+    ))}
+  </div>
+)}
       <button onClick={() => navigate("/")} style={styles}>
         Avsluta granskning
       </button>
