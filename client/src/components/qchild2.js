@@ -9,7 +9,7 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
   userAnswers, setUserAnswers, btnStates, setBtnStates
 }) => {
 
-
+//TODO bug occurs when you press Ja eller Nej for the second time ({}) is not itterable....
   
   const navigate = useNavigate();
   

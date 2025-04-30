@@ -78,8 +78,6 @@ const FormDone = () => {
         Rätt information (Om det behövs): Måste specificera tid och plats om man tidigare gett blod.
         
       `;
-    
-  
   }
 
   
@@ -99,35 +97,55 @@ const FormDone = () => {
 
   useEffect(() => {
     async function fetchAi() {
-        let qid = 1;
-        for(qid; qid <=34; qid++){
+          console.log("fetchAi called.....");
           try{
             let res = await fetch("http://localhost:5000/api/answers");
             let data = await res.json();
             setAnswers(data);
-            let q = questions.find(q => q.id === qid);
-            console.log(q);
-            console.log(data);
-            let ans = answerBuilder(q, data);
-            console.log(ans);
-            let prompt = setPrompt(ans);
-            console.log(prompt);
-            let chatRes = await fetch("http://localhost:5000/chat", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ message: prompt }),
+            let qs = [];
+            for(let i = 1; i<=34; i++){
+              qs.push(
+                questions.find(q => q.id === i)
+              );
+            }
+            console.log("QuestionList:" + qs);
+            console.log("Data: " + data);
+            let ans = [];
+            qs.forEach(q => {
+              ans.push(answerBuilder(q, data));
             });
+            console.log("Array of Answers:" + ans);
+            let prompts = [];
+            ans.forEach(a => {
+              prompts.push(setPrompt(a));
+            });
+            console.log("Array of prompts: " + prompts);
+            const url = "http://localhost:5000/chat";
+            const fetchTasks = prompts.map(p => 
+              fetch(url, {
+                method : 'POST',
+                headers: {"Content-Type" : "application/json"},
+                body: JSON.stringify({message : p}),
+              }).then(res => res.json())
+            );
+            console.log("fetchtasks (expected to be an array of promises): " + fetchTasks);
+            const responses = await Promise.all(fetchTasks);
+            responses.sort();
             setIsLoading(false);
-          
-            let chatData = await chatRes.json();
-            setAiFeedback(prev => [...prev, chatData.reply || "Ingen feedback tillgänglig."]);
+            console.log("THESE ARE THE RESPONSES:"  + responses);
+            responses.forEach( r => {
+              setAiFeedback(prev => [...prev, r.reply || "Ingen feedback tillgänglig"]);
+            });
           }catch (e){
             console.error("Error in fetchAi:", e);
           }
-        }  
     }
     fetchAi();
   }, []);
+
+  async function doFetch(qid)  {
+
+  }
 
 
   const styles = {
