@@ -29,7 +29,7 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
     if(btnStates[questionindex]?.Nej){
       setUserAnswers(prev => ({
         ...prev,
-        [questionindex]: Object.keys(...prev[questionindex] || {})
+        [questionindex]: Object.keys(prev[questionindex] || {})
         .reduce((undefinedMap, i) =>{
           undefinedMap[i] = undefined;
           return undefinedMap;
