@@ -16,7 +16,7 @@ const CHATBOT_URL = "http://localhost:5000/chat";
 async function queryChatbot(message) {
     try {
         const response = await axios.post(CHATBOT_URL, { message });
-        return response.data; // expects: { reply, thread_id, run_id }
+        return response.data.reply; // expects: { reply, thread_id, run_id }
     } catch (error) {
         console.error("Error querying chatbot:", error);
         return { reply: "Error retrieving response" };

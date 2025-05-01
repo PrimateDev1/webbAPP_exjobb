@@ -1,0 +1,49 @@
+{"input":"Jag har haft Malignt melanom, kan jag ge blod?",   "response":"Tyvärr kan du inte ge blod om du har haft malignt melanom. Det leder till en permanent avstängning från blodgivning"}
+{"input":"Jag har haft Malignt melanom, kan jag ge blod?",   "response":"Du kan tyvärr inte ge blod om du har haft malignt melanom, eftersom det leder till en permanent avstängning från blodgivning"}
+{"input":"jag har Diabetes, går det att ge blod då?",         "response":"Diabetes mellitus godkänns inte för blodgivning om du är insulinbehandlad eller har symtom som tyder på svårare sjukdom, som bensår, neuropati eller ögonpåverkan. Det är viktigt att notera att eventuell medicinering kan påverka din möjlighet att ge blod."}
+{"input":"Jag har Cancer, kan jag ge blod? "  ,               "response":"Du kan tyvärr inte ge blod om du har cancer. Det gäller en permanent avstängning. Undantag görs endast för ytliga cellförändringar (cancer in situ) under vissa omständigheter. Kom ihåg att pågående eller nyligen genomförd medicinering kan påverka din möjlighet att ge blod. Kontakta blodcentralen för mer information."}
+{"input":"Jag har haft cancer, kan jag ge blod? ",            "response":"Tyvärr, om du haft cancer kan du inte ge blod. Det är en permanent avstängning. Friskförklarade från cancer är inte berättigade att ge blod med eventuellt undantag för cancer in situ. Kom ihåg att eventuell medicinering eller behandling kan påverka din blodgivning."}
+{"input":"Jag lider av hypertyreos, kan jag ändå ge blod?",   "response":"Hypertyreos, som innebär överfunktion av sköldkörteln, får godkännas för blodgivning efter behandling med tyreostatika, men du måste vänta 12 månader efter sista dos. Om du har genomgått behandling med radiojod, får du vänta 6 månader efter avslutad behandling. Kontrollera också eventuella mediciner eftersom de kan påverka om du kan donera blod."}
+{"input":"jag har Diabetes, går det att ge blod då?",         "response":"Diabetes mellitus är godkänd för blodgivning om du inte är insulinbehandlad och inte har symtom som tyder på en svårare sjukdom, såsom bensår, neuropati eller ögonpåverkan. Om du är under medicinsk behandling kan detta påverka din möjlighet att ge blod."}
+{"input":"Jag har haft cancer men är helt friskförklarad från den, kan jag ge blod då? "    ,"response":"Tyvärr kan du inte ge blod om du har haft cancer, även om du är friskförklarad. Det gäller permanent avstängning. Vissa undatag för cancer in situ, observera att eventuell läkemedelsbehandling kan påverka din möjlighet att ge blod. kontakta blodcentralen för mer information."}
+{"input":"jag har cervix cancer in situ, kan jag ge blod då?",         "response":"Du kan godkännas för blodgivning om du har haft cervix cancer in situ och är fullt tillfrisknad, samt om minst en kontroll har genomförts utan anmärkning eller om en läkare bedömt att ingen uppföljning krävs. Om du har kontroller oftare än var sjätte månad, bör du kontakta blodgivningen för handläggning. Notera också att eventuell pågående eller nyligen avslutad medicinering kan påverka din möjlighet att ge blod."}
+{"input":"Jag lider av hypertyreos, kan jag ändå ge blod?",             "response":"För personer med hypertyreos gäller följande regler för blodgivning:- Behandling med tyreostatika: Du kan godkännas för blodgivning 12 månader efter den sista dosen.- Behandling med radiojod: Du kan godkännas 6 månader efter avslutad behandling.Observera att medicinering kan påverka möjligheten att ge blod, kontakta blodcentralen för mer information."}
+{"input":"Artrit (ledinflammation)","ground_truth":"Finns flera olika orsaker till artrit. Kontrollera om det finns en grundsjukdom. ","response":"Artrit, eller ledinflammation, kan ha flera olika orsaker. Det är viktigt att kontrollera om det finns en underliggande grundsjukdom som bidrar till tillståndet. Bedömningen av kronisk artrit baseras på denna grundsjukdom. Reumatoid artrit (RA) är en specifik form av artrit som inte godkänns för blodgivning, vilket innebär permanent avstängning för den som lider av det. Om du har fler frågor eller behöver mer information, tveka inte att fråga!"}
+{"input":"Reumatoid artrit","ground_truth":" – godkänns inte. Permanent avstängning.","response":"Reumatoid artrit (RA), även känd som ledgångsreumatism, är en autoimmun sjukdom som kännetecknas av inflammation i lederna. Enligt de dokument som har granskats, godkänns inte blodgivning för personer med reumatoid artrit. Detta beror på att det finns svårigheter att återhämta hemoglobinnivåerna (Hb) på grund av den kroniska inflammation som är förknippad med sjukdomen. Därför innebär det en permanent avstängning från blodgivning. Om du har fler frågor eller behöver mer information, tveka inte att fråga!"}}
+{"input":"Epilepsi – diagnostiserad (Gäller inte enstaka krampanfall)","ground_truth":"Får godkännas om varit krampfri och utan behandling för epilepsi i minst tre år.","response":"För personer med diagnostiserad epilepsi (gäller inte enstaka krampanfall) gäller följande: De får godkännas som blodgivare om de har varit krampfria och utan behandling för epilepsi i minst tre år."}}
+{"input":"Creutzfeldt-Jakobs sjukdom Creutzfeldt-Jakob disease (CJD) Transmissibel spongiform encefalopati (TSE) Variant Creutzfeldt-Jakob disease (vCJD)","ground_truth":"Finns olika typer – ärftlig, sporadisk och överförd sjukdom.Diagnosticerad med Creutzfeldt-Jakobs sjukdom oavsett typ eller variant – godkänns inte. Permanent avstängning.En biologisk släkting till en person med Creutzfeldt-Jakobs sjukdom får godkännas om det går att utesluta en ärftlig form av sjukdomen. Det krävs en genetisk undersökning av prionproteingenen hos personer med säkerställd diagnos för att biologiska släktingar ska kunna vara blodgivare (enligt Socialstyrelsen).","response":"Creutzfeldt-Jakobs sjukdom (CJD) är en sällsynt och dödlig neurodegenerativ sjukdom som tillhör gruppen transmissibla spongiforma encefalopatier (TSE). Det finns olika typer av CJD, inklusive ärftlig, sporadisk och överförd form. Variant Creutzfeldt-Jakob sjukdom (vCJD) är den mänskliga formen av "galna ko-sjukan" och kan uppstå efter exponering för prioner från smittade nötkreatur.Personer som har diagnostiserats med Creutzfeldt-Jakobs sjukdom, oavsett typ eller variant, får inte ge blod. Det finns även restriktioner för biologiska släktingar till personer med CJD; de kan godkännas som blodgivare om en ärftlig form av sjukdomen kan uteslutas genom genetisk undersökning."}}
+{"input":"Jag har fått botox på en klinik, kan jag ge blod idag?", "response": "på IVO-registrerad klinik enligt ovan – får godkännas dagen efter injektion om besvärsfri och om underliggande orsak är godtagbar."}
+{"input":"Jag röker cannabis, får jag ge blod?", "response": "får godkännas 2 veckor efter användandet."}
+{"input": "Jag har injicerat droger får jag ge blod?", "response": "godkänns inte. Permanent avstängning.Injektion med anabola steroider, hormoner eller något annat preparat utanför hälso- och sjukvården – godkänns inte. Permanent avstängning."}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
+{}
