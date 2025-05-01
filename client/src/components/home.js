@@ -10,7 +10,7 @@ const styles = {
     alignItems: "center",  // Align them to the left (or use "center" or "flex-end")
     padding: "2em",
     gap: "1em",                // Adds space between elements
-    border : "3px solid red",
+   // border : "3px solid red",
   },
 };
 

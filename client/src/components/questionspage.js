@@ -12,11 +12,13 @@ const QParent = () => {
     container: {
       display : "flex",
       flexDirection : "column",
-      justifyContent : "flex-start",
+      justifyContent : "center",
       alignItems : "center",
       width : "800px",
       height : "90vh",
-      border: '3px solid red' //debug border
+      //border: '3px solid red', //debug border
+      margin: "0 auto",
+      //backgroundColor: "#f0f0f0"
     }
   };
   

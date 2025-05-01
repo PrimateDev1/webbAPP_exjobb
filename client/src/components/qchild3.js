@@ -8,8 +8,6 @@ import  { useState, useEffect, useLayoutEffect } from "react";
 const QChild3 = ({question, questionindex, showFollowUp, setShowFollowUp, userAnswers, btnStates}) => {
 
   const navigate = useNavigate();
-  //TODO se till att man inte kan navigera out of bounds för frågorna
-  //TODO BUGG: svar defaultar till Nej när man trycker på nästa fråga även om man markerat Ja
 
   const handleNext = () => {
     if (showFollowUp && userAnswers[questionindex] ) {
@@ -17,11 +15,14 @@ const QChild3 = ({question, questionindex, showFollowUp, setShowFollowUp, userAn
       saveAnswer(ans);
     }
     setShowFollowUp(false);
-    navigate(`/question/${question.next}`);
+    if(question.next !== undefined)
+      navigate(`/question/${question.next}`);
   };
 
   const handlePrevious = () => {
-    if (showFollowUp && userAnswers[questionindex] !== null) {
+    let ua = userAnswers[questionindex];
+    console.log(ua);
+    if (showFollowUp && userAnswers[questionindex] !== undefined) {
       let ans = btnStates[questionindex]?.Ja === true ? "Ja": "Nej"; 
         saveAnswer(ans);
       }
@@ -51,14 +52,26 @@ const QChild3 = ({question, questionindex, showFollowUp, setShowFollowUp, userAn
           alignItems : "center",
           padding : "3em solid red",
           height : "100px",
-          width : "100px",
+          width : "1000px",
+        },
+        button : {
+          style : {
+            backgroundColor:  'gray',
+            color: 'white',
+            padding: '10px 20px',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            height : "40px",
+            width : "200 px",
+          }
         }
     };
 
    return (
-    <div style = {null}>
-        <button onClick={handlePrevious}>Föregående Fråga</button>
-        <button onClick={handleNext}>Nästa Fråga</button>
+    <div style={styles.container}>
+        <button style={styles.button.style} onClick={handlePrevious}>Föregående Fråga</button>
+        <button style={styles.button.style} onClick={handleNext}>Nästa Fråga</button>
     </div>
    );
 

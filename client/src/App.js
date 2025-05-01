@@ -5,6 +5,7 @@ import Chatbot from "./components/chatbot.js";
 import FormDone from "./components/formDone.js";
 import Home from "./components/home.js"
 import QParent from "./components/questionspage.js";
+import "./index.css";
 
 
 const appstyle = {
@@ -15,19 +16,11 @@ const appstyle = {
     alignItems: "flex-start",
     padding: "20px",
     flexWrap: "wrap",  // Allow wrapping on smaller screens
+    backgroundColor : "#B0E0E6",
   },
 };
 
-const questionsStyle = {
-  container: {
-    display : "flex",
-    flexDirection : "column",
-    justifyContent : "flex-end",
-    alignItems : "center",
-    width : "600px",
-    height : "1000px",
-  }
-}
+
 
 
 function App() {
@@ -39,7 +32,7 @@ function App() {
         <div style={{ flex: 1 }}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/question/:id" element={<QParent/>} style = {questionsStyle.container} />
+            <Route path="/question/:id" element={<QParent/>}  />
             <Route path="/done" element={<FormDone />} />
           </Routes>
         </div>

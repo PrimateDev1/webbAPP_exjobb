@@ -70,6 +70,11 @@ const Chatbot = () => {
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Ställ en fråga..."
                 disabled={isLoading}
+                onKeyDown={(e) =>{
+                    if(e.key === 'Enter'){
+                        sendMessage();
+                    }
+                }}
             />
             <button style={isLoading ? styles.buttonDisabled : styles.button} onClick={sendMessage} disabled={isLoading}>
                 {isLoading ? "Laddar..." : "Skicka"}
@@ -87,7 +92,7 @@ const styles = {
         width: "300px",
         background: "#fff",
         padding: "20px",
-        border: "1px solid #ccc",
+        border: "3px solid black",
         borderRadius: "5px",
         boxShadow: "0px 0px 10px rgba(0,0,0,0.1)",
         zIndex: 1000

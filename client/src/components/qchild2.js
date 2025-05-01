@@ -9,10 +9,7 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
   userAnswers, setUserAnswers, btnStates, setBtnStates
 }) => {
 
-//TODO bug occurs when you press Ja eller Nej for the second time ({}) is not itterable....
-  
   const navigate = useNavigate();
-  
   const handleAnswer = (answer) => {
 
     setBtnStates(prev => ({
@@ -20,6 +17,7 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
       [questionindex]: {
         Ja : evalStringStart("Ja", answer),
         Nej : evalStringStart("Nej", answer),
+        
       }
     }));
 
@@ -50,7 +48,7 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
       navigate(`/question/${question?.next}`);
       
     } else {
-      navigate("/done");
+        navigate("/done");
     }
   };
 
@@ -82,9 +80,18 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
         flexDirection: "column",
         justifyContent: "flex-start",
         alignItems: "center",     
-        marginLeft: "40px",
+        marginLeft: "0px",
         padding: "1em",              // Optional: spacing inside the container
         gap: "1em",    
+      },
+      text : {
+        margin : 0.3,
+        lineHeight : "1.5",
+      },
+      input : {
+        width : "400px",
+        height : "2.0em",
+        padding : "0em",
       }
     }
 
@@ -96,11 +103,12 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
           alignItems: "center",     
           marginLeft: "40px",
           padding: "1em",              // Optional: spacing inside the container
-          gap: "1em",      
+          gap: "0em",      
           width : "600px",
           height : "300px",
           overflow : "auto",
-          border : "3px solid red"
+          backgroundColor : "	#87CEEB",
+          border : "3px solid black"
         },
       };
       
@@ -130,12 +138,18 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
         cursor: 'pointer'
       }}>Nej </button>  
       </div>
+
+      
       
       { question?.followUp["Ja"] !== null && btnStates[questionindex]?.Ja &&
       question?.followUp["Ja"]?.map((fq, i) => (
-        <div key={i} style={followUpStyle.container}>
-          <p>{fq.text}</p>
+        <div key={fq.text} style={followUpStyle.container}>
+          <p style={followUpStyle.text}>{fq.text}</p>
           <input
+            style={{
+              width : "400px",
+              height : "2.0em",
+              padding : "0em"}}
             type="text"
             placeholder="Skriv ditt svar här..."
             onChange={(e) => handleInputChange(e, i)}
