@@ -151,6 +151,7 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
               height : "2.0em",
               padding : "0em"}}
             type="text"
+            value={userAnswers[questionindex]?.[i] || ""}
             placeholder="Skriv ditt svar här..."
             onChange={(e) => handleInputChange(e, i)}
           />
