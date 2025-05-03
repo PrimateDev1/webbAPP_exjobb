@@ -102,6 +102,7 @@ const FormDone = () => {
             let res = await fetch("http://localhost:5000/api/answers");
             let data = await res.json();
             setAnswers(data);
+            
             let qs = [];
             for(let i = 1; i<=34; i++){
               qs.push(
@@ -119,6 +120,7 @@ const FormDone = () => {
             ans.forEach(a => {
               prompts.push(setPrompt(a));
             });
+            
             console.log("Array of prompts: " + prompts);
             const url = "http://localhost:5000/chat";
             const fetchTasks = prompts.map(p => 
@@ -143,7 +145,7 @@ const FormDone = () => {
     fetchAi();
   }, []);
 
-  async function doFetch(qid)  {
+  async function cancel(){
 
   }
 

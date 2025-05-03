@@ -3,6 +3,7 @@ import  { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import questions from "../data/questions.js";
 import React from "react";
+//import { get, fetch } from "http";
 
 
 const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
@@ -10,14 +11,13 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
 }) => {
 
   const navigate = useNavigate();
-  const handleAnswer = (answer) => {
+  const  handleAnswer = (answer) => {
 
     setBtnStates(prev => ({
       ...prev,
       [questionindex]: {
         Ja : evalStringStart("Ja", answer),
         Nej : evalStringStart("Nej", answer),
-        
       }
     }));
 
@@ -48,7 +48,25 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
       navigate(`/question/${question?.next}`);
       
     } else {
-        navigate("/done");
+       fetch("http://localhost:5000/api/check", {
+          method : "GET",
+        }).then(res => {
+          if(!res.ok) console.error(res);
+          return res.json();
+        }).then( missing => {
+          if(Array.isArray(missing) && missing.length === 0)
+            navigate("/done");
+          else{
+            let min =  missing.reduce((acc, curr) => {
+              return (acc < curr) ? acc : curr; 
+            });
+            alert("Alla frågor är inte besvarade! Obesvarade frågor: " + missing.join(", "));
+            navigate(`/question/${min}`);  
+          }
+        }
+          
+        );
+
     }
   };
 

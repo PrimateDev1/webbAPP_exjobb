@@ -203,11 +203,28 @@ app.post("/api/answer", (req, res) => {
     console.log("Answers reset.");
     res.sendStatus(200);
   });
+
+  app.get("/api/check", (req, res) => {
+    console.log("Checking all answers");
+    let ans = Object.keys(currentAnswers);
+    console.log(ans);
+    let missing = [];
+    for(let i = 1; i<= 34; i++)
+    {
+        if(!ans.includes(i.toString())){ 
+            missing.push(i.toString())
+            console.log(i);
+        }
+    }
+    res.json(missing);
+  });
+
   
   app.get("/api/answers", (req, res) => {
     console.log("SENDING ANSWERS::::::::");
     res.json(currentAnswers);
   });
+
   
 // ✅ Run Setup (Assistant + Vector Store)
 async function setup() {

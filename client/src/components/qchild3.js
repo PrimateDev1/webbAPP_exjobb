@@ -17,6 +17,24 @@ const QChild3 = ({question, questionindex, showFollowUp, setShowFollowUp, userAn
     setShowFollowUp(false);
     if(question.next !== undefined)
       navigate(`/question/${question.next}`);
+    else{
+      fetch("http://localhost:5000/api/check", {
+        method : "GET",
+      }).then(res => {
+        if(!res.ok) console.error(res);
+        return res.json();
+      }).then( missing => {
+        if(Array.isArray(missing) && missing.length === 0)
+          navigate("/done");
+        else{
+          let min =  missing.reduce((acc, curr) => {
+            return (acc < curr) ? acc : curr; 
+          });
+          alert("Alla frågor är inte besvarade! Obesvarade frågor: " + missing.join(", "));
+          navigate(`/question/${min}`);  
+        }
+      });
+    }
   };
 
   const handlePrevious = () => {
