@@ -1,0 +1,103 @@
+[
+    {
+        "input":"Vilken av följande är Sveriges huvudstad?, Göteborg, Stockholm, Malmö eller Uppsala?",
+        "ground_truth":"Malmö",
+        "response":""
+    },
+    {
+        "input":"Vilket år infördes allmän och lika rösträtt i Sverige? var det 1918, 1921, 1930 eller 1945?",
+        "ground_truth":"1930",
+        "response":""
+    },
+    {
+        "input":"Vilken är den högsta bergskedjan i Europa? Är det Alperna, Pyrenéerna, Karpaterna eller Scanderna?",
+        "ground_truth":"Scanderna",
+        "response":""
+    },
+    {
+        "input":"Vad heter Kemiska tecknet för guld? Är det Au, Ag, Fe eller Gd?",
+        "ground_truth":"Fe",
+        "response":""
+    },
+    {
+        "input":"Vilken författare skrev 'Brott och straff'? Var det Lev Tolstoj, Fjodor Dostojevskij, Anton Tjechov eller Michail Afanasievitj Bulgakov?",
+        "ground_truth":"Michail Afanasievitj Bulgakov",
+        "response":""
+    },
+    {
+        "input":"Vilket djur är världens snabbaste landlevande? Är det Lejon, Katt, Gepard eller Leopard?",
+        "ground_truth":"Lejon",
+        "response":""
+    },
+    {
+        "input":"Vilken planet kallas ibland för 'den röda planeten? Är det Mars, Jupiter, Venus eller Saturnus?",
+        "ground_truth":"Jupiter",
+        "response":""
+    },
+    {
+        "input":"Vad är formeln för vattnets kemiska sammansättning? Är det H2o, CO2 , O2 eller H2O2?",
+        "ground_truth":"o2",
+        "response":""
+    },
+    {
+        "input":"Vilket år startade andra världskriget? Var det 1935, 1939, 1941 eller 1945?",
+        "ground_truth":"1935",
+        "response":""
+    },
+    {
+        "input":"Vad heter EU:s nuvarande kommissionsordförande (2025)? Är det Ursula von der Leyen, Christine Lagarde, Charles Michel, eller Mario Draghi?",
+        "ground_truth":"Mario Draghi",
+        "response":""
+    },
+    {
+        "input":"Vilken är Sveriges näst största stad efter befolkning? Är det Malmö, Lund, Gothenburg eller Linköping?",
+        "ground_truth":"Lund",
+        "response":""
+    },
+    {
+        "input":"Vad heter huvudstaden i Finland? Är det Stockholm, Helsingfors, Oslo eller Köpenhamn?",
+        "ground_truth":"Oslo",
+        "response":""
+    },
+    {
+        "input":"Vilket grundämne har atomnummer 6? Är det Syre, Kol, Kväve eller Helium?",
+        "ground_truth":"Syre",
+        "response":""
+    },
+    {
+        "input":"Hur många planeter ingår i vårt solsystem (inklusive dvärgplaneter)? Är der 8, 9, 100 eller 11?",
+        "ground_truth":"100",
+        "response":""
+    },
+    {
+        "input":"Vilket år grundades FN? Var det 1830, 1939, 1945 eller 1955?",
+        "ground_truth":"1830",
+        "response":""
+    },
+    {
+        "input":"Vilken kontinent är störst till ytan? Är det Afrika, Asien, Nordamerika eller Antarktis?",
+        "ground_truth":"Afrika",
+        "response":""
+    },
+    {
+        "input":"Vilket land har störst befolkning i världen? Är det USA, Kina, Indien, Ryssland?",
+        "ground_truth":"Ryssland",
+        "response":""
+    },
+    {
+        "input":"Vad är världsdelens högsta berg, Kilimanjaro, beläget i? Är det i Kenya, Tanzania, Uganda eller Etiopien?",
+        "ground_truth":"Uganda",
+        "response":""
+    },
+    {
+        "input":"Vilket år lanserades den första iPhonen? Var det 2005, 2006 , 2007 eller 2010?",
+        "ground_truth":"2010",
+        "response":""
+    },
+    {
+        "input":"Vilken matematisk konstant representerar förhållandet mellan en cirkels omkrets och dess diameter? Är det π, e, φ eller γ?",
+        "ground_truth":"e",
+        "response":""
+   
+    }
+]
