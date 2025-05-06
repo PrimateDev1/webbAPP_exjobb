@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import allQuestions from "../data/questions.js"; 
 import questions from "../data/questions.js";
@@ -9,6 +9,8 @@ const FormDone = () => {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
   const [loadingDots, setLoadingDots] = useState("");
+
+  const controllerRef = useRef(null);
 
   function cleanAndSplit(str) {
     // Remove everything before and including the first colon
@@ -55,7 +57,7 @@ const FormDone = () => {
     return builder;
   }
 
-  function setPrompt (ans)  {
+  function makePrompt (ans)  {
     
       return `
         Du är en sjukvårdsrådgivare som granskar svaren från en blodgivare som fyllt i ett hälsodeklarationsformulär.
@@ -96,6 +98,11 @@ const FormDone = () => {
   }, [isLoading]);
 
   useEffect(() => {
+
+    const controller = new AbortController();
+    controllerRef.current = controller;
+    const {signal}= controller;
+
     async function fetchAi() {
           console.log("fetchAi called.....");
           try{
@@ -118,16 +125,18 @@ const FormDone = () => {
             console.log("Array of Answers:" + ans);
             let prompts = [];
             ans.forEach(a => {
-              prompts.push(setPrompt(a));
+              prompts.push(makePrompt(a));
             });
             
             console.log("Array of prompts: " + prompts);
             const url = "http://localhost:5000/chat";
+
             const fetchTasks = prompts.map(p => 
               fetch(url, {
                 method : 'POST',
                 headers: {"Content-Type" : "application/json"},
                 body: JSON.stringify({message : p}),
+                signal,
               }).then(res => res.json())
             );
             console.log("fetchtasks (expected to be an array of promises): " + fetchTasks);
@@ -138,15 +147,27 @@ const FormDone = () => {
             responses.forEach( r => {
               setAiFeedback(prev => [...prev, r.reply || "Ingen feedback tillgänglig"]);
             });
-          }catch (e){
-            console.error("Error in fetchAi:", e);
+
+            
+          }catch (err){
+            if(err.name === 'AbortError'){
+              console.log("ABORT ERROR IN FETCHAI.......");
+            }
+            console.error("Another Error in fetchAi (not abort):", err);
           }
     }
     fetchAi();
+    return () => {
+      controller.abort();
+    }
   }, []);
 
-  async function cancel(){
-
+  const cancel = () =>{
+    if(controllerRef.current){
+      controllerRef.current.abort();
+      navigate("/");
+    }
+    
   }
 
 
@@ -167,7 +188,7 @@ const FormDone = () => {
       <h1>Formulär färdigt!</h1>
       <h2>AI-feedback</h2>
       {isLoading ? (
-  <p>AI-feedback genereras{loadingDots}</p>
+  <p>AI-feedback genereras, var god vänta{loadingDots}</p>
 ) : (
   <div>
     {aiFeedback.map((res, index) => (
@@ -188,7 +209,7 @@ const FormDone = () => {
     ))}
   </div>
 )}
-      <button onClick={() => navigate("/")} style={styles}>
+      <button onClick={() => cancel()} style={styles}>
         Avsluta granskning
       </button>
     </div>

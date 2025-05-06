@@ -162,7 +162,7 @@ async function runAssistant(threadId, assistantId) {
         temperature: 0.3, 
     });
     
-    console.log("🛠 AI Run Details:", JSON.stringify(run, null, 2));
+   // console.log("🛠 AI Run Details:", JSON.stringify(run, null, 2));
     
     if (run.status !== "completed") {
         console.error("❌ Assistant run failed:", run);
