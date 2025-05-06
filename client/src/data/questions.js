@@ -11,8 +11,9 @@ const questions = [
   {
     id: 2,
     text: "Har du tidigare givit blod, plasma, trombocyter eller tidigare anmält dig till blodgivning?",
+    nrFollowUp : 2,
     followUp: {
-      Ja: [{"text" : "När gav du blod, plasma eller trombocyter tidigare? Vilken region?"}],
+      Ja: [{"text" : "När gav du blod, plasma eller trombocyter tidigare?"}, {"text" :"Vilken region?"}],
       Nej: null
     },
     next: 3

@@ -60,6 +60,7 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
             let min =  missing.reduce((acc, curr) => {
               return (acc < curr) ? acc : curr; 
             });
+            console.log("min: " + min);
             alert("Alla frågor är inte besvarade! Obesvarade frågor: " + missing.join(", "));
             navigate(`/question/${min}`);  
           }
