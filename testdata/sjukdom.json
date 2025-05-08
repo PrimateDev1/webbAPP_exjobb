@@ -1,119 +1,119 @@
 [
-{
-    "input":"Jag har Cancer, kan jag ge blod? ",
-    "ground_truth":" godkänns inte. Friskförklarad från cancer &#8211; godkänns inte. CancerCancer &#8211; godkänns inte. Friskförklarad från cancer &#8211; godkänns inte. Cancer in situ – får godkännas om fullt tillfrisknande och minst en kontroll utan anmärkning eller om läkare bedömt att ingen uppföljning krävs.",
-    "response":""
-},
-{
-    "input":"jag har cervix cancer in situ, kan jag ge blod då?",
-    "ground_truth":"Cancer in situ &#8211; får godkännas om fullt tillfrisknande och minst en kontroll utan anmärkning eller om läkare bedömt att ingen uppföljning krävs.",
-    "response":""
-},
-
-{
-    "input":"Jag har haft Malignt melanom, kan hag ge blod?",
-    "ground_truth":"Godkänns inte. Permanent avstängning.",
-    "response":""
-},
-{
-    "input":"jag har haft Prostatacancer kan jag ge blod? ",
-    "ground_truth":"&#8211; godkänns inte. Permanent avstängning.  ",
-    "response":""
-},
-{
-    "input":"Jag har haft cancer men är helt friskförklarad från den, kan jah ge blod då? ",
-    "ground_truth":"&#8211; godkänns inte. Permanent avstängning. ",
-    "response":""
-},
-{
-    "input":"jag har Diabetes, går det att ge blod då?",
-    "ground_truth":"Diabetes mellitus – godkänns inte om insulinbehandlad eller symtom som tyder på svårare sjukdom, t ex bensår, neuropati, ögonpåverkan mm. Fråga om läkemedelsbehandling, vid behov se läkemedelslista. ",
-    "response":""
-},
-
-{
-    "input":"Jag lider av hypertyreos, kan jag ändå ge blod?",
-    "ground_truth":"En överfunktion av sköldkörteln som behandlats kan övergå till en underfunktion av sköldkörteln varför alla enskilda sjukdomar inte tas upp. Kontakta blodgivningen.",
-    "response":""
-},
-{
-    "input":"jag har opererat sköldkörteln och är nu friskförklarad, får jag ge blod?",
-    "ground_truth":" – får godkännas 6 månader efter operation.",
-    "response":""
-},
-{
-    "input":"Jag har problem med ledinflammation, kan jag ge blod?",
-    "ground_truth":"Finns flera olika orsaker till artrit. Kontrollera om det finns en grundsjukdom. ",
-    "response":""
-},
-
-{
-    "input":"Jag lider av Reumatoid artrit, går det ändå att ge blod?",
-    "ground_truth":" – godkänns inte. Permanent avstängning.",
-    "response":""
-},
-{
-    "input":"jag har artros i knänan, kan jag ge blod?",
-    "ground_truth":"Får godkännas.",
-    "response":""
-},
-
-{
-    "input":"Jag har Parkinsons sjukdom, får jag ge blod?",
-    "ground_truth":"Godkänns inte. Permanent avstängning.",
-    "response":""
-},
-
-{
-    "input":"Jag har haft Epilepsi, får jag ge blod nu?",
-    "ground_truth":"Får godkännas om varit krampfri och utan behandling för epilepsi i minst tre år.",
-    "response":""
-},
-{
-    "input":"Jag har en släkting som har Creutzfeldt-Jakobs sjukdom, får jag ge blod?",
-    "ground_truth":"Finns olika typer – ärftlig, sporadisk och överförd sjukdom.Diagnosticerad med Creutzfeldt-Jakobs sjukdom oavsett typ eller variant – godkänns inte. Permanent avstängning.En biologisk släkting till en person med Creutzfeldt-Jakobs sjukdom får godkännas om det går att utesluta en ärftlig form av sjukdomen. Det krävs en genetisk undersökning av prionproteingenen hos personer med säkerställd diagnos för att biologiska släktingar ska kunna vara blodgivare (enligt Socialstyrelsen).",
-    "response":""
-},
-{
-    "input":"Jag har Hepatit B får jag ge blod?",
-    "ground_truth":"Hepatit A – får godkännas 6 månader efter tillfrisknande. Hepatit B– får godkännas om utläkt och HBsAg-test är negativ och anti-HBc kan påvisas och anti-HBs kan påvisas med titer ≥100 IE/L. Nära kontakt (samma hushåll) med en person som har en smittsam infektion med hepatit B-virus &#8211; får godkännas tidigast 6 månader efter att den nära kontakten upphört (inte längre samma hushåll) eller tidigast 6 månader efter att den smittsamma personen har bedömts som ej längre smittsam av behandlande läkare.Hepatit C &#8211; godkänns inte. Permanent avstängning. Sexuellt umgänge med person som är smittad med hepatit C &#8211; Får godkännas 6 månader efter sista sexuella kontakten.Hepatit D &#8211; godkänns inte. Permanent avstängning.Hepatit E &#8211; får godkännas 6 månader efter tillfrisknande.Hepatit orsakad av läkemedel &#8211; får godkännas 6 månader efter tillfrisknande.Hepatit, autoimmun &#8211; godkänns inte. Permanent avstängning.Herpes simplex",
-    "response":""
-},
-{
-    "input":"Jag är smittad med Syfilis, kan jag ge blod nu?",
-    "ground_truth":"Får godkännas 1 år efter styrkt tillfrisknande.Om antikroppstest används kan det uppstå praktiska bekymmer eftersom antikroppar ofta kvarstår efter genomgången infektion. De flesta tester som idag används för screening av syfilis ger reaktivitet även om syfilis är utläkt, varför blodgivning ändå inte kommer att godkännas.",
-    "response":""
-},
-{
-    "input":"Jag har haft tuberkulos, gåt det bra att ge blod?",
-    "ground_truth":"Får godkännas 2 år efter styrkt tillfrisknande.",
-    "response":""
-},
-
-{
-    "input":"Jag röker cannabis, får jag ge blod?",
-    "ground_truth":"Injektion med narkotika – godkänns inte. Permanent avstängning.Injektion med anabola steroider, hormoner eller något annat preparat utanför hälso- och sjukvården – godkänns inte. Permanent avstängning.Användning av narkotikaklassade droger som röks, sväljs eller intas via slemhinnor &#8211; får godkännas 2 veckor efter användandet.",
-    "response":""
-},
-{
-    "input":"Jag har fått botox på en klinik, kan jag ge blod idag?",
-    "ground_truth":"på IVO-registrerad klinik enligt ovan – får godkännas dagen efter injektion om besvärsfri och om underliggande orsak är godtagbar. Se läkemedelslista. ",
-    "response":""
-},
-
-{
-    "input":"Jag hade en hjärtinfarkt för ett år sedan, får jag ge blod?",
-    "ground_truth":" &#8211; godkänns inte. För givarens skull. Permanent avstängning.",
-    "response":""
-},
-{
-    "input":"jag tar medicin mot Förmaksflimmer, får jag ge blod ändå?",
-    "ground_truth":" &#8211; Pågående förmaksflimmer &#8211; godkänns inte. Förebyggande tablettbehandling mot förmaksflimmer &#8211; godkänns inte. Återkommande elkonverteringar pga förmaksflimmer &#8211; godkänns inte.",
-    "response":""
-},
-{
-    "input":"jag har lite Kärlkramp, som jag tar medicin för ibland, är det ok för mig att ge blod?",
-    "ground_truth":"Godkänns inte om aktuella symtom eller tidigare haft angina pectoris. För givarens skull. Permanent avstängning.Permanent avstängning även om symtomfri efter ev. operation.",
-    "response":""
-}
-]
+    {
+        "input":"Jag har Cancer, kan jag ge blod? ",
+        "ground_truth":" godkänns inte. Friskförklarad från cancer &#8211; godkänns inte. CancerCancer &#8211; godkänns inte. Friskförklarad från cancer &#8211; godkänns inte. Cancer in situ – får godkännas om fullt tillfrisknande och minst en kontroll utan anmärkning eller om läkare bedömt att ingen uppföljning krävs.",
+        "response":""
+    },
+    {
+        "input":"jag har cervix cancer in situ, kan jag ge blod då?",
+        "ground_truth":"Cancer in situ &#8211; får godkännas om fullt tillfrisknande och minst en kontroll utan anmärkning eller om läkare bedömt att ingen uppföljning krävs.",
+        "response":""
+    },
+    
+    {
+        "input":"Jag har haft Malignt melanom, kan hag ge blod?",
+        "ground_truth":"Godkänns inte. Permanent avstängning.",
+        "response":""
+    },
+    {
+        "input":"jag har haft Prostatacancer kan jag ge blod? ",
+        "ground_truth":"&#8211; godkänns inte. Permanent avstängning.  ",
+        "response":""
+    },
+    {
+        "input":"Jag har haft cancer men är helt friskförklarad från den, kan jah ge blod då? ",
+        "ground_truth":"&#8211; godkänns inte. Permanent avstängning. ",
+        "response":""
+    },
+    {
+        "input":"jag har Diabetes, går det att ge blod då?",
+        "ground_truth":"Diabetes mellitus – godkänns inte om insulinbehandlad eller symtom som tyder på svårare sjukdom, t ex bensår, neuropati, ögonpåverkan mm. Fråga om läkemedelsbehandling, vid behov se läkemedelslista. ",
+        "response":""
+    },
+    
+    {
+        "input":"Jag lider av hypertyreos, kan jag ändå ge blod?",
+        "ground_truth":"En överfunktion av sköldkörteln som behandlats kan övergå till en underfunktion av sköldkörteln varför alla enskilda sjukdomar inte tas upp. Kontakta blodgivningen.",
+        "response":""
+    },
+    {
+        "input":"jag har opererat sköldkörteln och är nu friskförklarad, får jag ge blod?",
+        "ground_truth":" – får godkännas 6 månader efter operation.",
+        "response":""
+    },
+    {
+        "input":"Jag har problem med ledinflammation, kan jag ge blod?",
+        "ground_truth":"Finns flera olika orsaker till artrit. Kontrollera om det finns en grundsjukdom. ",
+        "response":""
+    },
+    
+    {
+        "input":"Jag lider av Reumatoid artrit, går det ändå att ge blod?",
+        "ground_truth":" – godkänns inte. Permanent avstängning.",
+        "response":""
+    },
+    {
+        "input":"jag har artros i knänan, kan jag ge blod?",
+        "ground_truth":"Får godkännas.",
+        "response":""
+    },
+    
+    {
+        "input":"Jag har Parkinsons sjukdom, får jag ge blod?",
+        "ground_truth":"Godkänns inte. Permanent avstängning.",
+        "response":""
+    },
+    
+    {
+        "input":"Jag har haft Epilepsi, får jag ge blod nu?",
+        "ground_truth":"Får godkännas om varit krampfri och utan behandling för epilepsi i minst tre år.",
+        "response":""
+    },
+    {
+        "input":"Jag har en släkting som har Creutzfeldt-Jakobs sjukdom, får jag ge blod?",
+        "ground_truth":"Finns olika typer – ärftlig, sporadisk och överförd sjukdom.Diagnosticerad med Creutzfeldt-Jakobs sjukdom oavsett typ eller variant – godkänns inte. Permanent avstängning.En biologisk släkting till en person med Creutzfeldt-Jakobs sjukdom får godkännas om det går att utesluta en ärftlig form av sjukdomen. Det krävs en genetisk undersökning av prionproteingenen hos personer med säkerställd diagnos för att biologiska släktingar ska kunna vara blodgivare (enligt Socialstyrelsen).",
+        "response":""
+    },
+    {
+        "input":"Jag har Hepatit B får jag ge blod?",
+        "ground_truth":"Hepatit A – får godkännas 6 månader efter tillfrisknande. Hepatit B– får godkännas om utläkt och HBsAg-test är negativ och anti-HBc kan påvisas och anti-HBs kan påvisas med titer ≥100 IE/L. Nära kontakt (samma hushåll) med en person som har en smittsam infektion med hepatit B-virus &#8211; får godkännas tidigast 6 månader efter att den nära kontakten upphört (inte längre samma hushåll) eller tidigast 6 månader efter att den smittsamma personen har bedömts som ej längre smittsam av behandlande läkare.Hepatit C &#8211; godkänns inte. Permanent avstängning. Sexuellt umgänge med person som är smittad med hepatit C &#8211; Får godkännas 6 månader efter sista sexuella kontakten.Hepatit D &#8211; godkänns inte. Permanent avstängning.Hepatit E &#8211; får godkännas 6 månader efter tillfrisknande.Hepatit orsakad av läkemedel &#8211; får godkännas 6 månader efter tillfrisknande.Hepatit, autoimmun &#8211; godkänns inte. Permanent avstängning.Herpes simplex",
+        "response":""
+    },
+    {
+        "input":"Jag är smittad med Syfilis, kan jag ge blod nu?",
+        "ground_truth":"Får godkännas 1 år efter styrkt tillfrisknande.Om antikroppstest används kan det uppstå praktiska bekymmer eftersom antikroppar ofta kvarstår efter genomgången infektion. De flesta tester som idag används för screening av syfilis ger reaktivitet även om syfilis är utläkt, varför blodgivning ändå inte kommer att godkännas.",
+        "response":""
+    },
+    {
+        "input":"Jag har haft tuberkulos, gåt det bra att ge blod?",
+        "ground_truth":"Får godkännas 2 år efter styrkt tillfrisknande.",
+        "response":""
+    },
+    
+    {
+        "input":"Jag röker cannabis, får jag ge blod?",
+        "ground_truth":"Injektion med narkotika – godkänns inte. Permanent avstängning.Injektion med anabola steroider, hormoner eller något annat preparat utanför hälso- och sjukvården – godkänns inte. Permanent avstängning.Användning av narkotikaklassade droger som röks, sväljs eller intas via slemhinnor &#8211; får godkännas 2 veckor efter användandet.",
+        "response":""
+    },
+    {
+        "input":"Jag har fått botox på en klinik, kan jag ge blod idag?",
+        "ground_truth":"på IVO-registrerad klinik enligt ovan – får godkännas dagen efter injektion om besvärsfri och om underliggande orsak är godtagbar. Se läkemedelslista. ",
+        "response":""
+    },
+    
+    {
+        "input":"Jag hade en hjärtinfarkt för ett år sedan, får jag ge blod?",
+        "ground_truth":" &#8211; godkänns inte. För givarens skull. Permanent avstängning.",
+        "response":""
+    },
+    {
+        "input":"jag tar medicin mot Förmaksflimmer, får jag ge blod ändå?",
+        "ground_truth":" &#8211; Pågående förmaksflimmer &#8211; godkänns inte. Förebyggande tablettbehandling mot förmaksflimmer &#8211; godkänns inte. Återkommande elkonverteringar pga förmaksflimmer &#8211; godkänns inte.",
+        "response":""
+    },
+    {
+        "input":"jag har lite Kärlkramp, som jag tar medicin för ibland, är det ok för mig att ge blod?",
+        "ground_truth":"Godkänns inte om aktuella symtom eller tidigare haft angina pectoris. För givarens skull. Permanent avstängning.Permanent avstängning även om symtomfri efter ev. operation.",
+        "response":""
+    }
+    ]

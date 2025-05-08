@@ -1,0 +1,103 @@
+[
+    {
+      "input": "Hur kommunicerar Zeptunierna med varandra? Telepatiskt, Med radiorör, Via rytmiska trummor eller Genom doftsignaler?",
+      "ground_truth": "Telepatiskt",
+      "response": ""
+    },
+    {
+      "input": "Vad består Zeptuniers primära diet av? Flödesbär med läkande saft, Stjärngryn, Kristallvänder eller Månfrukter?",
+      "ground_truth": "Flödesbär med läkande saft",
+      "response": ""
+    },
+    {
+      "input": "Vad drivs Zepton-batterierna av? Kosmisk strålning, Vulkanisk värme, Vindkraft eller Geotermisk ånga?",
+      "ground_truth": "Kosmisk strålning",
+      "response": ""
+    },
+    {
+      "input": "Vilken roll har Vornox i samhället? Stjärnskådare och vetenskapare, Krigare, Fiskare eller Handelsmän?",
+      "ground_truth": "Stjärnskådare och vetenskapare",
+      "response": ""
+    },
+    {
+      "input": "Vad händer under Stjärnregnet? Kosmiska glasmeteoriter faller och ger illusioner, Månarna går i skymning, Havet ändrar färg eller Växter blommar omedelbart?",
+      "ground_truth": "Kosmiska glasmeteoriter faller och ger illusioner",
+      "response": ""
+    },
+    {
+      "input": "Hur regleras Zeptunius tidmätning? Sol, månar och kristallhjärta i kärnan, Årliga växtcykler, Flodernas strömmar eller Vulkanutbrott?",
+      "ground_truth": "Sol, månar och kristallhjärta i kärnan",
+      "response": ""
+    },
+    {
+      "input": "Vad används ametistskivor till? Diagnostisera själsliga obalanser, Bygga undervattensstäder, Driva teleportation eller Framställa bioluminiscens?",
+      "ground_truth": "Diagnostisera själsliga obalanser",
+      "response": ""
+    },
+    {
+      "input": "Hur ofta genomgår befolkningen själstest? Var femte år, Varje månad, Var tionde dag eller En gång i livet?",
+      "ground_truth": "Var femte år",
+      "response": ""
+    },
+    {
+      "input": "Vad är Norgaxle känd för? Pansar och nanofiber-taggar, Teleportation, Själssång eller Lavaandningar?",
+      "ground_truth": "Pansar och nanofiber-taggar",
+      "response": ""
+    },
+    {
+      "input": "Vad omvandlar silverlövsträdets blad till drömpulver? Regndroppar, Solstrålar, Jordpartiklar eller Vindpustar?",
+      "ground_truth": "Regndroppar",
+      "response": ""
+    },
+    {
+      "input": "Vilken funktion har de krossade fröna från silverlövsträd? Skapa telepatisk länk mellan två sinnen, Odla kristallberg, Framkalla evig ungdom eller Kontrollera tidevattnet?",
+      "ground_truth": "Skapa telepatisk länk mellan två sinnen",
+      "response": ""
+    },
+    {
+      "input": "Vilka två månar styr tidvattnet på Zeptunius? Lunora och Xebin, Andora och Yebin, Lunora och Yebis eller Selora och Xebis?",
+      "ground_truth": "Lunora och Xebin",
+      "response": ""
+    },
+    {
+      "input": "Vad sker vid granittemplet varje sjunde dag? Offring av glödande peridotstenar, Fiskauppvisning, Månceremoni eller Solfest?",
+      "ground_truth": "Offring av glödande peridotstenar",
+      "response": ""
+    },
+    {
+      "input": "Hur byggdes undervattensstäderna? Av levande korallliknande material odlade av krabbor, Av stål och glas, Av vulkansten eller Av trä från regnskogen?",
+      "ground_truth": "Av levande korallliknande material odlade av krabbor",
+      "response": ""
+    },
+    {
+      "input": "Vad kan Zeptunierna göra under en timme av illusioner? Materialisera drömmar till verklighet, Flyga utan vingar, Tala djurpråk eller Hitta förlorade skatter?",
+      "ground_truth": "Materialisera drömmar till verklighet",
+      "response": ""
+    },
+    {
+      "input": "Var sker meditation inför medial kanalisation? I den heliga skogen Trinora efter fasta, Under Peridotträdet, I kristallgrottorna eller Vid Zepton-batterierna?",
+      "ground_truth": "I den heliga skogen Trinora efter fasta",
+      "response": ""
+    },
+    {
+      "input": "Hur bildades planetens magnetfältshistorier? Av Luminor-rasen som gömde sina minnen, Genom solstormar, Via undervattensströmningar eller Från kosmiska kollisioner?",
+      "ground_truth": "Av Luminor-rasen som gömde sina minnen",
+      "response": ""
+    },
+    {
+      "input": "Vad skiftar himlens färg mellan? Jadegrönt och smaragdton, Röd och lila, Silver och guld eller Orange och blått?",
+      "ground_truth": "Jadegrönt och smaragdton",
+      "response": ""
+    },
+    {
+      "input": "Vilken procent av planeten täcks av hav? 72 %, 50 %, 85 % eller 60 %?",
+      "ground_truth": "72 %",
+      "response": ""
+    },
+    {
+      "input": "Vad skapar tidevattnets rytm? Kombinationen av solen Sariel och månarna Lunora och Xebin, Telepatisk energi, Kristallhjärtats puls eller Peridotceremonierna?",
+      "ground_truth": "Kombinationen av solen Sariel och månarna Lunora och Xebin",
+      "response": ""
+    }
+  ]
+  

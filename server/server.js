@@ -98,7 +98,7 @@ async function createAssistant() {
         - If the question is unrelated to blood donation eligibility, respond: "Jag har tyvärr ingen information om detta" or "Jag kan bara hjälpa till med regler för blodgivning."
         - Avoid speculation and never guess.
         - Ask for clarification if the user's input is vague.
-        - If the condition itself is approved, always include a note that any medication or treatment may still affect blood donation eligibility.
+        - If the condition itself is approved, always include a note that any medication or treatment may still affect blood donation eligibility (No reminder for vaccine-related questions).
         
         VACCINATION-RELATED QUESTIONS:
         - Search exclusively in: vacciner_text_istallet.txt.
@@ -121,7 +121,7 @@ async function createAssistant() {
         - Do not include unrelated facts or general medical descriptions.
         - The length of the response may vary depending on context, but aim to keep it efficient and focused.
         - Clearly state eligibility and any waiting period.
-        - IF approved for blod donation, include a reminder that any ongoing or recent medication may influence eligibility.
+        - IF approved for blod donation, include a reminder that any ongoing or recent medication may influence eligibility (No reminder for vaccine-related questions).
         
         CLARIFICATION PROMPTS:
         - If vague, ask: "Kan du förtydliga vilken vaccination du har tagit?"

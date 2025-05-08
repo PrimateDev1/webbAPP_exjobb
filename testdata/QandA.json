@@ -15,7 +15,7 @@
         "response":""
     },
     {
-        "input":"Vad heter Kemiska tecknet för guld? Är det Au, Ag, Fe eller Gd?",
+        "input":"Vad heter Kemiska tecknet för guld? Är det Au, Qq, Fe eller Gd?",
         "ground_truth":"Fe",
         "response":""
     },

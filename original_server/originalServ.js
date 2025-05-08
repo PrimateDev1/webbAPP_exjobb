@@ -85,20 +85,7 @@ wss.on("connection", (ws) => {
 async function createAssistant() {
     const assistant = await openai.beta.assistants.create({
         name: "Real-Time AI Assistant",
-        instructions: `  Du är en hjälpsam AI-assistent. Hitta rätt svar på fakta som finns i dokumentet fabriceradProvtext.txt som finns i din databas. 
-
-                        GENERAL:
-                        - Du får enbart svara med information från textdokumentet fabriceradProvtext.txt. 
-                        - Du ska svara enbart med ett ord. Detta ord ska vara svaret som efterfrågas. 
-                        - Om relevant information inte finns tillgänglig, säg att informationen inte finns. 
-                        - Svara alltid på svenska."
-                        
-                        FINAL REMINDER:
-                        - Ditt svar måste vara taget från dokumentet fabriceradProvtext.txt.
-                        - Du får under inga omständigheter ge svar som du redan är tränad på.
-                        - Om svaret inte hittas i favriceradProvtext.txt ska du svara med "fel".
-                        
-                        `,
+        instructions: "  Du är en hjälpsam AI-assistent. Följ alltid riktlinjerna i 'instructions.txt'. Använd endast verifierad information från dokumenten som finns tillgängliga via file_search. Om relevant information inte finns tillgänglig, säg att informationen inte finns. Svara alltid på svenska.",
         model: "gpt-4o-mini",
         tools: [{ type: "file_search" }],
        
