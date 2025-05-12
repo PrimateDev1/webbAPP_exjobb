@@ -69,8 +69,8 @@ const QChild3 = ({question, questionindex, showFollowUp, setShowFollowUp, userAn
           justifyContent : "center",
           alignItems : "center",
           padding : "3em solid red",
-          height : "100px",
-          width : "1000px",
+          height : "10vh",
+          width : "1000vw",
         },
         button : {
           style : {

@@ -14,7 +14,7 @@ const QParent = () => {
       flexDirection : "column",
       justifyContent : "center",
       alignItems : "center",
-      width : "800px",
+      width : "50vh",
       height : "90vh",
       //border: '3px solid red', //debug border
       margin: "0 auto",

@@ -17,10 +17,9 @@ const QChild1 = ({question}) => {
       justifyContent: "flex-start", // Align items to the top (main axis)
       alignItems: "center",     
       marginLeft: "40px",
-      padding: "1em",              // Optional: spacing inside the container
-      gap: "0em",      
-      width : "600px",
-      height : "170px",
+      padding: "1em",
+         width: "50vw",              // Was 600px — 80% of viewport width
+      height: "25vh",
       overflow : "auto",
       backgroundColor : "#87CEEB",
       border : "3px solid black"

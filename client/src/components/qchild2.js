@@ -125,8 +125,8 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
           marginLeft: "40px",
           padding: "1em",              // Optional: spacing inside the container
           gap: "0em",      
-          width : "600px",
-          height : "300px",
+          width : "50vw",
+          height : "40vh",
           overflow : "auto",
           backgroundColor : "	#87CEEB",
           border : "3px solid black"

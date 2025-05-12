@@ -83,13 +83,23 @@ const Chatbot = () => {
     );
 };
 
+function pxToVh(px) {
+    const vh = window.innerHeight;
+    return ((px / vh) * 100).toString() + "vh";
+  }
+  
+  function pxToVw(px) {
+    const vw = window.innerWidth;
+    return ((px / vw) * 100).toString() + "vw";
+  }
+
 // ✅ Keep styles as an object inside JavaScript
 const styles = {
     chatbotContainer: {
         position: "",
-        left: "20px",
-        top: "40px",
-        width: "300px",
+        left: pxToVw(20),
+        top: pxToVh(40),
+        width: pxToVw(300),
         background: "#fff",
         padding: "20px",
         border: "3px solid black",
@@ -98,7 +108,7 @@ const styles = {
         zIndex: 1000
     },
     chatTitle: {marginBottom: "10px", textAlign: "center", fontStyle: "bold", fontSize: "18px"},
-    chatbox: { maxHeight: "300px", overflowY: "auto", marginBottom: "10px" },
+    chatbox: { maxHeight: pxToVh(300), overflowY: "auto", marginBottom: "10px" },
     userMessage: { textAlign: "right", color: "blue" },
     botMessage: { textAlign: "left", color: "green" },
     loading: { textAlign: "center", color: "gray", fontStyle: "italic" }, // ✅ Animated dots style

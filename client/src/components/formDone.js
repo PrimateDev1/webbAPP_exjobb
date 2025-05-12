@@ -209,7 +209,7 @@ const FormDone = () => {
     ))}
   </div>
 )}
-      <button onClick={() => cancel()} style={styles}>
+      <button onClick={() => cancel()} style={styles.container}>
         Avsluta granskning
       </button>
     </div>
