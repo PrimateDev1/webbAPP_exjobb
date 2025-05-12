@@ -9,13 +9,13 @@ const QChild3 = ({question, questionindex, showFollowUp, setShowFollowUp, userAn
 
   const navigate = useNavigate();
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (showFollowUp && userAnswers[questionindex] ) {
     let ans = btnStates[questionindex]?.Ja === true ? "Ja": "Nej";
-      saveAnswer(ans);
+      await saveAnswer(ans);
     }
     setShowFollowUp(false);
-    if(question.next !== undefined)
+    if(question?.next !== -1)
       navigate(`/question/${question.next}`);
     else{
       fetch("http://localhost:5000/api/check", {
@@ -37,12 +37,12 @@ const QChild3 = ({question, questionindex, showFollowUp, setShowFollowUp, userAn
     }
   };
 
-  const handlePrevious = () => {
+  const handlePrevious = async () => {
     let ua = userAnswers[questionindex];
     console.log(ua);
     if (showFollowUp && userAnswers[questionindex] !== undefined) {
       let ans = btnStates[questionindex]?.Ja === true ? "Ja": "Nej"; 
-        saveAnswer(ans);
+       await saveAnswer(ans);
       }
     if(question.id > 1){
       let previous = question.id -1;
@@ -52,9 +52,9 @@ const QChild3 = ({question, questionindex, showFollowUp, setShowFollowUp, userAn
     else navigate("/");
   }
 
-  const saveAnswer = (answerToSave) => {
+  async function saveAnswer(answerToSave) {
     let followupText = ": " + Object.values(userAnswers[questionindex]).join(", ");
-     fetch("http://localhost:5000/api/answer", {
+    await fetch("http://localhost:5000/api/answer", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ questionId: question.id, answer : answerToSave + followupText }),

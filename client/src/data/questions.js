@@ -324,6 +324,7 @@ const questions = [
       Ja: null,
      Nej: null
     },
+    next: -1
   }
 ];
 

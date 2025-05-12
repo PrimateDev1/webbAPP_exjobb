@@ -11,7 +11,7 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
 }) => {
 
   const navigate = useNavigate();
-  const  handleAnswer = (answer) => {
+  const  handleAnswer = async (answer) => {
 
     setBtnStates(prev => ({
       ...prev,
@@ -34,7 +34,7 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
         }, {})
       }));
     }
-    saveAnswer(answer, textAnswer);
+    await saveAnswer(answer, textAnswer);
 
     function evalStringStart  (aStr, searchStr){
       const regex = new RegExp(`^${aStr}`);
@@ -43,7 +43,7 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
 
     if (question?.followUp && question?.followUp[answer]) {
       setShowFollowUp(true);
-    } else if (question?.next) {
+    } else if (question?.next !== -1) {
       setShowFollowUp(false);
       navigate(`/question/${question?.next}`);
       
@@ -54,19 +54,21 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
           if(!res.ok) console.error(res);
           return res.json();
         }).then( missing => {
+          console.log(missing);
           if(Array.isArray(missing) && missing.length === 0)
             navigate("/done");
           else{
             let min =  missing.reduce((acc, curr) => {
               return (acc < curr) ? acc : curr; 
             });
-            console.log("min: " + min);
-            alert("Alla frågor är inte besvarade! Obesvarade frågor: " + missing.join(", "));
+            alert(
+              "Alla frågor är inte besvarade! Obesvarade frågor: "
+               + missing.join(", ")
+              );
             navigate(`/question/${min}`);  
           }
         }
-          
-        );
+      );
 
     }
   };
@@ -82,11 +84,11 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
     }));
   };
 
-  const saveAnswer = (answerToSave, textAnswer) => {
+   async function saveAnswer (answerToSave, textAnswer) {
     let completedAnswer = answerToSave;
     if(textAnswer !== undefined)
       completedAnswer += textAnswer;
-    fetch("http://localhost:5000/api/answer", {
+    await fetch("http://localhost:5000/api/answer", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ questionId: question.id, answer: completedAnswer }),
@@ -165,10 +167,7 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
         <div key={fq.text} style={followUpStyle.container}>
           <p style={followUpStyle.text}>{fq.text}</p>
           <input
-            style={{
-              width : "400px",
-              height : "2.0em",
-              padding : "0em"}}
+            style={followUpStyle.input}
             type="text"
             value={userAnswers[questionindex]?.[i] || ""}
             placeholder="Skriv ditt svar här..."

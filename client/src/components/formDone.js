@@ -46,10 +46,10 @@ const FormDone = () => {
     let builder = "Fråga: " + main + " Svar:" + ansBinary;
     if (Array.isArray(fuarr) && fuText !== undefined) {
       fuarr.forEach((element, i) => {
-        for(let i = 0; i<10; i++){
-          console.log(element);
-          console.log(Object.values(element));
-        }
+        
+        console.log(element);
+        console.log(Object.values(element));
+        
         let tot = ` Följdfråga ${i}: ${Object.values(element)} svar: ${fuText[i]}`;
         builder += tot;
       });
@@ -62,7 +62,7 @@ const FormDone = () => {
       return `
         Du är en sjukvårdsrådgivare som granskar svaren från en blodgivare som fyllt i ett hälsodeklarationsformulär.
         
-        Du har tillgång till riktlinjer i dokumentet "questions_db.txt" som beskriver varje fråga och när det krävs ytterligare information. Använd detta dokument som referens.
+        Du har tillgång till riktlinjer i dokumentet "Hälsodeklarationsfrågor.txt" som beskriver varje fråga och när det krävs ytterligare information. Använd detta dokument som referens.
         Detta är frågan som ställs med svar och eventuella följdfrågor:
         ${ans}
         
@@ -152,7 +152,7 @@ const FormDone = () => {
           }catch (err){
             if(err.name === 'AbortError'){
               console.log("ABORT ERROR IN FETCHAI.......");
-            }
+            }else
             console.error("Another Error in fetchAi (not abort):", err);
           }
     }
