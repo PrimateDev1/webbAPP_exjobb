@@ -3,17 +3,15 @@ import  { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import questions from "../data/questions.js";
 import React from "react";
+//import { get, fetch } from "http";
 
 
 const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
   userAnswers, setUserAnswers, btnStates, setBtnStates
 }) => {
 
-//TODO bug occurs when you press Ja eller Nej for the second time ({}) is not itterable....
-  
   const navigate = useNavigate();
-  
-  const handleAnswer = (answer) => {
+  const  handleAnswer = async (answer) => {
 
     setBtnStates(prev => ({
       ...prev,
@@ -36,7 +34,7 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
         }, {})
       }));
     }
-    saveAnswer(answer, textAnswer);
+    await saveAnswer(answer, textAnswer);
 
     function evalStringStart  (aStr, searchStr){
       const regex = new RegExp(`^${aStr}`);
@@ -45,12 +43,33 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
 
     if (question?.followUp && question?.followUp[answer]) {
       setShowFollowUp(true);
-    } else if (question?.next) {
+    } else if (question?.next !== -1) {
       setShowFollowUp(false);
       navigate(`/question/${question?.next}`);
       
     } else {
-      navigate("/done");
+       fetch("http://localhost:5000/api/check", {
+          method : "GET",
+        }).then(res => {
+          if(!res.ok) console.error(res);
+          return res.json();
+        }).then( missing => {
+          console.log(missing);
+          if(Array.isArray(missing) && missing.length === 0)
+            navigate("/done");
+          else{
+            let min =  missing.reduce((acc, curr) => {
+              return (acc < curr) ? acc : curr; 
+            });
+            alert(
+              "Alla frågor är inte besvarade! Obesvarade frågor: "
+               + missing.join(", ")
+              );
+            navigate(`/question/${min}`);  
+          }
+        }
+      );
+
     }
   };
 
@@ -65,11 +84,11 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
     }));
   };
 
-  const saveAnswer = (answerToSave, textAnswer) => {
+   async function saveAnswer (answerToSave, textAnswer) {
     let completedAnswer = answerToSave;
     if(textAnswer !== undefined)
       completedAnswer += textAnswer;
-    fetch("http://localhost:5000/api/answer", {
+    await fetch("http://localhost:5000/api/answer", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ questionId: question.id, answer: completedAnswer }),
@@ -82,9 +101,18 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
         flexDirection: "column",
         justifyContent: "flex-start",
         alignItems: "center",     
-        marginLeft: "40px",
+        marginLeft: "0px",
         padding: "1em",              // Optional: spacing inside the container
         gap: "1em",    
+      },
+      text : {
+        margin : 0.3,
+        lineHeight : "1.5",
+      },
+      input : {
+        width : "400px",
+        height : "2.0em",
+        padding : "0em",
       }
     }
 
@@ -96,11 +124,12 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
           alignItems: "center",     
           marginLeft: "40px",
           padding: "1em",              // Optional: spacing inside the container
-          gap: "1em",      
-          width : "600px",
-          height : "300px",
+          gap: "0em",      
+          width : "50vw",
+          height : "40vh",
           overflow : "auto",
-          border : "3px solid red"
+          backgroundColor : "	#87CEEB",
+          border : "3px solid black"
         },
       };
       
@@ -130,13 +159,17 @@ const QChild2 = ({question, questionindex, showFollowUp, setShowFollowUp,
         cursor: 'pointer'
       }}>Nej </button>  
       </div>
+
+      
       
       { question?.followUp["Ja"] !== null && btnStates[questionindex]?.Ja &&
       question?.followUp["Ja"]?.map((fq, i) => (
-        <div key={i} style={followUpStyle.container}>
-          <p>{fq.text}</p>
+        <div key={fq.text} style={followUpStyle.container}>
+          <p style={followUpStyle.text}>{fq.text}</p>
           <input
+            style={followUpStyle.input}
             type="text"
+            value={userAnswers[questionindex]?.[i] || ""}
             placeholder="Skriv ditt svar här..."
             onChange={(e) => handleInputChange(e, i)}
           />

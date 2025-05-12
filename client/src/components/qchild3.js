@@ -8,22 +8,41 @@ import  { useState, useEffect, useLayoutEffect } from "react";
 const QChild3 = ({question, questionindex, showFollowUp, setShowFollowUp, userAnswers, btnStates}) => {
 
   const navigate = useNavigate();
-  //TODO se till att man inte kan navigera out of bounds för frågorna
-  //TODO BUGG: svar defaultar till Nej när man trycker på nästa fråga även om man markerat Ja
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (showFollowUp && userAnswers[questionindex] ) {
     let ans = btnStates[questionindex]?.Ja === true ? "Ja": "Nej";
-      saveAnswer(ans);
+      await saveAnswer(ans);
     }
     setShowFollowUp(false);
-    navigate(`/question/${question.next}`);
+    if(question?.next !== -1)
+      navigate(`/question/${question.next}`);
+    else{
+      fetch("http://localhost:5000/api/check", {
+        method : "GET",
+      }).then(res => {
+        if(!res.ok) console.error(res);
+        return res.json();
+      }).then( missing => {
+        if(Array.isArray(missing) && missing.length === 0)
+          navigate("/done");
+        else{
+          let min =  missing.reduce((acc, curr) => {
+            return (acc < curr) ? acc : curr; 
+          });
+          alert("Alla frågor är inte besvarade! Obesvarade frågor: " + missing.join(", "));
+          navigate(`/question/${min}`);  
+        }
+      });
+    }
   };
 
-  const handlePrevious = () => {
-    if (showFollowUp && userAnswers[questionindex] !== null) {
+  const handlePrevious = async () => {
+    let ua = userAnswers[questionindex];
+    console.log(ua);
+    if (showFollowUp && userAnswers[questionindex] !== undefined) {
       let ans = btnStates[questionindex]?.Ja === true ? "Ja": "Nej"; 
-        saveAnswer(ans);
+       await saveAnswer(ans);
       }
     if(question.id > 1){
       let previous = question.id -1;
@@ -33,9 +52,9 @@ const QChild3 = ({question, questionindex, showFollowUp, setShowFollowUp, userAn
     else navigate("/");
   }
 
-  const saveAnswer = (answerToSave) => {
+  async function saveAnswer(answerToSave) {
     let followupText = ": " + Object.values(userAnswers[questionindex]).join(", ");
-     fetch("http://localhost:5000/api/answer", {
+    await fetch("http://localhost:5000/api/answer", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ questionId: question.id, answer : answerToSave + followupText }),
@@ -50,15 +69,27 @@ const QChild3 = ({question, questionindex, showFollowUp, setShowFollowUp, userAn
           justifyContent : "center",
           alignItems : "center",
           padding : "3em solid red",
-          height : "100px",
-          width : "100px",
+          height : "10vh",
+          width : "1000vw",
+        },
+        button : {
+          style : {
+            backgroundColor:  'gray',
+            color: 'white',
+            padding: '10px 20px',
+            border: 'none',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            height : "40px",
+            width : "200 px",
+          }
         }
     };
 
    return (
-    <div style = {null}>
-        <button onClick={handlePrevious}>Föregående Fråga</button>
-        <button onClick={handleNext}>Nästa Fråga</button>
+    <div style={styles.container}>
+        <button style={styles.button.style} onClick={handlePrevious}>Föregående Fråga</button>
+        <button style={styles.button.style} onClick={handleNext}>Nästa Fråga</button>
     </div>
    );
 

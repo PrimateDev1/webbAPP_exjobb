@@ -17,13 +17,17 @@ const QChild1 = ({question}) => {
       justifyContent: "flex-start", // Align items to the top (main axis)
       alignItems: "center",     
       marginLeft: "40px",
-      padding: "1em",              // Optional: spacing inside the container
-      gap: "1em",      
-      width : "600px",
-      height : "200px",
+      padding: "1em",
+         width: "50vw",              // Was 600px — 80% of viewport width
+      height: "25vh",
       overflow : "auto",
-      border : "3px solid red"
+      backgroundColor : "#87CEEB",
+      border : "3px solid black"
     },
+    text : {
+      lineHeight : "1.5",
+      margin: 0.3,
+    }
   };
 
   if (!question) {
@@ -33,8 +37,8 @@ const QChild1 = ({question}) => {
   return(
   <div className="container">
     <div className="question-box" style={styles1.container}>
-        <h1>Fråga {question.id}</h1 >
-        <p>{question.text}</p>
+        <h1 style={styles1.text}>Fråga {question.id}</h1 >
+        <p style={styles1.text}>{question.text}</p>
     </div>
   </div>);
 }
